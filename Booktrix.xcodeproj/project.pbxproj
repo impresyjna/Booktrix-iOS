@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D5B0C2E9DC759B4F51E75D /* Pods_BooktrixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E41E83B16300F3FD53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E31E83B16300F3FD53 /* ViewController.swift */; };
 		1AED63E71E83B16300F3FD53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* Main.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
 		1AED63F71E83B16300F3FD53 /* BooktrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63F61E83B16300F3FD53 /* BooktrixTests.swift */; };
+		1E641575CFE77276DF1444B6 /* Pods_Booktrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C6E43F5367CFA1AA19D824 /* Pods_Booktrix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,21 @@
 		1AED63F21E83B16300F3FD53 /* BooktrixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooktrixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63F61E83B16300F3FD53 /* BooktrixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooktrixTests.swift; sourceTree = "<group>"; };
 		1AED63F81E83B16300F3FD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AED64041E83B7F200F3FD53 /* Booktrix-ReleaseStaging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Booktrix-ReleaseStaging.xcconfig"; sourceTree = "<group>"; };
+		1AED64051E83B83000F3FD53 /* Booktrix-DebugProduction.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Booktrix-DebugProduction.xcconfig"; sourceTree = "<group>"; };
+		1AED64061E83B85400F3FD53 /* Booktrix-ReleaseProduction.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Booktrix-ReleaseProduction.xcconfig"; sourceTree = "<group>"; };
+		1AED64071E83B86800F3FD53 /* Booktrix-DebugStaging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Booktrix-DebugStaging.xcconfig"; sourceTree = "<group>"; };
+		1AED64081E83B86800F3FD53 /* Booktrix.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Booktrix.xcconfig; sourceTree = "<group>"; };
+		20FEB10A9E7762F8541EA063 /* Pods-BooktrixTests.releaseproduction.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BooktrixTests.releaseproduction.xcconfig"; path = "Pods/Target Support Files/Pods-BooktrixTests/Pods-BooktrixTests.releaseproduction.xcconfig"; sourceTree = "<group>"; };
+		2BD756CACA1E3D35F2F406F6 /* Pods-BooktrixTests.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BooktrixTests.debugstaging.xcconfig"; path = "Pods/Target Support Files/Pods-BooktrixTests/Pods-BooktrixTests.debugstaging.xcconfig"; sourceTree = "<group>"; };
+		2D041C54874C291AD5781082 /* Pods-Booktrix.releasestaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booktrix.releasestaging.xcconfig"; path = "Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix.releasestaging.xcconfig"; sourceTree = "<group>"; };
+		5505B480A87C70D49B005FD9 /* Pods-Booktrix.releaseproduction.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booktrix.releaseproduction.xcconfig"; path = "Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix.releaseproduction.xcconfig"; sourceTree = "<group>"; };
+		5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BooktrixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F6F0D2180456C2472D1C38F /* Pods-BooktrixTests.releasestaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BooktrixTests.releasestaging.xcconfig"; path = "Pods/Target Support Files/Pods-BooktrixTests/Pods-BooktrixTests.releasestaging.xcconfig"; sourceTree = "<group>"; };
+		A8C6E43F5367CFA1AA19D824 /* Pods_Booktrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booktrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8D6C7292E28AEE06880C74 /* Pods-Booktrix.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booktrix.debugstaging.xcconfig"; path = "Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix.debugstaging.xcconfig"; sourceTree = "<group>"; };
+		B31F42A04B78EEBCB5DB6030 /* Pods-Booktrix.debugproduction.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booktrix.debugproduction.xcconfig"; path = "Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix.debugproduction.xcconfig"; sourceTree = "<group>"; };
+		CD269544E709BCBF166FEA0B /* Pods-BooktrixTests.debugproduction.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BooktrixTests.debugproduction.xcconfig"; path = "Pods/Target Support Files/Pods-BooktrixTests/Pods-BooktrixTests.debugproduction.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E641575CFE77276DF1444B6 /* Pods_Booktrix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D5B0C2E9DC759B4F51E75D /* Pods_BooktrixTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +81,8 @@
 				1AED63E01E83B16300F3FD53 /* Booktrix */,
 				1AED63F51E83B16300F3FD53 /* BooktrixTests */,
 				1AED63DF1E83B16300F3FD53 /* Products */,
+				442867BC45FFD75724F10AE1 /* Pods */,
+				7C1B97FD03B3C74B1D6F67C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +98,7 @@
 		1AED63E01E83B16300F3FD53 /* Booktrix */ = {
 			isa = PBXGroup;
 			children = (
+				1AED64011E83B75F00F3FD53 /* Configuration */,
 				1AED63E11E83B16300F3FD53 /* AppDelegate.swift */,
 				1AED63E31E83B16300F3FD53 /* ViewController.swift */,
 				1AED63E51E83B16300F3FD53 /* Main.storyboard */,
@@ -96,6 +118,42 @@
 			path = BooktrixTests;
 			sourceTree = "<group>";
 		};
+		1AED64011E83B75F00F3FD53 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1AED64071E83B86800F3FD53 /* Booktrix-DebugStaging.xcconfig */,
+				1AED64081E83B86800F3FD53 /* Booktrix.xcconfig */,
+				1AED64041E83B7F200F3FD53 /* Booktrix-ReleaseStaging.xcconfig */,
+				1AED64051E83B83000F3FD53 /* Booktrix-DebugProduction.xcconfig */,
+				1AED64061E83B85400F3FD53 /* Booktrix-ReleaseProduction.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		442867BC45FFD75724F10AE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB8D6C7292E28AEE06880C74 /* Pods-Booktrix.debugstaging.xcconfig */,
+				B31F42A04B78EEBCB5DB6030 /* Pods-Booktrix.debugproduction.xcconfig */,
+				2D041C54874C291AD5781082 /* Pods-Booktrix.releasestaging.xcconfig */,
+				5505B480A87C70D49B005FD9 /* Pods-Booktrix.releaseproduction.xcconfig */,
+				2BD756CACA1E3D35F2F406F6 /* Pods-BooktrixTests.debugstaging.xcconfig */,
+				CD269544E709BCBF166FEA0B /* Pods-BooktrixTests.debugproduction.xcconfig */,
+				9F6F0D2180456C2472D1C38F /* Pods-BooktrixTests.releasestaging.xcconfig */,
+				20FEB10A9E7762F8541EA063 /* Pods-BooktrixTests.releaseproduction.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C1B97FD03B3C74B1D6F67C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8C6E43F5367CFA1AA19D824 /* Pods_Booktrix.framework */,
+				5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AED63FB1E83B16300F3FD53 /* Build configuration list for PBXNativeTarget "Booktrix" */;
 			buildPhases = (
+				CCB5536548E75A6652236D49 /* [CP] Check Pods Manifest.lock */,
 				1AED63DA1E83B16300F3FD53 /* Sources */,
 				1AED63DB1E83B16300F3FD53 /* Frameworks */,
 				1AED63DC1E83B16300F3FD53 /* Resources */,
+				196127D491289E0F3730841E /* [CP] Embed Pods Frameworks */,
+				BB218333F739D283AACC780C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AED63FE1E83B16300F3FD53 /* Build configuration list for PBXNativeTarget "BooktrixTests" */;
 			buildPhases = (
+				DA0807F55348BA64CEF2C318 /* [CP] Check Pods Manifest.lock */,
 				1AED63EE1E83B16300F3FD53 /* Sources */,
 				1AED63EF1E83B16300F3FD53 /* Frameworks */,
 				1AED63F01E83B16300F3FD53 /* Resources */,
+				ECE62B4C2ADD660174B9411A /* [CP] Embed Pods Frameworks */,
+				F4C2CDA1319540CC54C55559 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +258,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		196127D491289E0F3730841E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB218333F739D283AACC780C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCB5536548E75A6652236D49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0807F55348BA64CEF2C318 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE62B4C2ADD660174B9411A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BooktrixTests/Pods-BooktrixTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C2CDA1319540CC54C55559 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BooktrixTests/Pods-BooktrixTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AED63DA1E83B16300F3FD53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -242,8 +399,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1AED63F91E83B16300F3FD53 /* Debug */ = {
+		1AED63F91E83B16300F3FD53 /* DebugStaging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AED64071E83B86800F3FD53 /* Booktrix-DebugStaging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -282,17 +440,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = DebugStaging;
 		};
-		1AED63FA1E83B16300F3FD53 /* Release */ = {
+		1AED63FA1E83B16300F3FD53 /* ReleaseStaging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AED64041E83B7F200F3FD53 /* Booktrix-ReleaseStaging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -325,40 +484,43 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = ReleaseStaging;
 		};
-		1AED63FC1E83B16300F3FD53 /* Debug */ = {
+		1AED63FC1E83B16300F3FD53 /* DebugStaging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB8D6C7292E28AEE06880C74 /* Pods-Booktrix.debugstaging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edu.Booktrix;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = DebugStaging;
 		};
-		1AED63FD1E83B16300F3FD53 /* Release */ = {
+		1AED63FD1E83B16300F3FD53 /* ReleaseStaging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D041C54874C291AD5781082 /* Pods-Booktrix.releasestaging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edu.Booktrix;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
-			name = Release;
+			name = ReleaseStaging;
 		};
-		1AED63FF1E83B16300F3FD53 /* Debug */ = {
+		1AED63FF1E83B16300F3FD53 /* DebugStaging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BD756CACA1E3D35F2F406F6 /* Pods-BooktrixTests.debugstaging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -369,10 +531,11 @@
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Booktrix.app/Booktrix";
 			};
-			name = Debug;
+			name = DebugStaging;
 		};
-		1AED64001E83B16300F3FD53 /* Release */ = {
+		1AED64001E83B16300F3FD53 /* ReleaseStaging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6F0D2180456C2472D1C38F /* Pods-BooktrixTests.releasestaging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -383,7 +546,156 @@
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Booktrix.app/Booktrix";
 			};
-			name = Release;
+			name = ReleaseStaging;
+		};
+		1AED640B1E83B8E100F3FD53 /* DebugProduction */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AED64051E83B83000F3FD53 /* Booktrix-DebugProduction.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = DebugProduction;
+		};
+		1AED640C1E83B8E100F3FD53 /* DebugProduction */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B31F42A04B78EEBCB5DB6030 /* Pods-Booktrix.debugproduction.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Booktrix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = DebugProduction;
+		};
+		1AED640D1E83B8E100F3FD53 /* DebugProduction */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD269544E709BCBF166FEA0B /* Pods-BooktrixTests.debugproduction.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BooktrixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edu.BooktrixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Booktrix.app/Booktrix";
+			};
+			name = DebugProduction;
+		};
+		1AED640E1E83B8E400F3FD53 /* ReleaseProduction */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AED64061E83B85400F3FD53 /* Booktrix-ReleaseProduction.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ReleaseProduction;
+		};
+		1AED640F1E83B8E400F3FD53 /* ReleaseProduction */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5505B480A87C70D49B005FD9 /* Pods-Booktrix.releaseproduction.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Booktrix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = ReleaseProduction;
+		};
+		1AED64101E83B8E400F3FD53 /* ReleaseProduction */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20FEB10A9E7762F8541EA063 /* Pods-BooktrixTests.releaseproduction.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BooktrixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edu.BooktrixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Booktrix.app/Booktrix";
+			};
+			name = ReleaseProduction;
 		};
 /* End XCBuildConfiguration section */
 
@@ -391,27 +703,35 @@
 		1AED63D91E83B16300F3FD53 /* Build configuration list for PBXProject "Booktrix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AED63F91E83B16300F3FD53 /* Debug */,
-				1AED63FA1E83B16300F3FD53 /* Release */,
+				1AED63F91E83B16300F3FD53 /* DebugStaging */,
+				1AED640B1E83B8E100F3FD53 /* DebugProduction */,
+				1AED63FA1E83B16300F3FD53 /* ReleaseStaging */,
+				1AED640E1E83B8E400F3FD53 /* ReleaseProduction */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = ReleaseStaging;
 		};
 		1AED63FB1E83B16300F3FD53 /* Build configuration list for PBXNativeTarget "Booktrix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AED63FC1E83B16300F3FD53 /* Debug */,
-				1AED63FD1E83B16300F3FD53 /* Release */,
+				1AED63FC1E83B16300F3FD53 /* DebugStaging */,
+				1AED640C1E83B8E100F3FD53 /* DebugProduction */,
+				1AED63FD1E83B16300F3FD53 /* ReleaseStaging */,
+				1AED640F1E83B8E400F3FD53 /* ReleaseProduction */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ReleaseStaging;
 		};
 		1AED63FE1E83B16300F3FD53 /* Build configuration list for PBXNativeTarget "BooktrixTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AED63FF1E83B16300F3FD53 /* Debug */,
-				1AED64001E83B16300F3FD53 /* Release */,
+				1AED63FF1E83B16300F3FD53 /* DebugStaging */,
+				1AED640D1E83B8E100F3FD53 /* DebugProduction */,
+				1AED64001E83B16300F3FD53 /* ReleaseStaging */,
+				1AED64101E83B8E400F3FD53 /* ReleaseProduction */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = ReleaseStaging;
 		};
 /* End XCConfigurationList section */
 	};

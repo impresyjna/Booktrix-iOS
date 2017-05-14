@@ -9,6 +9,8 @@ target 'Booktrix' do
 
   target 'BooktrixTests' do
     inherit! :search_paths
+    pod "Quick"
+    pod "Nimble"
     # Pods for testing
   end
 
