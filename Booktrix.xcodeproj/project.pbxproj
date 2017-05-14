@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		07D5B0C2E9DC759B4F51E75D /* Pods_BooktrixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */; };
 		1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BAD1EC8D81E00B4D76F /* SignInViewController.swift */; };
+		1A117BB11EC8E7C100B4D76F /* SignUpView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A117BB01EC8E7C100B4D76F /* SignUpView.storyboard */; };
+		1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB21EC8E9C500B4D76F /* SignInViewModel.swift */; };
+		1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB41EC8EB5900B4D76F /* SignUpViewController.swift */; };
+		1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */; };
+		1A117BBA1EC8EC5900B4D76F /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB91EC8EC5900B4D76F /* AppColors.swift */; };
+		1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
-		1AED63E71E83B16300F3FD53 /* SignStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignStoryboard.storyboard */; };
+		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
 		1AED63F71E83B16300F3FD53 /* BooktrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63F61E83B16300F3FD53 /* BooktrixTests.swift */; };
@@ -29,9 +35,15 @@
 
 /* Begin PBXFileReference section */
 		1A117BAD1EC8D81E00B4D76F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		1A117BB01EC8E7C100B4D76F /* SignUpView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpView.storyboard; sourceTree = "<group>"; };
+		1A117BB21EC8E9C500B4D76F /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		1A117BB41EC8EB5900B4D76F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Prepare.swift"; sourceTree = "<group>"; };
+		1A117BB91EC8EC5900B4D76F /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignStoryboard.storyboard; sourceTree = "<group>"; };
+		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AED63EB1E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AED63ED1E83B16300F3FD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				1A117BAD1EC8D81E00B4D76F /* SignInViewController.swift */,
+				1A117BB21EC8E9C500B4D76F /* SignInViewModel.swift */,
 			);
 			name = SignInView;
 			sourceTree = "<group>";
@@ -103,6 +116,7 @@
 		1A117BAC1EC8D58400B4D76F /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
+				1A117BB41EC8EB5900B4D76F /* SignUpViewController.swift */,
 			);
 			name = SignUpView;
 			sourceTree = "<group>";
@@ -110,9 +124,19 @@
 		1A117BAF1EC8D85600B4D76F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				1AED63E51E83B16300F3FD53 /* SignStoryboard.storyboard */,
+				1AED63E51E83B16300F3FD53 /* SignInView.storyboard */,
+				1A117BB01EC8E7C100B4D76F /* SignUpView.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		1A117BB61EC8EBA600B4D76F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */,
+				1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1AED63D51E83B16300F3FD53 = {
@@ -138,6 +162,7 @@
 		1AED63E01E83B16300F3FD53 /* Booktrix */ = {
 			isa = PBXGroup;
 			children = (
+				1A117BB61EC8EBA600B4D76F /* Extensions */,
 				1A117BAF1EC8D85600B4D76F /* Storyboards */,
 				1A117BA91EC8D54800B4D76F /* Controllers */,
 				1AED64011E83B75F00F3FD53 /* Configuration */,
@@ -166,6 +191,7 @@
 				1AED64041E83B7F200F3FD53 /* Booktrix-ReleaseStaging.xcconfig */,
 				1AED64051E83B83000F3FD53 /* Booktrix-DebugProduction.xcconfig */,
 				1AED64061E83B85400F3FD53 /* Booktrix-ReleaseProduction.xcconfig */,
+				1A117BB91EC8EC5900B4D76F /* AppColors.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -284,8 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */,
+				1A117BB11EC8E7C100B4D76F /* SignUpView.storyboard in Resources */,
 				1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */,
-				1AED63E71E83B16300F3FD53 /* SignStoryboard.storyboard in Resources */,
+				1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +424,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
+				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
 				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
+				1A117BBA1EC8EC5900B4D76F /* AppColors.swift in Sources */,
+				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
+				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
+				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,12 +452,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1AED63E51E83B16300F3FD53 /* SignStoryboard.storyboard */ = {
+		1AED63E51E83B16300F3FD53 /* SignInView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1AED63E61E83B16300F3FD53 /* Base */,
 			);
-			name = SignStoryboard.storyboard;
+			name = SignInView.storyboard;
 			sourceTree = "<group>";
 		};
 		1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */ = {
