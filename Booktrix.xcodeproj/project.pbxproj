@@ -15,6 +15,8 @@
 		1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */; };
 		1A117BBA1EC8EC5900B4D76F /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB91EC8EC5900B4D76F /* AppColors.swift */; };
 		1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */; };
+		1A117BBF1EC912CE00B4D76F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BBD1EC912CE00B4D76F /* Alamofire.framework */; };
+		1A117BC01EC912CE00B4D76F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Prepare.swift"; sourceTree = "<group>"; };
 		1A117BB91EC8EC5900B4D76F /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		1A117BBD1EC912CE00B4D76F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A117BBF1EC912CE00B4D76F /* Alamofire.framework in Frameworks */,
+				1A117BC01EC912CE00B4D76F /* SwiftyJSON.framework in Frameworks */,
 				1E641575CFE77276DF1444B6 /* Pods_Booktrix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +220,8 @@
 		7C1B97FD03B3C74B1D6F67C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A117BBD1EC912CE00B4D76F /* Alamofire.framework */,
+				1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */,
 				A8C6E43F5367CFA1AA19D824 /* Pods_Booktrix.framework */,
 				5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */,
 			);
@@ -233,6 +241,7 @@
 				1AED63DC1E83B16300F3FD53 /* Resources */,
 				196127D491289E0F3730841E /* [CP] Embed Pods Frameworks */,
 				BB218333F739D283AACC780C /* [CP] Copy Pods Resources */,
+				1A117BC11EC9132500B4D76F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -340,6 +349,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Booktrix/Pods-Booktrix-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1A117BC11EC9132500B4D76F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		BB218333F739D283AACC780C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -569,6 +593,10 @@
 			baseConfigurationReference = AB8D6C7292E28AEE06880C74 /* Pods-Booktrix.debugstaging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
@@ -582,6 +610,10 @@
 			baseConfigurationReference = 2D041C54874C291AD5781082 /* Pods-Booktrix.releasestaging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
@@ -675,6 +707,10 @@
 			baseConfigurationReference = B31F42A04B78EEBCB5DB6030 /* Pods-Booktrix.debugproduction.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
@@ -746,6 +782,10 @@
 			baseConfigurationReference = 5505B480A87C70D49B005FD9 /* Pods-Booktrix.releaseproduction.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
