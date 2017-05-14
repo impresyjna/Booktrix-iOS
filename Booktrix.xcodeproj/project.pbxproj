@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		07D5B0C2E9DC759B4F51E75D /* Pods_BooktrixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */; };
+		1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BAD1EC8D81E00B4D76F /* SignInViewController.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
-		1AED63E41E83B16300F3FD53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E31E83B16300F3FD53 /* ViewController.swift */; };
-		1AED63E71E83B16300F3FD53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* Main.storyboard */; };
+		1AED63E71E83B16300F3FD53 /* SignStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignStoryboard.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
 		1AED63F71E83B16300F3FD53 /* BooktrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63F61E83B16300F3FD53 /* BooktrixTests.swift */; };
@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A117BAD1EC8D81E00B4D76F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AED63E31E83B16300F3FD53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignStoryboard.storyboard; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AED63EB1E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AED63ED1E83B16300F3FD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +75,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A117BA91EC8D54800B4D76F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BAA1EC8D55F00B4D76F /* SignStoryboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A117BAA1EC8D55F00B4D76F /* SignStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BAC1EC8D58400B4D76F /* SignUpView */,
+				1A117BAB1EC8D57600B4D76F /* SignInView */,
+			);
+			path = SignStoryboard;
+			sourceTree = "<group>";
+		};
+		1A117BAB1EC8D57600B4D76F /* SignInView */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BAD1EC8D81E00B4D76F /* SignInViewController.swift */,
+			);
+			name = SignInView;
+			sourceTree = "<group>";
+		};
+		1A117BAC1EC8D58400B4D76F /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SignUpView;
+			sourceTree = "<group>";
+		};
+		1A117BAF1EC8D85600B4D76F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1AED63E51E83B16300F3FD53 /* SignStoryboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		1AED63D51E83B16300F3FD53 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +138,10 @@
 		1AED63E01E83B16300F3FD53 /* Booktrix */ = {
 			isa = PBXGroup;
 			children = (
+				1A117BAF1EC8D85600B4D76F /* Storyboards */,
+				1A117BA91EC8D54800B4D76F /* Controllers */,
 				1AED64011E83B75F00F3FD53 /* Configuration */,
 				1AED63E11E83B16300F3FD53 /* AppDelegate.swift */,
-				1AED63E31E83B16300F3FD53 /* ViewController.swift */,
-				1AED63E51E83B16300F3FD53 /* Main.storyboard */,
 				1AED63E81E83B16300F3FD53 /* Assets.xcassets */,
 				1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */,
 				1AED63ED1E83B16300F3FD53 /* Info.plist */,
@@ -245,7 +285,7 @@
 			files = (
 				1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */,
 				1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */,
-				1AED63E71E83B16300F3FD53 /* Main.storyboard in Resources */,
+				1AED63E71E83B16300F3FD53 /* SignStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AED63E41E83B16300F3FD53 /* ViewController.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
+				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,12 +420,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1AED63E51E83B16300F3FD53 /* Main.storyboard */ = {
+		1AED63E51E83B16300F3FD53 /* SignStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1AED63E61E83B16300F3FD53 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SignStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */ = {
