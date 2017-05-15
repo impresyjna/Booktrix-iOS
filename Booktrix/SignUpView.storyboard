@@ -26,16 +26,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GfF-Dt-jOh">
-                                <rect key="frame" x="20" y="80" width="325" height="92.5"/>
+                                <rect key="frame" x="20" y="36" width="325" height="119"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Booktrix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzO-NN-BOl">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="96"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="46"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Yours books in phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWb-DT-GbM">
-                                        <rect key="frame" x="0.0" y="69.5" width="325" height="23"/>
+                                        <rect key="frame" x="0.0" y="96" width="325" height="23"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="16"/>
                                         <color key="textColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -43,10 +43,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hq2-BR-fyO">
-                                <rect key="frame" x="30" y="188.5" width="315" height="289.5"/>
+                                <rect key="frame" x="30" y="171" width="315" height="324.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="c7X-qq-CgS">
-                                        <rect key="frame" x="16" y="16" width="283" height="257.5"/>
+                                        <rect key="frame" x="16" y="16" width="283" height="292.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsU-Sr-i4d">
                                                 <rect key="frame" x="0.0" y="0.0" width="283" height="20.5"/>
@@ -54,7 +54,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-jC-TmH">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-jC-TmH">
                                                 <rect key="frame" x="0.0" y="24.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -64,8 +64,12 @@
                                                         <color key="value" red="0.6705882353" green="0.71764705880000002" blue="0.71764705880000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateThroughInputs:" destination="Voc-TO-hdd" eventType="primaryActionTriggered" id="hby-tO-NsW"/>
+                                                    <outlet property="delegate" destination="Voc-TO-hdd" id="7kM-rd-idn"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="auf-5X-8HE">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="auf-5X-8HE">
                                                 <rect key="frame" x="0.0" y="58.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -75,8 +79,12 @@
                                                         <color key="value" red="0.6705882353" green="0.71764705880000002" blue="0.71764705880000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateThroughInputs:" destination="Voc-TO-hdd" eventType="primaryActionTriggered" id="oNn-Zk-jMf"/>
+                                                    <outlet property="delegate" destination="Voc-TO-hdd" id="HYU-cx-Pve"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password confirmation" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1f9-x2-dGG">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password confirmation" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1f9-x2-dGG">
                                                 <rect key="frame" x="0.0" y="92.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,8 +94,12 @@
                                                         <color key="value" red="0.6705882353" green="0.71764705880000002" blue="0.71764705880000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateThroughInputs:" destination="Voc-TO-hdd" eventType="primaryActionTriggered" id="bHX-q2-Rmi"/>
+                                                    <outlet property="delegate" destination="Voc-TO-hdd" id="VfV-hB-Vgm"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KUI-ba-Pls">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KUI-ba-Pls">
                                                 <rect key="frame" x="0.0" y="126.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -97,8 +109,12 @@
                                                         <color key="value" red="0.6705882353" green="0.71764705880000002" blue="0.71764705880000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateThroughInputs:" destination="Voc-TO-hdd" eventType="primaryActionTriggered" id="gz0-W3-SAD"/>
+                                                    <outlet property="delegate" destination="Voc-TO-hdd" id="xzd-Ud-UdW"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p3V-3a-SMO">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p3V-3a-SMO">
                                                 <rect key="frame" x="0.0" y="160.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -108,17 +124,21 @@
                                                         <color key="value" red="0.6705882353" green="0.71764705880000002" blue="0.71764705880000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateThroughInputs:" destination="Voc-TO-hdd" eventType="primaryActionTriggered" id="gtv-t1-26o"/>
+                                                    <outlet property="delegate" destination="Voc-TO-hdd" id="KiY-v2-zdk"/>
+                                                </connections>
                                             </textField>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fe4-Xj-gY3">
-                                                <rect key="frame" x="0.0" y="192.5" width="283" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="194.5" width="283" height="31"/>
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRQ-Cu-ffF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </switch>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokazuj moje imię i nazwisko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-b7-BHE">
-                                                        <rect key="frame" x="59" y="0.0" width="224" height="0.0"/>
+                                                        <rect key="frame" x="59" y="0.0" width="224" height="31"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -126,7 +146,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HT-K9-Fzi">
-                                                <rect key="frame" x="0.0" y="194.5" width="283" height="30"/>
+                                                <rect key="frame" x="0.0" y="229.5" width="283" height="30"/>
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Sign up">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,7 +158,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lPU-jm-zD5">
-                                                <rect key="frame" x="0.0" y="228.5" width="283" height="29"/>
+                                                <rect key="frame" x="0.0" y="263.5" width="283" height="29"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDr-qj-wbr">
                                                         <rect key="frame" x="0.0" y="0.0" width="283" height="29"/>

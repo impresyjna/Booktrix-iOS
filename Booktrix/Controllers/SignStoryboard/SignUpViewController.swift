@@ -33,5 +33,10 @@ class SignUpViewController: UIViewController {
     @IBAction func openSignInView(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func navigateThroughInputs(_ sender: UITextField) {
+        let nextTag = sender.tag + 1;
+        self.jump(toNextTextField: sender, withTag: nextTag)
+    }
 
 }
