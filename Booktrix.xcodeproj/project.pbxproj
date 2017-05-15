@@ -13,10 +13,10 @@
 		1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB21EC8E9C500B4D76F /* SignInViewModel.swift */; };
 		1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB41EC8EB5900B4D76F /* SignUpViewController.swift */; };
 		1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */; };
-		1A117BBA1EC8EC5900B4D76F /* TextFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB91EC8EC5900B4D76F /* TextFieldConfiguration.swift */; };
 		1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */; };
 		1A117BBF1EC912CE00B4D76F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BBD1EC912CE00B4D76F /* Alamofire.framework */; };
 		1A117BC01EC912CE00B4D76F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */; };
+		1A117BC41ECA331500B4D76F /* TextFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -41,10 +41,10 @@
 		1A117BB21EC8E9C500B4D76F /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		1A117BB41EC8EB5900B4D76F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Prepare.swift"; sourceTree = "<group>"; };
-		1A117BB91EC8EC5900B4D76F /* TextFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldConfiguration.swift; path = ../Configuration/TextFieldConfiguration.swift; sourceTree = "<group>"; };
 		1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		1A117BBD1EC912CE00B4D76F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldConfiguration.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		1A117BC21ECA2AE300B4D76F /* ViewsConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				1A117BB91EC8EC5900B4D76F /* TextFieldConfiguration.swift */,
+				1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */,
 			);
 			path = ViewsConfiguration;
 			sourceTree = "<group>";
@@ -455,10 +455,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A117BC41ECA331500B4D76F /* TextFieldConfiguration.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
 				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
-				1A117BBA1EC8EC5900B4D76F /* TextFieldConfiguration.swift in Sources */,
 				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
 				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
