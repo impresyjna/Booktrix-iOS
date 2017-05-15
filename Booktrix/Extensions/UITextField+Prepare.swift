@@ -8,10 +8,13 @@
 import UIKit
 
 extension UITextField {
-    func prepareForView(_ borderColor: UIColor = AppColor.textViewBorderColor) {
-        self.backgroundColor = UIColor.clear
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 5.0
+    func prepareForView(_ borderColor: UIColor = TextFieldConfiguration.textFieldBorderColor,
+                        backgroundColor: UIColor = TextFieldConfiguration.textFieldBackgroundColor,
+                        borderWidth: CGFloat = TextFieldConfiguration.textFieldBorderWidth,
+                        cornerRadius: CGFloat = TextFieldConfiguration.textFieldCornerRadius) {
+        self.backgroundColor = backgroundColor
+        self.layer.borderWidth = borderWidth
+        self.layer.cornerRadius = cornerRadius
         self.layer.borderColor = borderColor.cgColor
     }
     
