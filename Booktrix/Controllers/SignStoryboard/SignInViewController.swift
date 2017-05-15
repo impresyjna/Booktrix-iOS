@@ -32,7 +32,6 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
-        print("Hello")
         let nextTag = sender.tag + 1;
         self.jump(toNextTextField: sender, withTag: nextTag)
     }
