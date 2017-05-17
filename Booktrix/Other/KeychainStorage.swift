@@ -1,0 +1,57 @@
+//
+//  KeychainStorage.swift
+//  Booktrix
+//
+//  Created by Impresyjna on 17.05.2017.
+//  Copyright © 2017 Impresyjna. All rights reserved.
+//
+
+import KeychainAccess
+import JSONCodable
+
+struct KeychainStorage {
+    fileprivate let internalKeychain: Keychain
+    
+    init(service: String = "com.edu.booktrix.keychain") {
+        self.internalKeychain = Keychain(service: service)
+    }
+    
+    func put<T: JSONEncodable>(_ value: T, forKey: String) {
+        guard let data = (try? value.toJSON() as? [String: Any])?
+            .flatMap({NSKeyedArchiver.archivedData(withRootObject: $0)})
+            else {
+                fatalError("Cannot archive json")
+        }
+        
+        try? internalKeychain.set(data, key: forKey)
+    }
+    
+    func get<T: JSONDecodable>(key: String) -> T? {
+        return (try? internalKeychain.getData(key))?
+            .flatMap({ NSKeyedUnarchiver.unarchiveObject(with: $0) as? [String: Any]})
+            .flatMap({ try? T(object: $0) })
+    }
+    
+    func delete(key: String) {
+        try? internalKeychain.remove(key)
+    }
+}
+
+extension KeychainStorage {
+    
+    func getUser() -> User? {
+        return get(key: userKey)
+    }
+    
+    func setUser(_ user: User) {
+        put(user, forKey: userKey)
+    }
+    
+    func deleteUser() {
+        delete(key: userKey)
+    }
+    
+    var userKey: String {
+        return "com.edu.booktrix.keychain.user.key"
+    }
+}

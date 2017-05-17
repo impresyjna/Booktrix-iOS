@@ -15,8 +15,20 @@
 		1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */; };
 		1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */; };
 		1A117BBF1EC912CE00B4D76F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BBD1EC912CE00B4D76F /* Alamofire.framework */; };
-		1A117BC01EC912CE00B4D76F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */; };
 		1A117BC41ECA331500B4D76F /* TextFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */; };
+		1A117BC71ECBAB4900B4D76F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BC61ECBAB4900B4D76F /* Request.swift */; };
+		1A117BC91ECBBC1000B4D76F /* JSONCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BC81ECBBC1000B4D76F /* JSONCodable.framework */; };
+		1A117BCB1ECBBC4C00B4D76F /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BCA1ECBBC4C00B4D76F /* ApiRequester.swift */; };
+		1A117BCD1ECC553600B4D76F /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A117BCC1ECC553600B4D76F /* KeychainAccess.framework */; };
+		1A117BD01ECC55AD00B4D76F /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BCF1ECC55AD00B4D76F /* KeychainStorage.swift */; };
+		1A117BD31ECC563F00B4D76F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BD21ECC563F00B4D76F /* User.swift */; };
+		1A117BD51ECC5AA900B4D76F /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BD41ECC5AA900B4D76F /* ApiClient.swift */; };
+		1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BD61ECC5B3D00B4D76F /* RequestParams.swift */; };
+		1A117BDD1ECC5DE200B4D76F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A117BDC1ECC5DE200B4D76F /* UserService.swift */; };
+		1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */; };
+		1A9DC7E41ECC69AF001F0EB4 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */; };
+		1A9DC7E61ECC6D52001F0EB4 /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7E51ECC6D52001F0EB4 /* UIViewController+HUD.swift */; };
+		1A9DC7E91ECC780D001F0EB4 /* SignUpInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7E81ECC780D001F0EB4 /* SignUpInputValidator.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -43,8 +55,20 @@
 		1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Prepare.swift"; sourceTree = "<group>"; };
 		1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		1A117BBD1EC912CE00B4D76F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldConfiguration.swift; sourceTree = "<group>"; };
+		1A117BC61ECBAB4900B4D76F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		1A117BC81ECBBC1000B4D76F /* JSONCodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONCodable.framework; path = Carthage/Build/iOS/JSONCodable.framework; sourceTree = "<group>"; };
+		1A117BCA1ECBBC4C00B4D76F /* ApiRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequester.swift; sourceTree = "<group>"; };
+		1A117BCC1ECC553600B4D76F /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		1A117BCF1ECC55AD00B4D76F /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		1A117BD21ECC563F00B4D76F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1A117BD41ECC5AA900B4D76F /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		1A117BD61ECC5B3D00B4D76F /* RequestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
+		1A117BDC1ECC5DE200B4D76F /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
+		1A9DC7E51ECC6D52001F0EB4 /* UIViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		1A9DC7E81ECC780D001F0EB4 /* SignUpInputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInputValidator.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -76,8 +100,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9DC7E41ECC69AF001F0EB4 /* PKHUD.framework in Frameworks */,
+				1A117BCD1ECC553600B4D76F /* KeychainAccess.framework in Frameworks */,
+				1A117BC91ECBBC1000B4D76F /* JSONCodable.framework in Frameworks */,
 				1A117BBF1EC912CE00B4D76F /* Alamofire.framework in Frameworks */,
-				1A117BC01EC912CE00B4D76F /* SwiftyJSON.framework in Frameworks */,
 				1E641575CFE77276DF1444B6 /* Pods_Booktrix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				1A117BB41EC8EB5900B4D76F /* SignUpViewController.swift */,
+				1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */,
 			);
 			name = SignUpView;
 			sourceTree = "<group>";
@@ -141,6 +168,7 @@
 			children = (
 				1A117BB71EC8EBD200B4D76F /* UITextField+Prepare.swift */,
 				1A117BBB1EC8F45200B4D76F /* UIViewController+Storyboard.swift */,
+				1A9DC7E51ECC6D52001F0EB4 /* UIViewController+HUD.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +179,50 @@
 				1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */,
 			);
 			path = ViewsConfiguration;
+			sourceTree = "<group>";
+		};
+		1A117BC51ECBAA1900B4D76F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BDB1ECC5DC100B4D76F /* Services */,
+				1A117BC61ECBAB4900B4D76F /* Request.swift */,
+				1A117BCA1ECBBC4C00B4D76F /* ApiRequester.swift */,
+				1A117BD41ECC5AA900B4D76F /* ApiClient.swift */,
+				1A117BD61ECC5B3D00B4D76F /* RequestParams.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1A117BCE1ECC559800B4D76F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BCF1ECC55AD00B4D76F /* KeychainStorage.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1A117BD11ECC562800B4D76F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BD21ECC563F00B4D76F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A117BDB1ECC5DC100B4D76F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A117BDC1ECC5DE200B4D76F /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A9DC7E71ECC77D2001F0EB4 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				1A9DC7E81ECC780D001F0EB4 /* SignUpInputValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		1AED63D51E83B16300F3FD53 = {
@@ -176,11 +248,15 @@
 		1AED63E01E83B16300F3FD53 /* Booktrix */ = {
 			isa = PBXGroup;
 			children = (
+				1A117BC51ECBAA1900B4D76F /* API */,
+				1A117BCE1ECC559800B4D76F /* Other */,
 				1A117BB61EC8EBA600B4D76F /* Extensions */,
 				1A117BAF1EC8D85600B4D76F /* Storyboards */,
+				1A117BD11ECC562800B4D76F /* Models */,
 				1A117BA91EC8D54800B4D76F /* Controllers */,
 				1AED64011E83B75F00F3FD53 /* Configuration */,
 				1A117BC21ECA2AE300B4D76F /* ViewsConfiguration */,
+				1A9DC7E71ECC77D2001F0EB4 /* Validators */,
 				1AED63E11E83B16300F3FD53 /* AppDelegate.swift */,
 				1AED63E81E83B16300F3FD53 /* Assets.xcassets */,
 				1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */,
@@ -228,8 +304,10 @@
 		7C1B97FD03B3C74B1D6F67C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */,
+				1A117BCC1ECC553600B4D76F /* KeychainAccess.framework */,
+				1A117BC81ECBBC1000B4D76F /* JSONCodable.framework */,
 				1A117BBD1EC912CE00B4D76F /* Alamofire.framework */,
-				1A117BBE1EC912CE00B4D76F /* SwiftyJSON.framework */,
 				A8C6E43F5367CFA1AA19D824 /* Pods_Booktrix.framework */,
 				5CED97D6219593A489A44893 /* Pods_BooktrixTests.framework */,
 			);
@@ -365,7 +443,9 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JSONCodable.framework",
 			);
 			outputPaths = (
 			);
@@ -456,12 +536,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A117BC41ECA331500B4D76F /* TextFieldConfiguration.swift in Sources */,
+				1A117BC71ECBAB4900B4D76F /* Request.swift in Sources */,
+				1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
+				1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */,
+				1A9DC7E91ECC780D001F0EB4 /* SignUpInputValidator.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
 				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
+				1A117BCB1ECBBC4C00B4D76F /* ApiRequester.swift in Sources */,
 				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
+				1A117BD01ECC55AD00B4D76F /* KeychainStorage.swift in Sources */,
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
 				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
+				1A117BDD1ECC5DE200B4D76F /* UserService.swift in Sources */,
+				1A117BD31ECC563F00B4D76F /* User.swift in Sources */,
+				1A9DC7E61ECC6D52001F0EB4 /* UIViewController+HUD.swift in Sources */,
+				1A117BD51ECC5AA900B4D76F /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +697,7 @@
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -624,6 +715,7 @@
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -721,6 +813,7 @@
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -796,6 +889,7 @@
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

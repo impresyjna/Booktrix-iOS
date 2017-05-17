@@ -9,12 +9,15 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    @IBOutlet weak var loginTextView: UITextField!
-    @IBOutlet weak var passwordTextView: UITextField!
-    @IBOutlet weak var passwordConfirmationTextView: UITextField!
-    @IBOutlet weak var nameTextView: UITextField!
-    @IBOutlet weak var surnameTextView: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
 
+    var viewModel = SignUpViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,15 +26,30 @@ class SignUpViewController: UIViewController {
     }
     
     func prepareFields() {
-        loginTextView.prepareForView()
-        passwordTextView.prepareForView()
-        passwordConfirmationTextView.prepareForView()
-        nameTextView.prepareForView()
-        surnameTextView.prepareForView()
+        loginTextField.prepareForView()
+        passwordTextField.prepareForView()
+        passwordConfirmationTextField.prepareForView()
+        nameTextField.prepareForView()
+        surnameTextField.prepareForView()
+        emailTextField.prepareForView()
     }
 
+    @IBAction func textFieldChanged(_ sender: Any) {
+        //TODO: Validation here to enable button
+        viewModel.login = loginTextField.text
+        viewModel.password = passwordTextField.text
+        viewModel.confirmation = passwordConfirmationTextField.text
+        viewModel.name = nameTextField.text
+        viewModel.surname = surnameTextField.text
+        viewModel.email = emailTextField.text
+    }
+    
     @IBAction func openSignInView(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func signUpAction(_ sender: Any) {
+        showHud()
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
