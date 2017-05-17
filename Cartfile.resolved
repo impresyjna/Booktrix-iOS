@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "4.4.0"
+github "abdullahselek/SwiftyNotifications" "0.2"
 github "kishikawakatsumi/KeychainAccess" "v3.0.2"
 github "matthewcheok/JSONCodable" "3.0.1"
 github "pkluz/PKHUD" "4.2.2"

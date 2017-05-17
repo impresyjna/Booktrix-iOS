@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Booktrix
+
+  Created by Impresyjna on 17.05.2017.
+  Copyright © 2017 Impresyjna. All rights reserved.
+*/
+"booktrix.common.error" = "Error";
+"booktrix.common.ok" = "OK";
+"booktrix.common.back" = "Back";
+"booktrix.common.edit" = "Edit"; 

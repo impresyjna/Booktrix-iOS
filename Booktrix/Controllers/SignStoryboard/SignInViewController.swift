@@ -17,6 +17,13 @@ class SignInViewController: UIViewController, UITextViewDelegate {
         
         self.hideKeyboardWhenTappedAround()
         prepareFields()
+        
+        print("".validate(.nonEmpty, .atLeast(10)))
+        print("short".validate(.nonEmpty, .atLeast(10)))
+        print("emailemailemail".validate(.nonEmpty, .atLeast(10)))
+        print("name".validate(.nameFormat))
+        print("name1".validate(.nameFormat))
+        print(" ".validate(.nameFormat))
     }
     
     func prepareFields() {

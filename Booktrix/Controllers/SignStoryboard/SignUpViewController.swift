@@ -36,12 +36,12 @@ class SignUpViewController: UIViewController {
 
     @IBAction func textFieldChanged(_ sender: Any) {
         //TODO: Validation here to enable button
-        viewModel.login = loginTextField.text
-        viewModel.password = passwordTextField.text
-        viewModel.confirmation = passwordConfirmationTextField.text
-        viewModel.name = nameTextField.text
-        viewModel.surname = surnameTextField.text
-        viewModel.email = emailTextField.text
+//        viewModel.login = loginTextField.text
+//        viewModel.password = passwordTextField.text
+//        viewModel.confirmation = passwordConfirmationTextField.text
+//        viewModel.name = nameTextField.text
+//        viewModel.surname = surnameTextField.text
+//        viewModel.email = emailTextField.text
     }
     
     @IBAction func openSignInView(_ sender: Any) {

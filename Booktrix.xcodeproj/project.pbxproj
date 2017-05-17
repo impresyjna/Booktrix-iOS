@@ -28,7 +28,10 @@
 		1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */; };
 		1A9DC7E41ECC69AF001F0EB4 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */; };
 		1A9DC7E61ECC6D52001F0EB4 /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7E51ECC6D52001F0EB4 /* UIViewController+HUD.swift */; };
-		1A9DC7E91ECC780D001F0EB4 /* SignUpInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7E81ECC780D001F0EB4 /* SignUpInputValidator.swift */; };
+		1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7E81ECC780D001F0EB4 /* StringValidation.swift */; };
+		1A9DC7F51ECCDCF2001F0EB4 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7F41ECCDCF2001F0EB4 /* LocalizedString.swift */; };
+		1A9DC7F81ECCE541001F0EB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A9DC7FA1ECCE541001F0EB4 /* Localizable.strings */; };
+		1A9DC7FD1ECCED79001F0EB4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7FC1ECCED79001F0EB4 /* Validator.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -68,7 +71,12 @@
 		1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
 		1A9DC7E51ECC6D52001F0EB4 /* UIViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
-		1A9DC7E81ECC780D001F0EB4 /* SignUpInputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInputValidator.swift; sourceTree = "<group>"; };
+		1A9DC7E81ECC780D001F0EB4 /* StringValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValidation.swift; sourceTree = "<group>"; };
+		1A9DC7EA1ECCD97C001F0EB4 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1A9DC7F41ECCDCF2001F0EB4 /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		1A9DC7F91ECCE541001F0EB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1A9DC7FB1ECCE542001F0EB4 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1A9DC7FC1ECCED79001F0EB4 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -122,18 +130,10 @@
 		1A117BA91EC8D54800B4D76F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1A117BAA1EC8D55F00B4D76F /* SignStoryboard */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		1A117BAA1EC8D55F00B4D76F /* SignStoryboard */ = {
-			isa = PBXGroup;
-			children = (
 				1A117BAC1EC8D58400B4D76F /* SignUpView */,
 				1A117BAB1EC8D57600B4D76F /* SignInView */,
 			);
-			path = SignStoryboard;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1A117BAB1EC8D57600B4D76F /* SignInView */ = {
@@ -143,6 +143,7 @@
 				1A117BB21EC8E9C500B4D76F /* SignInViewModel.swift */,
 			);
 			name = SignInView;
+			path = SignStoryboard;
 			sourceTree = "<group>";
 		};
 		1A117BAC1EC8D58400B4D76F /* SignUpView */ = {
@@ -152,6 +153,7 @@
 				1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */,
 			);
 			name = SignUpView;
+			path = SignStoryboard;
 			sourceTree = "<group>";
 		};
 		1A117BAF1EC8D85600B4D76F /* Storyboards */ = {
@@ -220,9 +222,19 @@
 		1A9DC7E71ECC77D2001F0EB4 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				1A9DC7E81ECC780D001F0EB4 /* SignUpInputValidator.swift */,
+				1A9DC7E81ECC780D001F0EB4 /* StringValidation.swift */,
+				1A9DC7FC1ECCED79001F0EB4 /* Validator.swift */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		1A9DC7EB1ECCDAC9001F0EB4 /* LocalizableStrings */ = {
+			isa = PBXGroup;
+			children = (
+				1A9DC7F41ECCDCF2001F0EB4 /* LocalizedString.swift */,
+				1A9DC7FA1ECCE541001F0EB4 /* Localizable.strings */,
+			);
+			path = LocalizableStrings;
 			sourceTree = "<group>";
 		};
 		1AED63D51E83B16300F3FD53 = {
@@ -256,6 +268,7 @@
 				1A117BA91EC8D54800B4D76F /* Controllers */,
 				1AED64011E83B75F00F3FD53 /* Configuration */,
 				1A117BC21ECA2AE300B4D76F /* ViewsConfiguration */,
+				1A9DC7EB1ECCDAC9001F0EB4 /* LocalizableStrings */,
 				1A9DC7E71ECC77D2001F0EB4 /* Validators */,
 				1AED63E11E83B16300F3FD53 /* AppDelegate.swift */,
 				1AED63E81E83B16300F3FD53 /* Assets.xcassets */,
@@ -387,6 +400,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 1AED63D51E83B16300F3FD53;
 			productRefGroup = 1AED63DF1E83B16300F3FD53 /* Products */;
@@ -404,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9DC7F81ECCE541001F0EB4 /* Localizable.strings in Resources */,
 				1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */,
 				1A117BB11EC8E7C100B4D76F /* SignUpView.storyboard in Resources */,
 				1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */,
@@ -540,12 +555,14 @@
 				1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
 				1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */,
-				1A9DC7E91ECC780D001F0EB4 /* SignUpInputValidator.swift in Sources */,
+				1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
 				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
 				1A117BCB1ECBBC4C00B4D76F /* ApiRequester.swift in Sources */,
 				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
 				1A117BD01ECC55AD00B4D76F /* KeychainStorage.swift in Sources */,
+				1A9DC7F51ECCDCF2001F0EB4 /* LocalizedString.swift in Sources */,
+				1A9DC7FD1ECCED79001F0EB4 /* Validator.swift in Sources */,
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
 				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
 				1A117BDD1ECC5DE200B4D76F /* UserService.swift in Sources */,
@@ -574,6 +591,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1A9DC7FA1ECCE541001F0EB4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A9DC7F91ECCE541001F0EB4 /* en */,
+				1A9DC7FB1ECCE542001F0EB4 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		1AED63E51E83B16300F3FD53 /* SignInView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -586,6 +612,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1AED63EB1E83B16300F3FD53 /* Base */,
+				1A9DC7EA1ECCD97C001F0EB4 /* pl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -598,6 +625,7 @@
 			baseConfigurationReference = 1AED64071E83B86800F3FD53 /* Booktrix-DebugStaging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -648,6 +676,7 @@
 			baseConfigurationReference = 1AED64041E83B7F200F3FD53 /* Booktrix-ReleaseStaging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -757,6 +786,7 @@
 			baseConfigurationReference = 1AED64051E83B83000F3FD53 /* Booktrix-DebugProduction.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -840,6 +870,7 @@
 			baseConfigurationReference = 1AED64061E83B85400F3FD53 /* Booktrix-ReleaseProduction.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
