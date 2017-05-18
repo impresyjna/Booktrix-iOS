@@ -10,51 +10,36 @@
 import UIKit
 
 struct SignUpForm {
-    var name: String?
-    var surname: String?
-    var login: String?
-    var email: String?
-    var password: String?
-    var confirmation: String?
+    var name: String
+    var surname: String
+    var login: String
+    var email: String
+    var password: String
+    var confirmation: String
 }
 
-protocol SignUpViewModelProtocol {
+final class SignUpViewModel {
+    var form: SignUpForm
     
-    weak var delegate: SignUpViewControllerDelegate? { get set }
+
+    typealias SignUpCompletion = (ApiResponse<User>) -> ()
     
-    //var submitTextColor: UIColor { get }
-   // var submitEnabled: Bool { get }
-}
-
-protocol SignUpViewControllerDelegate: class {
-    func reloadViews()
-    func goToActivityPage()
-}
-
-struct SignUpViewModel: SignUpViewModelProtocol {
-    weak var delegate: SignUpViewControllerDelegate?
-
-    internal var submitEnabled : Bool = true
-
-//    var submitEnabled: Bool {
-//        return usernameValid //&& passwordValid
-//    }
+    init() {
+        form = SignUpForm(name: "", surname: "", login: "", email: "", password: "", confirmation: "")
+    }
     
-    // MARK: - Actions
-    
-    func submitButtonPressed() {
+    func register(completion: SignUpCompletion) {
+        let service = UserService()
         
-    }
-    
-    
-    // MARK: - Delegate Response
-    
-    private func delegateSignUpAction() {
-        delegate?.goToActivityPage()
-    }
-    
-    private func delegateReloadViews() {
-        delegate?.reloadViews()
+         let status = form.name.validate(.nameFormat).combine([
+            form.surname.validate(.nameFormat),
+            form.email.validate(.emailFormat, .nonEmpty),
+            form.password.validate(.nonEmpty),
+            form.confirmation.validate(.matching(form.password), .nonEmpty),
+            form.login.validate(.nonEmpty)
+        ])
+        
+        print(status)
     }
     
 }

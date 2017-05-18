@@ -6,17 +6,43 @@
 //  Copyright © 2017 Impresyjna. All rights reserved.
 //
 
+import Foundation
+
+struct ValidationError: LocalizedError {
+    let message: String
+    
+    var localizedDescription: String {
+        return message
+    }
+}
+
 enum ValidationResult {
     case success
-    case failure(Error)
+    case failure(ValidationError)
     
-    var error: Error? {
+    var error: ValidationError? {
         switch self {
         case .success:
             return nil
         case .failure(let error):
             return error
         }
+    }
+    
+    func combine(_ result: ValidationResult) -> ValidationResult {
+        switch (self, result) {
+        case (.success, .success):
+            return .success
+        case (.failure(let error), .success), (.success, .failure(let error)):
+            return .failure(error)
+        case (.failure(let firstError), .failure(let secondError)):
+            let error = ValidationError(message: "\(firstError.message)\n\(secondError.message)")
+            return .failure(error)
+        }
+    }
+    
+    func combine(_ results: [ValidationResult]) -> ValidationResult? {
+        return results.reduce(self) { $0.combine($1) }
     }
 }
 
@@ -25,8 +51,6 @@ protocol Validator {
     
     var isValid: (Subject) -> ValidationResult { get }
 }
-
-extension String: Error { }
 
 protocol Validatable {
     associatedtype ValidatorType: Validator
@@ -44,5 +68,10 @@ extension Validatable where ValidatorType.Subject == Self {
 
 extension String: Validatable {
     typealias ValidatorType = StringValidation
+    
+    var validationError: ValidationError {
+        return ValidationError(message: self)
+    }
 }
+
 

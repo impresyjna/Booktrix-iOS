@@ -49,7 +49,10 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: Any) {
-        showHud()
+        viewModel.register { (result) in
+            
+        }
+//        showHud()
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
