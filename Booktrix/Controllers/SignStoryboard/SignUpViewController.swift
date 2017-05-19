@@ -36,12 +36,12 @@ class SignUpViewController: UIViewController {
 
     @IBAction func textFieldChanged(_ sender: Any) {
         //TODO: Validation here to enable button
-//        viewModel.login = loginTextField.text
-//        viewModel.password = passwordTextField.text
-//        viewModel.confirmation = passwordConfirmationTextField.text
-//        viewModel.name = nameTextField.text
-//        viewModel.surname = surnameTextField.text
-//        viewModel.email = emailTextField.text
+        viewModel.form.login = loginTextField.text ?? ""
+        viewModel.form.password = passwordTextField.text ?? ""
+        viewModel.form.confirmation = passwordConfirmationTextField.text ?? ""
+        viewModel.form.name = nameTextField.text ?? ""
+        viewModel.form.surname = surnameTextField.text ?? ""
+        viewModel.form.email = emailTextField.text ?? ""
     }
     
     @IBAction func openSignInView(_ sender: Any) {
@@ -50,7 +50,14 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpAction(_ sender: Any) {
         viewModel.register { (result) in
-            
+            switch result {
+            case .success(let result):
+                break
+            case .failure(let error as ValidationError):
+                self.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
+            default:
+                break
+            }
         }
 //        showHud()
     }

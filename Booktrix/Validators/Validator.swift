@@ -41,7 +41,7 @@ enum ValidationResult {
         }
     }
     
-    func combine(_ results: [ValidationResult]) -> ValidationResult? {
+    func combine(_ results: [ValidationResult]) -> ValidationResult {
         return results.reduce(self) { $0.combine($1) }
     }
 }

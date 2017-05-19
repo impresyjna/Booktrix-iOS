@@ -30,4 +30,26 @@
 "booktrix.string.validation.not_name" = "Not name";
 
 /* Not match */
-"booktrix.string.validation.not_matching" = "Not match"; 
+"booktrix.string.validation.not_matching" = "Not match";
+
+/* Invalid */
+"booktrix.named.object.validation.invalid" = "is invalid";
+
+/* Name */
+"booktrix.sign.up.form.name" = "Name";
+
+/* Surname */
+"booktrix.sign.up.form.surname" = "Surname";
+
+/* Email */
+"booktrix.sign.up.form.email" = "Email";
+
+/* Password */
+"booktrix.sign.up.form.password" = "Password";
+
+/* Password confirmation */
+"booktrix.sign.up.form.confirmation" = "Password confirmation";
+
+/* Login */
+"booktrix.sign.up.form.login" = "Login";
+
