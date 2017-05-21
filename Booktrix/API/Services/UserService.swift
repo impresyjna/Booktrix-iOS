@@ -16,4 +16,12 @@ final class UserService  {
         
         requester.request(request: request, params: params, completion: completion)
     }
+    
+    func login(with form: SignInForm, completion: @escaping (ApiResponse<User>) -> ()) {
+        let requester = ApiRequester()
+        let request = LoginRequest()
+        let params = LoginParams(form: form)
+        
+        requester.request(request: request, params: params, completion: completion)
+    }
 }

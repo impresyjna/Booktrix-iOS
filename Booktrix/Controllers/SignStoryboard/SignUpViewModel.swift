@@ -66,12 +66,11 @@ final class SignUpViewModel {
 }
 
 fileprivate extension LocalizedString {
-    static let name = NSLocalizedString("booktrix.sign.up.form.name", comment: "Name")
-    static let surname = NSLocalizedString("booktrix.sign.up.form.surname", comment: "Surname")
-    static let email = NSLocalizedString("booktrix.sign.up.form.email", comment: "Email")
-    static let password = NSLocalizedString("booktrix.sign.up.form.password", comment: "Password")
-    static let confirmation = NSLocalizedString("booktrix.sign.up.form.confirmation", comment: "Password confirmation")
-    static let login = NSLocalizedString("booktrix.sign.up.form.login", comment: "Login")
-    static let serverError = NSLocalizedString("booktrix.sign.up.form.server_error", comment: "Server error")
+    static let name = NSLocalizedString("booktrix.user.form.name", comment: "Name")
+    static let surname = NSLocalizedString("booktrix.user.form.surname", comment: "Surname")
+    static let email = NSLocalizedString("booktrix.user.form.email", comment: "Email")
+    static let password = NSLocalizedString("booktrix.user.form.password", comment: "Password")
+    static let confirmation = NSLocalizedString("booktrix.user.form.confirmation", comment: "Password confirmation")
+    static let login = NSLocalizedString("booktrix.user.form.login", comment: "Login")
     static let emailOrLoginFailure = NSLocalizedString("booktrix.sign.up.form.email_or_login_failure", comment: "Email or login already taken")
 }

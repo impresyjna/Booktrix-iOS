@@ -25,7 +25,7 @@ extension Request {
 //        #if DEBUG
 //            url = URL(string: "http://localhost:3000/api/v1")!
 //        #else
-            url = URL(string: "https://booktrix-server.herokuapp.com/api/v1")!
+            url = URL(string: "https://booktrix-server.herokuapp.com/api/")!
 //        #endif
         return url
     }
@@ -43,6 +43,16 @@ struct RegisterRequest: Request {
     
     var path: String {
         return "users"
+    }
+}
+
+struct LoginRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "sessions"
     }
 }
 

@@ -34,3 +34,16 @@ struct RegisterParams: RequestParams {
         ]
     }
 }
+
+struct LoginParams: RequestParams {
+    let form: SignInForm
+    
+    var params: [String: Any] {
+        return [
+            "session" : [
+                "login" : form.login,
+                "password" : form.password
+            ]
+        ]
+    }
+}

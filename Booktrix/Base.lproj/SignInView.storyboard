@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,7 +58,7 @@
                                                 <rect key="frame" x="0.0" y="24.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                         <color key="value" red="0.6705882352941176" green="0.71764705882352942" blue="0.71764705882352942" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -66,6 +66,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="navigateThroughInputs:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="nhl-L5-AmN"/>
+                                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="RYv-v4-ZKe"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bCN-kw-jOh"/>
                                                 </connections>
                                             </textField>
@@ -73,7 +74,7 @@
                                                 <rect key="frame" x="0.0" y="58.5" width="283" height="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                         <color key="value" red="0.6705882352941176" green="0.71764705882352942" blue="0.71764705882352942" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -81,6 +82,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="navigateThroughInputs:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UDw-N3-55y"/>
+                                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="t1d-iL-LO7"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3P1-wj-jOe"/>
                                                 </connections>
                                             </textField>
@@ -95,6 +97,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3b3-0Y-D3p"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9J8-QP-hAl">
                                                 <rect key="frame" x="0.0" y="126.5" width="283" height="29"/>

@@ -36,20 +36,29 @@
 "booktrix.named.object.validation.invalid" = "is invalid";
 
 /* Name */
-"booktrix.sign.up.form.name" = "Name";
+"booktrix.user.form.name" = "Name";
 
 /* Surname */
-"booktrix.sign.up.form.surname" = "Surname";
+"booktrix.user.form.surname" = "Surname";
 
 /* Email */
-"booktrix.sign.up.form.email" = "Email";
+"booktrix.user.form.email" = "Email";
 
 /* Password */
-"booktrix.sign.up.form.password" = "Password";
+"booktrix.user.form.password" = "Password";
 
 /* Password confirmation */
-"booktrix.sign.up.form.confirmation" = "Password confirmation";
+"booktrix.user.form.confirmation" = "Password confirmation";
 
 /* Login */
-"booktrix.sign.up.form.login" = "Login";
+"booktrix.user.form.login" = "Login";
+
+/* Server error */
+"booktrix.common.server_error" = "Server error";
+
+/* Email or login already taken */
+"booktrix.sign.up.form.email_or_login_failure" = "Email or login already taken";
+
+/* Bad auth */
+"booktrix.sign.in.form.bad_auth" = "Bad auth";
 
