@@ -34,7 +34,9 @@
 		1A9DC7FD1ECCED79001F0EB4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7FC1ECCED79001F0EB4 /* Validator.swift */; };
 		1A9DC7FF1ECE13DC001F0EB4 /* FieldValidationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7FE1ECE13DC001F0EB4 /* FieldValidationName.swift */; };
 		1A9DC8011ECE41D1001F0EB4 /* UIViewController+SwiftNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC8001ECE41D1001F0EB4 /* UIViewController+SwiftNotifications.swift */; };
-		1A9DC8031ECE5159001F0EB4 /* SwiftyNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9DC8021ECE5159001F0EB4 /* SwiftyNotifications.framework */; };
+		1AB1A09E1ECFAF9C00E40A6D /* BRYXBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB1A09D1ECFAF9C00E40A6D /* BRYXBanner.framework */; };
+		1AB1A0A01ED1050300E40A6D /* ActivitiesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A09F1ED1050300E40A6D /* ActivitiesView.storyboard */; };
+		1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0A21ED1115A00E40A6D /* ActivitiesViewController.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -83,6 +85,11 @@
 		1A9DC7FE1ECE13DC001F0EB4 /* FieldValidationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidationName.swift; sourceTree = "<group>"; };
 		1A9DC8001ECE41D1001F0EB4 /* UIViewController+SwiftNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftNotifications.swift"; sourceTree = "<group>"; };
 		1A9DC8021ECE5159001F0EB4 /* SwiftyNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyNotifications.framework; path = Carthage/Build/iOS/SwiftyNotifications.framework; sourceTree = "<group>"; };
+		1AB1A09D1ECFAF9C00E40A6D /* BRYXBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BRYXBanner.framework; path = Carthage/Build/iOS/BRYXBanner.framework; sourceTree = "<group>"; };
+		1AB1A09F1ED1050300E40A6D /* ActivitiesView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivitiesView.storyboard; sourceTree = "<group>"; };
+		1AB1A0A21ED1115A00E40A6D /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		1AD5C73F1ECFA3430086ACF8 /* Whisper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Whisper.framework; path = Carthage/Build/iOS/Whisper.framework; sourceTree = "<group>"; };
+		1AD5C7411ECFA7470086ACF8 /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -114,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A9DC8031ECE5159001F0EB4 /* SwiftyNotifications.framework in Frameworks */,
+				1AB1A09E1ECFAF9C00E40A6D /* BRYXBanner.framework in Frameworks */,
 				1A9DC7E41ECC69AF001F0EB4 /* PKHUD.framework in Frameworks */,
 				1A117BCD1ECC553600B4D76F /* KeychainAccess.framework in Frameworks */,
 				1A117BC91ECBBC1000B4D76F /* JSONCodable.framework in Frameworks */,
@@ -137,6 +144,7 @@
 		1A117BA91EC8D54800B4D76F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AB1A0A11ED110A200E40A6D /* ActivitiesView */,
 				1A117BAC1EC8D58400B4D76F /* SignUpView */,
 				1A117BAB1EC8D57600B4D76F /* SignInView */,
 			);
@@ -168,6 +176,7 @@
 			children = (
 				1AED63E51E83B16300F3FD53 /* SignInView.storyboard */,
 				1A117BB01EC8E7C100B4D76F /* SignUpView.storyboard */,
+				1AB1A09F1ED1050300E40A6D /* ActivitiesView.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -244,6 +253,15 @@
 				1A9DC7FA1ECCE541001F0EB4 /* Localizable.strings */,
 			);
 			path = LocalizableStrings;
+			sourceTree = "<group>";
+		};
+		1AB1A0A11ED110A200E40A6D /* ActivitiesView */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1A0A21ED1115A00E40A6D /* ActivitiesViewController.swift */,
+			);
+			name = ActivitiesView;
+			path = Activities;
 			sourceTree = "<group>";
 		};
 		1AED63D51E83B16300F3FD53 = {
@@ -326,6 +344,9 @@
 		7C1B97FD03B3C74B1D6F67C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AB1A09D1ECFAF9C00E40A6D /* BRYXBanner.framework */,
+				1AD5C7411ECFA7470086ACF8 /* SwiftMessages.framework */,
+				1AD5C73F1ECFA3430086ACF8 /* Whisper.framework */,
 				1A9DC8021ECE5159001F0EB4 /* SwiftyNotifications.framework */,
 				1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */,
 				1A117BCC1ECC553600B4D76F /* KeychainAccess.framework */,
@@ -428,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB1A0A01ED1050300E40A6D /* ActivitiesView.storyboard in Resources */,
 				1A9DC7F81ECCE541001F0EB4 /* Localizable.strings in Resources */,
 				1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */,
 				1A117BB11EC8E7C100B4D76F /* SignUpView.storyboard in Resources */,
@@ -471,7 +493,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JSONCodable.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyNotifications.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BRYXBanner.framework",
 			);
 			outputPaths = (
 			);
@@ -564,6 +586,7 @@
 				1A117BC41ECA331500B4D76F /* TextFieldConfiguration.swift in Sources */,
 				1A117BC71ECBAB4900B4D76F /* Request.swift in Sources */,
 				1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */,
+				1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
 				1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */,
 				1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */,
@@ -736,6 +759,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/NotificationBannerSwift",
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -754,6 +778,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/NotificationBannerSwift",
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -853,6 +878,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/NotificationBannerSwift",
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -930,6 +956,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/NotificationBannerSwift",
 				);
 				INFOPLIST_FILE = Booktrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

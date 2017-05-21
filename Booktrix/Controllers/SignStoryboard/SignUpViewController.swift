@@ -15,12 +15,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-
+    
     var viewModel = SignUpViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.hideKeyboardWhenTappedAround()
         prepareFields()
     }
@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController {
         surnameTextField.prepareForView()
         emailTextField.prepareForView()
     }
-
+    
     @IBAction func textFieldChanged(_ sender: Any) {
         //TODO: Validation here to enable button
         viewModel.form.login = loginTextField.text ?? ""
@@ -49,22 +49,26 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: Any) {
-        viewModel.register { (result) in
+        showHud()
+        viewModel.register { [weak self] (result) in
+            self?.hideHud()
             switch result {
-            case .success(let result):
-                break
+            case .success(_):
+                self?.presentViewFromStoryboard(storyboardName: "ActivitiesView", viewName: "ActivitiesViewController")
             case .failure(let error as ValidationError):
-                self.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
+                self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
+            case .failure(let error as ErrorWithCode):
+                self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
             default:
                 break
             }
         }
-//        showHud()
+        
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
         let nextTag = sender.tag + 1;
         self.jump(toNextTextField: sender, withTag: nextTag)
     }
-
+    
 }

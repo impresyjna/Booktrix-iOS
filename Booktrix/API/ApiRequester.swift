@@ -12,6 +12,29 @@ import JSONCodable
 enum ApiResponse<T> {
     case success(T)
     case failure(Error?)
+    case codeFailure(ErrorWithCode)
+}
+
+struct ErrorWithCode: LocalizedError {
+    var message: String = ""
+    var code: Int = 0
+    
+    var localizedDescription: String {
+        return message
+    }
+    
+    init() {
+        
+    }
+    
+    init(code: Int) {
+        self.code = code
+    }
+    
+    init(message: String, code: Int) {
+        self.message = message
+        self.code = code
+    }
 }
 
 struct Adapter: RequestAdapter {
@@ -42,14 +65,13 @@ final class ApiRequester {
     
     func request<T:JSONDecodable>(request: Request, params: RequestParams? = nil, completion: @escaping (ApiResponse<T>) -> ()) {
         manager.request(request.url, method: request.method, parameters: params?.params, encoding: JSONEncoding(), headers: nil)
-            .validate()
+            .validate(statusCode: 200...422)
             .responseJSON { result in
-                
                 guard let object = result.value
                     .flatMap({ $0 as? [String: Any] })
                     .flatMap({ try? T(object: $0) })
                     else {
-                        completion(.failure(result.error))
+                        completion(.codeFailure(ErrorWithCode(code: (result.response?.statusCode)!)))
                         return
                 }
                 

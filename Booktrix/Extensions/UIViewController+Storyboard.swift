@@ -14,6 +14,12 @@ extension UIViewController {
         
     }
     
+    func presentViewFromStoryboard(storyboardName: String, viewName: String) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let newView = storyBoard.instantiateViewController(withIdentifier: viewName)
+        self.present(newView, animated: true, completion: nil)
+    }
+    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false

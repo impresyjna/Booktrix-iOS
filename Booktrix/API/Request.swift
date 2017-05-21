@@ -22,11 +22,11 @@ extension Request {
     
     var baseURL: URL {
         let url: URL
-        #if DEBUG
-            url = URL(string: "http://booktrix-server.dev/api/")!
-        #else
-            url = URL(string: "https://booktrix-server.herokuapp.com/api")!
-        #endif
+//        #if DEBUG
+//            url = URL(string: "http://localhost:3000/api/v1")!
+//        #else
+            url = URL(string: "https://booktrix-server.herokuapp.com/api/v1")!
+//        #endif
         return url
     }
     

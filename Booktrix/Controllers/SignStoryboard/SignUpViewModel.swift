@@ -28,7 +28,7 @@ final class SignUpViewModel {
         form = SignUpForm(name: "", surname: "", login: "", email: "", password: "", confirmation: "")
     }
     
-    func register(completion: SignUpCompletion) {
+    func register(completion: @escaping SignUpCompletion) {
         let service = UserService()
         
         let status = FieldValidationName(name: LocalizedString.name, validationResult: form.name.validate(.nameFormat)).result.combine([
@@ -42,7 +42,21 @@ final class SignUpViewModel {
         switch status {
         case .success:
             service.register(with: form, completion: { (result) in
-               print(result)
+                switch result {
+                case .success(let user):
+                    KeychainStorage().setUser(user)
+                    completion(.success(user))
+                case .codeFailure(var error):
+                    switch error.code {
+                    case 409:
+                        error.message = LocalizedString.emailOrLoginFailure
+                    default:
+                        error.message = LocalizedString.serverError
+                    }
+                    completion(.failure(error))
+                default:
+                    completion(.failure(ErrorWithCode(message: LocalizedString.serverError, code: 500)))
+                }
             })
         case .failure(let error):
             completion(.failure(error))
@@ -58,4 +72,6 @@ fileprivate extension LocalizedString {
     static let password = NSLocalizedString("booktrix.sign.up.form.password", comment: "Password")
     static let confirmation = NSLocalizedString("booktrix.sign.up.form.confirmation", comment: "Password confirmation")
     static let login = NSLocalizedString("booktrix.sign.up.form.login", comment: "Login")
+    static let serverError = NSLocalizedString("booktrix.sign.up.form.server_error", comment: "Server error")
+    static let emailOrLoginFailure = NSLocalizedString("booktrix.sign.up.form.email_or_login_failure", comment: "Email or login already taken")
 }

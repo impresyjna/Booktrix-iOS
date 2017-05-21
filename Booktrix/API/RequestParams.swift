@@ -18,12 +18,18 @@ struct RegisterParams: RequestParams {
     var params: [String: Any] {
         return [
             "user" : [
-                "name" : form.name ?? "",
-                "surname" : form.surname ?? "",
-                "login" : form.login ?? "",
-                "email" : form.email ?? "",
-                "password" : form.password ?? "",
-                "password_confirmation" : form.confirmation ?? ""
+                "name" : form.name,
+                "surname" : form.surname,
+                "login" : form.login,
+                "email" : form.email,
+                "password" : form.password,
+                "password_confirmation" : form.confirmation
+            ],
+            "user_setting": [
+                    "show_full_name":  true,
+                    "show_gifts_boolean": true,
+                    "show_activities": true,
+                    "show_books": true
             ]
         ]
     }
