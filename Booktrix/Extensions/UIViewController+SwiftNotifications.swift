@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyNotifications
 import BRYXBanner
 
 enum NotificationBackground : UInt32 {
