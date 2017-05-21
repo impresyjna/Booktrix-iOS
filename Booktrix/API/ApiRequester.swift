@@ -12,26 +12,17 @@ import JSONCodable
 enum ApiResponse<T> {
     case success(T)
     case failure(Error?)
-    case codeFailure(ErrorWithCode)
 }
 
-struct ErrorWithCode: LocalizedError {
-    var message: String = ""
-    var code: Int = 0
+struct HTTPError: LocalizedError {
+    let message: String
+    let code: Int
     
     var localizedDescription: String {
         return message
     }
     
-    init() {
-        
-    }
-    
-    init(code: Int) {
-        self.code = code
-    }
-    
-    init(message: String, code: Int) {
+    init(code: Int = 0, message: String = ""){
         self.message = message
         self.code = code
     }
@@ -71,7 +62,7 @@ final class ApiRequester {
                     .flatMap({ $0 as? [String: Any] })
                     .flatMap({ try? T(object: $0) })
                     else {
-                        completion(.codeFailure(ErrorWithCode(code: (result.response?.statusCode)!)))
+                        completion(.failure(HTTPError(code: result.response?.statusCode ?? 500)))
                         return
                 }
                 

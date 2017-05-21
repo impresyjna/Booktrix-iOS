@@ -37,6 +37,10 @@
 		1AB1A09E1ECFAF9C00E40A6D /* BRYXBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB1A09D1ECFAF9C00E40A6D /* BRYXBanner.framework */; };
 		1AB1A0A01ED1050300E40A6D /* ActivitiesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A09F1ED1050300E40A6D /* ActivitiesView.storyboard */; };
 		1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0A21ED1115A00E40A6D /* ActivitiesViewController.swift */; };
+		1AB1A0BA1ED22E8D00E40A6D /* StoryboardWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0B91ED22E8D00E40A6D /* StoryboardWireframe.swift */; };
+		1AB1A0BC1ED22FB800E40A6D /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0BB1ED22FB800E40A6D /* Wireframe.swift */; };
+		1AB1A0BE1ED232AD00E40A6D /* Instantiatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0BD1ED232AD00E40A6D /* Instantiatior.swift */; };
+		1AB1A0C01ED23A3D00E40A6D /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0BF1ED23A3D00E40A6D /* StoryboardIdentifiable.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -87,6 +91,10 @@
 		1AB1A09D1ECFAF9C00E40A6D /* BRYXBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BRYXBanner.framework; path = Carthage/Build/iOS/BRYXBanner.framework; sourceTree = "<group>"; };
 		1AB1A09F1ED1050300E40A6D /* ActivitiesView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivitiesView.storyboard; sourceTree = "<group>"; };
 		1AB1A0A21ED1115A00E40A6D /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		1AB1A0B91ED22E8D00E40A6D /* StoryboardWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardWireframe.swift; sourceTree = "<group>"; };
+		1AB1A0BB1ED22FB800E40A6D /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		1AB1A0BD1ED232AD00E40A6D /* Instantiatior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiatior.swift; sourceTree = "<group>"; };
+		1AB1A0BF1ED23A3D00E40A6D /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -213,6 +221,10 @@
 			isa = PBXGroup;
 			children = (
 				1A117BCF1ECC55AD00B4D76F /* KeychainStorage.swift */,
+				1AB1A0B91ED22E8D00E40A6D /* StoryboardWireframe.swift */,
+				1AB1A0BB1ED22FB800E40A6D /* Wireframe.swift */,
+				1AB1A0BD1ED232AD00E40A6D /* Instantiatior.swift */,
+				1AB1A0BF1ED23A3D00E40A6D /* StoryboardIdentifiable.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -590,14 +602,18 @@
 				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
 				1A117BD01ECC55AD00B4D76F /* KeychainStorage.swift in Sources */,
 				1A9DC7F51ECCDCF2001F0EB4 /* LocalizedString.swift in Sources */,
+				1AB1A0BE1ED232AD00E40A6D /* Instantiatior.swift in Sources */,
 				1A9DC7FD1ECCED79001F0EB4 /* Validator.swift in Sources */,
 				1A9DC7FF1ECE13DC001F0EB4 /* FieldValidationName.swift in Sources */,
+				1AB1A0C01ED23A3D00E40A6D /* StoryboardIdentifiable.swift in Sources */,
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
 				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
 				1A117BDD1ECC5DE200B4D76F /* UserService.swift in Sources */,
 				1A117BD31ECC563F00B4D76F /* User.swift in Sources */,
 				1A9DC8011ECE41D1001F0EB4 /* UIViewController+SwiftNotifications.swift in Sources */,
+				1AB1A0BC1ED22FB800E40A6D /* Wireframe.swift in Sources */,
 				1A9DC7E61ECC6D52001F0EB4 /* UIViewController+HUD.swift in Sources */,
+				1AB1A0BA1ED22E8D00E40A6D /* StoryboardWireframe.swift in Sources */,
 				1A117BD51ECC5AA900B4D76F /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

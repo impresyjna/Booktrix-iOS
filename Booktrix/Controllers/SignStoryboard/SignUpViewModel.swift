@@ -46,16 +46,15 @@ final class SignUpViewModel {
                 case .success(let user):
                     KeychainStorage().setUser(user)
                     completion(.success(user))
-                case .codeFailure(var error):
+                case .failure(let error as HTTPError):
                     switch error.code {
                     case 409:
-                        error.message = LocalizedString.emailOrLoginFailure
+                        completion(.failure(HTTPError(code: error.code, message: LocalizedString.emailOrLoginFailure)))
                     default:
-                        error.message = LocalizedString.serverError
+                        completion(.failure(HTTPError(code: error.code, message: LocalizedString.serverError)))
                     }
-                    completion(.failure(error))
                 default:
-                    completion(.failure(ErrorWithCode(message: LocalizedString.serverError, code: 500)))
+                    completion(.failure(HTTPError(code: 500, message: LocalizedString.serverError)))
                 }
             })
         case .failure(let error):

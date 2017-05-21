@@ -9,19 +9,17 @@
 import UIKit
 
 extension UIViewController {
-    func pushViewFromStoryboard(storyboardName: String, viewName: String) {
-        self.navigationController?.pushViewController(UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: viewName) as UIViewController, animated: true)
+    func pushViewFromStoryboard(controller: UIViewController) {
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
     
-    func presentViewFromStoryboard(storyboardName: String, viewName: String) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
-        let newView = storyBoard.instantiateViewController(withIdentifier: viewName)
-        self.present(newView, animated: true, completion: nil)
+    func presentViewFromStoryboard(controller: UIViewController) {
+        self.present(controller, animated: true, completion: nil)
     }
     
     func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
-    var viewModel = SignUpViewModel()
+    let viewModel = SignUpViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +53,10 @@ class SignUpViewController: UIViewController {
             self?.hideHud()
             switch result {
             case .success(_):
-                self?.presentViewFromStoryboard(storyboardName: "ActivitiesView", viewName: "ActivitiesViewController")
+                self?.presentViewFromStoryboard(controller: Wireframe.ActivitiesView().activities())
             case .failure(let error as ValidationError):
-                self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
-            case .failure(let error as ErrorWithCode):
+                self?.showWarning(title: nil, subtitle: error.message, dismissDelay: 3.0)
+            case .failure(let error as HTTPError):
                 self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
             default:
                 break
@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
         let nextTag = sender.tag + 1;
-        self.jump(toNextTextField: sender, withTag: nextTag)
+        jump(toNextTextField: sender, withTag: nextTag)
     }
     
 }

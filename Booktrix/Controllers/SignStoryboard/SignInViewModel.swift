@@ -27,7 +27,7 @@ final class SignInViewModel {
         
         let status = FieldValidationName(name: LocalizedString.login, validationResult: form.login.validate(.nonEmpty)).result.combine([
             FieldValidationName(name: LocalizedString.password, validationResult: form.password.validate(.nonEmpty, .atLeast(6))).result
-            ])
+        ])
         
         switch status {
         case .success:
@@ -36,11 +36,10 @@ final class SignInViewModel {
                 case .success(let user):
                     KeychainStorage().setUser(user)
                     completion(.success(user))
-                case .codeFailure(var error):
-                    error.message = LocalizedString.badAuth
-                    completion(.failure(error))
+                case .failure(let error as HTTPError):
+                    completion(.failure(HTTPError(code: error.code, message: LocalizedString.badAuth)))
                 default:
-                    completion(.failure(ErrorWithCode(message: LocalizedString.serverError, code: 500)))
+                    completion(.failure(HTTPError(code: 500, message: LocalizedString.serverError)))
                 }
             })
         case .failure(let error):
