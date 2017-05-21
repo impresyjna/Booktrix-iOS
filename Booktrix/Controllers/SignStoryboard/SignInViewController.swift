@@ -26,9 +26,7 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     
     //MARK: Button actions
     @IBAction func openSignUp(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "SignUpView", bundle: nil)
-        let signUpViewController = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        self.present(signUpViewController, animated: true, completion: nil)
+        self.presentViewFromStoryboard(storyboardName: "SignUpView", viewName: "SignUpViewController")
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
