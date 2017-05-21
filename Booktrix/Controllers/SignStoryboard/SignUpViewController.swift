@@ -35,7 +35,6 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {
-        //TODO: Validation here to enable button
         viewModel.form.login = loginTextField.text ?? ""
         viewModel.form.password = passwordTextField.text ?? ""
         viewModel.form.confirmation = passwordConfirmationTextField.text ?? ""
