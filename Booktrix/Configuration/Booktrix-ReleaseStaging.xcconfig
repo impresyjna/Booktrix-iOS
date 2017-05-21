@@ -7,4 +7,3 @@
 //
 
 PRODUCT_BUNDLE_IDENTIFIER = com.edu.Booktrix.staging
-BUNDLE_TEST = com.edu.Booktrix.staging
