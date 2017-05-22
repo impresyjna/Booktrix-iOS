@@ -13,10 +13,14 @@ struct SignInForm {
 }
 
 final class SignInViewModel {
+    enum SignInStatus {
+        case success
+        case failure(DisplayableError)
+    }
+    
     var form: SignInForm
     
-    
-    typealias SignInCompletion = (ApiResponse<User>) -> ()
+    typealias SignInCompletion = (SignInStatus) -> ()
     
     init() {
         form = SignInForm(login: "",  password: "")
@@ -35,15 +39,17 @@ final class SignInViewModel {
                 switch result {
                 case .success(let user):
                     KeychainStorage().setUser(user)
-                    completion(.success(user))
-                case .failure(let error as HTTPError):
-                    completion(.failure(HTTPError(code: error.code, message: LocalizedString.badAuth)))
-                default:
-                    completion(.failure(HTTPError(code: 500, message: LocalizedString.serverError)))
+                    completion(.success)
+                case .failure(.unprocessable):
+                    let formError = FormError(message: LocalizedString.badAuth)
+                    completion(.failure(formError))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
             })
         case .failure(let error):
-            completion(.failure(error))
+            let formError = FormError(message: error.message)
+            completion(.failure(formError))
         }
     }
     

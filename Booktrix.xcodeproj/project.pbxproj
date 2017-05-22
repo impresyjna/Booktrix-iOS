@@ -41,6 +41,7 @@
 		1AB1A0BC1ED22FB800E40A6D /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0BB1ED22FB800E40A6D /* Wireframe.swift */; };
 		1AB1A0BE1ED232AD00E40A6D /* Instantiatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0BD1ED232AD00E40A6D /* Instantiatior.swift */; };
 		1AB1A0C01ED23A3D00E40A6D /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0BF1ED23A3D00E40A6D /* StoryboardIdentifiable.swift */; };
+		1AB1A0C21ED3844F00E40A6D /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0C11ED3844F00E40A6D /* DisplayableError.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E71E83B16300F3FD53 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E51E83B16300F3FD53 /* SignInView.storyboard */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		1AB1A0BB1ED22FB800E40A6D /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		1AB1A0BD1ED232AD00E40A6D /* Instantiatior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiatior.swift; sourceTree = "<group>"; };
 		1AB1A0BF1ED23A3D00E40A6D /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		1AB1A0C11ED3844F00E40A6D /* DisplayableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayableError.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E61E83B16300F3FD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignInView.storyboard; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				1A9DC7E81ECC780D001F0EB4 /* StringValidation.swift */,
 				1A9DC7FC1ECCED79001F0EB4 /* Validator.swift */,
 				1A9DC7FE1ECE13DC001F0EB4 /* FieldValidationName.swift */,
+				1AB1A0C11ED3844F00E40A6D /* DisplayableError.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				1A9DC7FF1ECE13DC001F0EB4 /* FieldValidationName.swift in Sources */,
 				1AB1A0C01ED23A3D00E40A6D /* StoryboardIdentifiable.swift in Sources */,
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
+				1AB1A0C21ED3844F00E40A6D /* DisplayableError.swift in Sources */,
 				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
 				1A117BDD1ECC5DE200B4D76F /* UserService.swift in Sources */,
 				1A117BD31ECC563F00B4D76F /* User.swift in Sources */,

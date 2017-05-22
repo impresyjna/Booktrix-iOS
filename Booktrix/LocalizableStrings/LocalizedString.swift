@@ -14,4 +14,5 @@ struct LocalizedString {
     static let back = NSLocalizedString("booktrix.common.back", comment: "Back")
     static let edit = NSLocalizedString("booktrix.common.edit", comment: "Edit")
     static let serverError = NSLocalizedString("booktrix.common.server_error", comment: "Server error")
+    static let unprocessable = NSLocalizedString("booktrix.common.unprocessable", comment: "Request cannot be processed")
 }

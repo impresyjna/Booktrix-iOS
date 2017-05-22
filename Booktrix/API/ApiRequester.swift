@@ -9,23 +9,42 @@
 import Alamofire
 import JSONCodable
 
-enum ApiResponse<T> {
-    case success(T)
-    case failure(Error?)
+enum HTTPError: Int, DisplayableError {
+    case badRequest = 400
+    case notAuthorized = 401
+    case forbidden = 403
+    case notFound = 404
+    case conflicted = 409
+    case unprocessable = 422
+    case unknown
+    
+    var errorMessage: String {
+        switch self {
+        case .badRequest:
+            return "Bad request!"
+        case .notAuthorized:
+            return "Not authorized!"
+        case .forbidden:
+            return "Access forbidden!"
+        case .notFound:
+            return "Not found!"
+        case .unprocessable:
+            return "Unprocessable"
+        case .conflicted:
+            return "Conflicted"
+        case .unknown:
+            return "Unknown"
+        }
+    }
+    
+    init(code: Int?) {
+        self = code.flatMap(HTTPError.init(rawValue:)) ?? .unknown
+    }
 }
 
-struct HTTPError: LocalizedError {
-    let message: String
-    let code: Int
-    
-    var localizedDescription: String {
-        return message
-    }
-    
-    init(code: Int = 0, message: String = ""){
-        self.message = message
-        self.code = code
-    }
+enum ApiResponse<T> {
+    case success(T)
+    case failure(HTTPError)
 }
 
 struct Adapter: RequestAdapter {
@@ -79,7 +98,7 @@ final class ApiRequester {
                     .flatMap({ $0 as? [[String: Any]] })
                     .flatMap({ try? [T](JSONArray: $0) })
                     else {
-                        completion(.failure(result.error))
+                        completion(.failure(HTTPError(code: result.response?.statusCode ?? 500)))
                         return
                 }
                 
@@ -92,8 +111,8 @@ final class ApiRequester {
             .validate()
             .responseJSON { result in
                 
-                if let error = result.error {
-                    completion(.failure(error))
+                if let _ = result.error {
+                    completion(.failure(HTTPError(code: result.response?.statusCode ?? 500)))
                     return
                 }
                 

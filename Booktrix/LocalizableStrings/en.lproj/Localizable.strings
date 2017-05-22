@@ -62,3 +62,6 @@
 /* Bad auth */
 "booktrix.sign.in.form.bad_auth" = "Bad auth";
 
+ /* Request cannot be processed */
+"booktrix.common.unprocessable" = "Request cannot be processed"; 
+

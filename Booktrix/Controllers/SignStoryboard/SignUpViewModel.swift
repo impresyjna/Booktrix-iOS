@@ -19,10 +19,15 @@ struct SignUpForm {
 }
 
 final class SignUpViewModel {
+    enum SignUpStatus {
+        case success
+        case failure(DisplayableError)
+    }
+    
     var form: SignUpForm
     
 
-    typealias SignUpCompletion = (ApiResponse<User>) -> ()
+    typealias SignUpCompletion = (SignUpStatus) -> ()
     
     init() {
         form = SignUpForm(name: "", surname: "", login: "", email: "", password: "", confirmation: "")
@@ -45,20 +50,20 @@ final class SignUpViewModel {
                 switch result {
                 case .success(let user):
                     KeychainStorage().setUser(user)
-                    completion(.success(user))
-                case .failure(let error as HTTPError):
-                    switch error.code {
-                    case 409:
-                        completion(.failure(HTTPError(code: error.code, message: LocalizedString.emailOrLoginFailure)))
-                    default:
-                        completion(.failure(HTTPError(code: error.code, message: LocalizedString.serverError)))
-                    }
-                default:
-                    completion(.failure(HTTPError(code: 500, message: LocalizedString.serverError)))
+                    completion(.success)
+                case .failure(.conflicted):
+                    let formError = FormError(message: LocalizedString.emailOrLoginFailure)
+                    completion(.failure(formError))
+                case .failure(.unprocessable):
+                    let formError = FormError(message: LocalizedString.unprocessable)
+                    completion(.failure(formError))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
             })
         case .failure(let error):
-            completion(.failure(error))
+            let formError = FormError(message: error.message)
+            completion(.failure(formError))
         }
     }
     

@@ -52,14 +52,12 @@ final class SignUpViewController: UIViewController {
         viewModel.register { [weak self] (result) in
             self?.hideHud()
             switch result {
-            case .success(_):
+            case .success:
                 self?.presentViewFromStoryboard(controller: Wireframe.ActivitiesView().activities())
-            case .failure(let error as ValidationError):
-                self?.showWarning(title: nil, subtitle: error.message, dismissDelay: 3.0)
-            case .failure(let error as HTTPError):
+            case .failure(let error as FormError):
                 self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
-            default:
-                break
+            case .failure(let error):
+                self?.showWarning(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
             }
         }
         
