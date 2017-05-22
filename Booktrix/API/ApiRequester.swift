@@ -16,6 +16,7 @@ enum HTTPError: Int, DisplayableError {
     case notFound = 404
     case conflicted = 409
     case unprocessable = 422
+    case serverError = 500
     case unknown
     
     var errorMessage: String {
@@ -32,6 +33,8 @@ enum HTTPError: Int, DisplayableError {
             return "Unprocessable"
         case .conflicted:
             return "Conflicted"
+        case .serverError:
+            return "Server error"
         case .unknown:
             return "Unknown"
         }
@@ -120,4 +123,3 @@ final class ApiRequester {
         }
     }
 }
-

@@ -63,5 +63,23 @@
 "booktrix.sign.in.form.bad_auth" = "Bad auth";
 
  /* Request cannot be processed */
-"booktrix.common.unprocessable" = "Request cannot be processed"; 
+"booktrix.http_error.unprocessable" = "Request cannot be processed";
+
+/* Bad request */
+"booktrix.http_error.bad_request" = "Bad request";
+
+/* Not authorized */
+"booktrix.http_error.not_authorized" = "Not authorized";
+
+/* Forbidden request */
+"booktrix.http_error.forbidden" = "Forbidden request";
+
+/* Not found */
+"booktrix.http_error.not_found" = "Not found";
+
+/* Request conflicted */
+"booktrix.http_error.conflicted" = "Request conflicted";
+
+/* Internal server error */
+"booktrix.http_error.server_error" = "Internal server error";
 

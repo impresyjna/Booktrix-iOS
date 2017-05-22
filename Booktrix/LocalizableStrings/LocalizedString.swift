@@ -13,6 +13,12 @@ struct LocalizedString {
     static let ok = NSLocalizedString("booktrix.common.ok", comment: "OK")
     static let back = NSLocalizedString("booktrix.common.back", comment: "Back")
     static let edit = NSLocalizedString("booktrix.common.edit", comment: "Edit")
-    static let serverError = NSLocalizedString("booktrix.common.server_error", comment: "Server error")
-    static let unprocessable = NSLocalizedString("booktrix.common.unprocessable", comment: "Request cannot be processed")
+    
+    static let badRequest = NSLocalizedString("booktrix.http_error.bad_request", comment: "Bad request")
+    static let notAuthorized = NSLocalizedString("booktrix.http_error.not_authorized", comment: "Not authorized")
+    static let forbidden = NSLocalizedString("booktrix.http_error.forbidden", comment: "Forbidden request")
+    static let notFound = NSLocalizedString("booktrix.http_error.not_found", comment: "Not found")
+    static let unprocessable = NSLocalizedString("booktrix.http_error.unprocessable", comment: "Request cannot be processed")
+    static let conflicted = NSLocalizedString("booktrix.http_error.conflicted", comment: "Request conflicted")
+    static let serverError = NSLocalizedString("booktrix.http_error.server_error", comment: "Internal server error")
 }
