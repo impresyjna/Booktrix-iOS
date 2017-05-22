@@ -15,11 +15,11 @@ protocol StoryboardWireframe {
 
 extension StoryboardWireframe {
     var storyboard: UIStoryboard {
-        return UIStoryboard(name: storyboardName, bundle: bundle)
+        return UIStoryboard(name: storyboardName, bundle: nil)
     }
     
     var bundle: Bundle? {
-        return nil
+        return .main
     }
     
     var instantiatior: Instantiatior {
