@@ -15,7 +15,7 @@ protocol StoryboardWireframe {
 
 extension StoryboardWireframe {
     var storyboard: UIStoryboard {
-        return UIStoryboard(name: storyboardName, bundle: nil)
+        return UIStoryboard(name: storyboardName, bundle: bundle)
     }
     
     var bundle: Bundle? {

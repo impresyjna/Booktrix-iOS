@@ -21,4 +21,5 @@ struct LocalizedString {
     static let unprocessable = NSLocalizedString("booktrix.http_error.unprocessable", comment: "Request cannot be processed")
     static let conflicted = NSLocalizedString("booktrix.http_error.conflicted", comment: "Request conflicted")
     static let serverError = NSLocalizedString("booktrix.http_error.server_error", comment: "Internal server error")
+    static let unknown = NSLocalizedString("booktrix.http_error.unknown", comment: "Unknown")
 }

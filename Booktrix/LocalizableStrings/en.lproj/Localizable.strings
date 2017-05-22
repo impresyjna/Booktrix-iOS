@@ -71,6 +71,9 @@
 /* Not authorized */
 "booktrix.http_error.not_authorized" = "Not authorized";
 
+/* Unknown */
+"booktrix.http_error.unknown" = "Unknown";
+
 /* Forbidden request */
 "booktrix.http_error.forbidden" = "Forbidden request";
 

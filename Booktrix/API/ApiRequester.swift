@@ -84,7 +84,7 @@ final class ApiRequester {
                     .flatMap({ $0 as? [String: Any] })
                     .flatMap({ try? T(object: $0) })
                     else {
-                        completion(.failure(HTTPError(code: result.response?.statusCode ?? 500)))
+                        completion(.failure(HTTPError(code: result.response?.statusCode)))
                         return
                 }
                 
@@ -101,7 +101,7 @@ final class ApiRequester {
                     .flatMap({ $0 as? [[String: Any]] })
                     .flatMap({ try? [T](JSONArray: $0) })
                     else {
-                        completion(.failure(HTTPError(code: result.response?.statusCode ?? 500)))
+                        completion(.failure(HTTPError(code: result.response?.statusCode)))
                         return
                 }
                 
@@ -115,7 +115,7 @@ final class ApiRequester {
             .responseJSON { result in
                 
                 if let _ = result.error {
-                    completion(.failure(HTTPError(code: result.response?.statusCode ?? 500)))
+                    completion(.failure(HTTPError(code: result.response?.statusCode)))
                     return
                 }
                 
