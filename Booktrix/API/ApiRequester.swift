@@ -22,21 +22,21 @@ enum HTTPError: Int, DisplayableError {
     var errorMessage: String {
         switch self {
         case .badRequest:
-            return "Bad request!"
+            return LocalizedString.badRequest
         case .notAuthorized:
-            return "Not authorized!"
+            return LocalizedString.notAuthorized
         case .forbidden:
-            return "Access forbidden!"
+            return LocalizedString.forbidden
         case .notFound:
-            return "Not found!"
+            return LocalizedString.notFound
         case .unprocessable:
-            return "Unprocessable"
+            return LocalizedString.unprocessable
         case .conflicted:
-            return "Conflicted"
+            return LocalizedString.conflicted
         case .serverError:
-            return "Server error"
+            return LocalizedString.serverError
         case .unknown:
-            return "Unknown"
+            return LocalizedString.unknown
         }
     }
     
