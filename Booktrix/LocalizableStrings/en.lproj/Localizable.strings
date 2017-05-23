@@ -1,0 +1,88 @@
+/* 
+  Localizable.strings
+  Booktrix
+
+  Created by Impresyjna on 17.05.2017.
+  Copyright © 2017 Impresyjna. All rights reserved.
+*/
+/* Error */
+"booktrix.common.error" = "Error";
+
+/* OK */
+"booktrix.common.ok" = "OK";
+
+/* Back */
+"booktrix.common.back" = "Back";
+
+/* Edit */
+"booktrix.common.edit" = "Edit";
+
+/* Empty */
+"booktrix.string.validation.empty" = "Empty";
+
+/* Too short */
+"booktrix.string.validation.too_short" = "Too short";
+
+/* Not email */
+"booktrix.string.validation.not_email" = "Not email";
+
+/* Not name */
+"booktrix.string.validation.not_name" = "Not name";
+
+/* Not match */
+"booktrix.string.validation.not_matching" = "Not match";
+
+/* Invalid */
+"booktrix.named.object.validation.invalid" = "is invalid";
+
+/* Name */
+"booktrix.user.form.name" = "Name";
+
+/* Surname */
+"booktrix.user.form.surname" = "Surname";
+
+/* Email */
+"booktrix.user.form.email" = "Email";
+
+/* Password */
+"booktrix.user.form.password" = "Password";
+
+/* Password confirmation */
+"booktrix.user.form.confirmation" = "Password confirmation";
+
+/* Login */
+"booktrix.user.form.login" = "Login";
+
+/* Server error */
+"booktrix.common.server_error" = "Server error";
+
+/* Email or login already taken */
+"booktrix.sign.up.form.email_or_login_failure" = "Email or login already taken";
+
+/* Bad auth */
+"booktrix.sign.in.form.bad_auth" = "Bad auth";
+
+ /* Request cannot be processed */
+"booktrix.http_error.unprocessable" = "Request cannot be processed";
+
+/* Bad request */
+"booktrix.http_error.bad_request" = "Bad request";
+
+/* Not authorized */
+"booktrix.http_error.not_authorized" = "Not authorized";
+
+/* Unknown */
+"booktrix.http_error.unknown" = "Unknown";
+
+/* Forbidden request */
+"booktrix.http_error.forbidden" = "Forbidden request";
+
+/* Not found */
+"booktrix.http_error.not_found" = "Not found";
+
+/* Request conflicted */
+"booktrix.http_error.conflicted" = "Request conflicted";
+
+/* Internal server error */
+"booktrix.http_error.server_error" = "Internal server error";
+
