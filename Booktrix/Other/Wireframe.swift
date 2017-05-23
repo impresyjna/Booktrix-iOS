@@ -32,4 +32,11 @@ struct Wireframe {
             return instantiatior.initial()
         }
     }
+    
+    struct RootView: StoryboardWireframe {
+        let storyboardName: String = "RootView"
+        func root() -> RootViewController {
+            return instantiatior.initial()
+        }
+    }
 }

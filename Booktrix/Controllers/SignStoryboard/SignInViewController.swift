@@ -42,7 +42,7 @@ final class SignInViewController: UIViewController, UITextViewDelegate {
             self?.hideHud()
             switch result {
             case .success:
-                self?.presentViewFromStoryboard(controller: Wireframe.ActivitiesView().activities())
+                self?.presentViewFromStoryboard(controller: Wireframe.RootView().root())
             case .failure(let error as FormError):
                 self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
             case .failure(let error):
