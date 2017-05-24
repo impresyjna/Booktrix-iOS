@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="P3H-o6-9tW">
             <objects>
-                <viewController id="qUO-OP-so8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qUO-OP-so8" customClass="SettingsViewController" customModule="Booktrix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e1b-n6-xvc"/>
                         <viewControllerLayoutGuide type="bottom" id="4Pc-Km-Mni"/>
@@ -33,7 +33,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Settings" id="7RA-KV-5rg">
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="PdV-NV-Mou"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="PdV-NV-Mou">
+                                            <connections>
+                                                <action selector="saveSettingsAction:" destination="qUO-OP-so8" id="Z0F-Vp-3Js"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -72,13 +76,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-bu-Aes">
                                                         <rect key="frame" x="0.0" y="108" width="375" height="41"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-74-gUu">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-74-gUu">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjg-eC-WJc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name and surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjg-eC-WJc">
                                                                 <rect key="frame" x="0.0" y="20.5" width="375" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -328,6 +332,9 @@
                                                                     <constraint firstItem="NIA-4T-g8d" firstAttribute="width" secondItem="NIA-4T-g8d" secondAttribute="height" multiplier="1:1" id="ht1-oi-PfB"/>
                                                                     <constraint firstAttribute="trailing" secondItem="NIA-4T-g8d" secondAttribute="trailing" constant="8" id="mzc-JA-jxe"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="vbi-Ge-KCX" appends="YES" id="5Kb-gN-MW3"/>
+                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-R8-2Zr">
                                                                 <rect key="frame" x="0.0" y="295" width="375" height="10"/>
@@ -363,6 +370,9 @@
                                                                     <constraint firstAttribute="trailing" secondItem="nGE-zQ-AZO" secondAttribute="trailing" constant="8" id="vPC-R3-RA4"/>
                                                                     <constraint firstItem="nGE-zQ-AZO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J1S-UK-T5j" secondAttribute="trailing" constant="16" id="xM1-KZ-IuM"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="ccx-1i-kwn" appends="YES" id="6js-Yk-RaS"/>
+                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -410,8 +420,28 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="confirmationTextField" destination="KdK-tY-dTa" id="aXA-gH-5Ma"/>
+                        <outlet property="emailTextField" destination="yxq-Km-fqk" id="F8J-5f-yG7"/>
+                        <outlet property="loginLabel" destination="HLp-74-gUu" id="3u1-hO-RWD"/>
+                        <outlet property="loginTextField" destination="Z1X-xc-RKU" id="Idq-mg-vs2"/>
+                        <outlet property="nameAndSurnameLabel" destination="sjg-eC-WJc" id="mdz-Zo-su6"/>
+                        <outlet property="nameTextField" destination="RXQ-Kr-hSf" id="nae-9V-iJZ"/>
+                        <outlet property="passwordTextField" destination="jo5-IS-7s6" id="cAb-17-88c"/>
+                        <outlet property="surnameTextField" destination="Zao-G1-amO" id="VFv-Br-uuz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZL3-er-Ptf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ccx-1i-kwn">
+                    <connections>
+                        <action selector="logoutAction:" destination="qUO-OP-so8" id="9wo-g4-Psx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vbi-Ge-KCX">
+                    <connections>
+                        <action selector="bookCategoriesAction:" destination="qUO-OP-so8" id="CN0-tn-NXf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="448.80000000000001" y="-26.53673163418291"/>
         </scene>
