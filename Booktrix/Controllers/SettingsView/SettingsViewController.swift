@@ -9,7 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    fileprivate let storage: KeychainStorage = .init()
+    
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var nameAndSurnameLabel: UILabel!
     @IBOutlet weak var loginTextField: UITextField!
@@ -21,7 +22,21 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
+        
+        prepareFields()
+    }
+    
+    func prepareFields() {
+        guard let user = storage.getUser() else {
+            return
+        }
+        loginLabel.text = user.login
+        nameAndSurnameLabel.text = "\(user.name) \(user.surname)"
+        loginTextField.text = user.login
+        emailTextField.text = user.email
+        nameTextField.text = user.name
+        surnameTextField.text = user.surname
     }
     
     @IBAction func saveSettingsAction(_ sender: Any) {
@@ -34,5 +49,10 @@ class SettingsViewController: UIViewController {
 
     @IBAction func bookCategoriesAction(_ sender: Any) {
         print("Book categories")
+    }
+    
+    @IBAction func navigateThroughInputs(_ sender: UITextField) {
+        let nextTag = sender.tag + 1;
+        jump(toNextTextField: sender, withTag: nextTag)
     }
 }
