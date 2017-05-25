@@ -118,7 +118,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="backgroundColor" red="0.94509803920000002" green="0.96862745100000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="Z1X-xc-RKU" firstAttribute="centerY" secondItem="26p-id-NUk" secondAttribute="centerY" id="0v1-bm-9W8"/>
                                                                     <constraint firstItem="Fc2-8N-BIE" firstAttribute="leading" secondItem="26p-id-NUk" secondAttribute="leading" constant="20" id="3X5-Pm-zUQ"/>
@@ -156,7 +156,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="backgroundColor" red="0.94509803920000002" green="0.96862745100000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="yxq-Km-fqk" firstAttribute="leading" secondItem="WUj-OG-GbS" secondAttribute="trailing" constant="8" id="0Vq-Cg-9oH"/>
                                                                     <constraint firstAttribute="bottom" secondItem="yxq-Km-fqk" secondAttribute="bottom" constant="5" id="AdF-ef-ca3"/>
@@ -193,7 +193,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="backgroundColor" red="0.94509803920000002" green="0.96862745100000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="jo5-IS-7s6" secondAttribute="trailing" constant="8" id="Ade-eF-Var"/>
                                                                     <constraint firstItem="jo5-IS-7s6" firstAttribute="top" secondItem="F4O-Z0-BCs" secondAttribute="top" constant="5" id="DhQ-o1-MZg"/>
@@ -230,7 +230,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="backgroundColor" red="0.94509803920000002" green="0.96862745100000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="KZ2-F4-rFw" firstAttribute="leading" secondItem="SLF-ow-DgC" secondAttribute="leading" constant="20" id="7Mh-WW-Syu"/>
                                                                     <constraint firstItem="KZ2-F4-rFw" firstAttribute="centerY" secondItem="SLF-ow-DgC" secondAttribute="centerY" id="UX3-G7-gPY"/>
@@ -267,7 +267,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="backgroundColor" red="0.94509803920000002" green="0.96862745100000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="RXQ-Kr-hSf" firstAttribute="leading" secondItem="mlz-mm-2jp" secondAttribute="trailing" constant="8" id="1L4-v4-jH2"/>
                                                                     <constraint firstAttribute="bottom" secondItem="RXQ-Kr-hSf" secondAttribute="bottom" constant="5" id="5a4-ia-iLh"/>
@@ -304,7 +304,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="backgroundColor" red="0.94509803921568625" green="0.96862745098039216" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="9l9-KO-dcl"/>
                                                                     <constraint firstAttribute="bottom" secondItem="Zao-G1-amO" secondAttribute="bottom" constant="5" id="AOx-st-d5d"/>
