@@ -52,6 +52,9 @@
 		1AB1A0DC1ED4DC3B00E40A6D /* SettingsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A0DB1ED4DC3B00E40A6D /* SettingsView.storyboard */; };
 		1AB1A0E11ED4EEA200E40A6D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E01ED4EEA200E40A6D /* RootViewController.swift */; };
 		1AB1A0E41ED64C4600E40A6D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E31ED64C4600E40A6D /* SettingsViewController.swift */; };
+		1AB1A0E61ED76E3E00E40A6D /* StartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E51ED76E3E00E40A6D /* StartView.storyboard */; };
+		1AB1A0E81ED76E6E00E40A6D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E71ED76E6E00E40A6D /* StartViewController.swift */; };
+		1AB1A0EA1ED7766400E40A6D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -116,6 +119,9 @@
 		1AB1A0DB1ED4DC3B00E40A6D /* SettingsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsView.storyboard; sourceTree = "<group>"; };
 		1AB1A0E01ED4EEA200E40A6D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1AB1A0E31ED64C4600E40A6D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1AB1A0E51ED76E3E00E40A6D /* StartView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartView.storyboard; sourceTree = "<group>"; };
+		1AB1A0E71ED76E6E00E40A6D /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 				1AB1A0A11ED110A200E40A6D /* ActivitiesView */,
 				1A117BAC1EC8D58400B4D76F /* SignUpView */,
 				1A117BAB1EC8D57600B4D76F /* SignInView */,
+				1AB1A0E71ED76E6E00E40A6D /* StartViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 				1AB1A0CA1ED4D3C000E40A6D /* SignInView.storyboard */,
 				1A117BB01EC8E7C100B4D76F /* SignUpView.storyboard */,
 				1AB1A0C31ED4C27D00E40A6D /* RootView.storyboard */,
+				1AB1A0E51ED76E3E00E40A6D /* StartView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -371,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB1A0E31ED64C4600E40A6D /* SettingsViewController.swift */,
+				1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -569,6 +578,7 @@
 				1AB1A0CD1ED4D73100E40A6D /* SearchView.storyboard in Resources */,
 				1AB1A0D81ED4DC2800E40A6D /* GiftsView.storyboard in Resources */,
 				1AB1A0C41ED4C27D00E40A6D /* RootView.storyboard in Resources */,
+				1AB1A0E61ED76E3E00E40A6D /* StartView.storyboard in Resources */,
 				1AB1A0CB1ED4D3C000E40A6D /* SignInView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +713,7 @@
 				1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */,
 				1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
+				1AB1A0E81ED76E6E00E40A6D /* StartViewController.swift in Sources */,
 				1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */,
 				1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
@@ -715,6 +726,7 @@
 				1AB1A0BE1ED232AD00E40A6D /* Instantiatior.swift in Sources */,
 				1A9DC7FD1ECCED79001F0EB4 /* Validator.swift in Sources */,
 				1A9DC7FF1ECE13DC001F0EB4 /* FieldValidationName.swift in Sources */,
+				1AB1A0EA1ED7766400E40A6D /* SettingsViewModel.swift in Sources */,
 				1AB1A0C01ED23A3D00E40A6D /* StoryboardIdentifiable.swift in Sources */,
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
 				1AB1A0C21ED3844F00E40A6D /* DisplayableError.swift in Sources */,

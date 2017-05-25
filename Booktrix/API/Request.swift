@@ -56,3 +56,13 @@ struct LoginRequest: Request {
     }
 }
 
+struct LogoutRequest: Request {
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "sessions"
+    }
+}
+

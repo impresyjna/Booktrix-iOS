@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-    fileprivate let storage: KeychainStorage = .init()
+final class SettingsViewController: UIViewController {
     
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var nameAndSurnameLabel: UILabel!
@@ -20,6 +19,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     
+    let viewModel = SettingsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -28,7 +29,7 @@ class SettingsViewController: UIViewController {
     }
     
     func prepareFields() {
-        guard let user = storage.getUser() else {
+        guard let user = KeychainStorage().getUser() else {
             return
         }
         loginLabel.text = user.login
@@ -42,11 +43,16 @@ class SettingsViewController: UIViewController {
     @IBAction func saveSettingsAction(_ sender: Any) {
         print("Save")
     }
-
+    
     @IBAction func logoutAction(_ sender: Any) {
-        print("Logout")
+        showHud()
+        viewModel.logout(completion: { _ in })
+        
+        KeychainStorage().deleteUser()
+        
+        setNewRoot(controller: Wireframe.SignInView().signIn())
     }
-
+    
     @IBAction func bookCategoriesAction(_ sender: Any) {
         print("Book categories")
     }
