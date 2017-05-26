@@ -55,6 +55,8 @@
 		1AB1A0E61ED76E3E00E40A6D /* StartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E51ED76E3E00E40A6D /* StartView.storyboard */; };
 		1AB1A0E81ED76E6E00E40A6D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E71ED76E6E00E40A6D /* StartViewController.swift */; };
 		1AB1A0EA1ED7766400E40A6D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */; };
+		1AB1A0EE1ED78EF400E40A6D /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0ED1ED78EF400E40A6D /* CategoriesTableViewController.swift */; };
+		1AB1A0F01ED8A76500E40A6D /* CategoriesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A0EF1ED8A76500E40A6D /* CategoriesView.storyboard */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -122,6 +124,8 @@
 		1AB1A0E51ED76E3E00E40A6D /* StartView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartView.storyboard; sourceTree = "<group>"; };
 		1AB1A0E71ED76E6E00E40A6D /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		1AB1A0ED1ED78EF400E40A6D /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		1AB1A0EF1ED8A76500E40A6D /* CategoriesView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoriesView.storyboard; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -363,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB1A0DB1ED4DC3B00E40A6D /* SettingsView.storyboard */,
+				1AB1A0EF1ED8A76500E40A6D /* CategoriesView.storyboard */,
 			);
 			name = SettingsTab;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 			children = (
 				1AB1A0E31ED64C4600E40A6D /* SettingsViewController.swift */,
 				1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */,
+				1AB1A0ED1ED78EF400E40A6D /* CategoriesTableViewController.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 				1AB1A0D41ED4DC1900E40A6D /* BookshelfView.storyboard in Resources */,
 				1AB1A0DA1ED4DC2F00E40A6D /* FriendsView.storyboard in Resources */,
 				1AB1A0CD1ED4D73100E40A6D /* SearchView.storyboard in Resources */,
+				1AB1A0F01ED8A76500E40A6D /* CategoriesView.storyboard in Resources */,
 				1AB1A0D81ED4DC2800E40A6D /* GiftsView.storyboard in Resources */,
 				1AB1A0C41ED4C27D00E40A6D /* RootView.storyboard in Resources */,
 				1AB1A0E61ED76E3E00E40A6D /* StartView.storyboard in Resources */,
@@ -711,6 +718,7 @@
 				1A117BC41ECA331500B4D76F /* TextFieldConfiguration.swift in Sources */,
 				1A117BC71ECBAB4900B4D76F /* Request.swift in Sources */,
 				1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */,
+				1AB1A0EE1ED78EF400E40A6D /* CategoriesTableViewController.swift in Sources */,
 				1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
 				1AB1A0E81ED76E6E00E40A6D /* StartViewController.swift in Sources */,

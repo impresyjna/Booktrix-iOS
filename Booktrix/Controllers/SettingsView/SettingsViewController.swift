@@ -40,25 +40,48 @@ final class SettingsViewController: UIViewController {
         surnameTextField.text = user.surname
     }
     
+    @IBAction func textFieldChanged(_ sender: Any) {
+        viewModel.form.login = loginTextField.text ?? ""
+        viewModel.form.password = passwordTextField.text ?? ""
+        viewModel.form.confirmation = confirmationTextField.text ?? ""
+        viewModel.form.name = nameTextField.text ?? ""
+        viewModel.form.surname = surnameTextField.text ?? ""
+        viewModel.form.email = emailTextField.text ?? ""
+    }
+    
     @IBAction func saveSettingsAction(_ sender: Any) {
-        print("Save")
+        self.showHud()
+        viewModel.updateUser { [weak self] (result) in
+            self?.hideHud()
+            switch result {
+            case .success:
+                self?.showSuccess(title: LocalizedString.updateSuccess, subtitle: nil, dismissDelay: 3.0)
+            case .failure(let error as FormError):
+                self?.showError(title: LocalizedString.updateFailure, subtitle: error.message, dismissDelay: 3.0)
+            case .failure(let error):
+                self?.showWarning(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
+            }
+        }
     }
     
     @IBAction func logoutAction(_ sender: Any) {
         showHud()
         viewModel.logout(completion: { _ in })
-        
         KeychainStorage().deleteUser()
-        
         setNewRoot(controller: Wireframe.SignInView().signIn())
     }
     
     @IBAction func bookCategoriesAction(_ sender: Any) {
-        print("Book categories")
+        pushViewFromStoryboard(controller: Wireframe.CategoriesView().categories())
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {
         let nextTag = sender.tag + 1;
         jump(toNextTextField: sender, withTag: nextTag)
     }
+}
+
+fileprivate extension LocalizedString {
+    static let updateSuccess = NSLocalizedString("booktrix.update.save.success", comment: "Success update")
+    static let updateFailure = NSLocalizedString("booktrix.update.save.failure", comment: "Update failure")
 }

@@ -53,14 +53,13 @@ final class SignUpViewController: UIViewController {
             self?.hideHud()
             switch result {
             case .success:
-                self?.presentViewFromStoryboard(controller: Wireframe.RootView().root())
+                self?.setNewRoot(controller: Wireframe.RootView().root())
             case .failure(let error as FormError):
                 self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
             case .failure(let error):
                 self?.showWarning(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
             }
         }
-        
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {

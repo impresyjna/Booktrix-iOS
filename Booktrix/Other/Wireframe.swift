@@ -39,4 +39,24 @@ struct Wireframe {
             return instantiatior.initial()
         }
     }
+    
+    struct SettingsView: StoryboardWireframe {
+        let storyboardName: String = "SettingsView"
+        
+        func settings() -> SettingsViewController {
+            return instantiatior.initial()
+        }
+        
+        func categories() -> CategoriesTableViewController {
+            return instantiatior.initial()
+        }
+    }
+    
+    struct CategoriesView: StoryboardWireframe {
+        let storyboardName: String = "CategoriesView"
+        
+        func categories() -> CategoriesTableViewController {
+            return instantiatior.initial()
+        }
+    }
 }

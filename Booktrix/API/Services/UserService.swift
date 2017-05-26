@@ -31,4 +31,12 @@ final class UserService  {
         
         requester.request(request: request, completion: completion)
     }
+    
+    func update(with form: UserUpdateForm, completion: @escaping (ApiResponse<User>) -> ()) {
+        let requester = ApiRequester()
+        let request = UserUpdateRequest(userId: form.id)
+        let params = UserUpdateParams(form: form)
+        
+        requester.request(request: request, params: params, completion: completion)
+    }
 }

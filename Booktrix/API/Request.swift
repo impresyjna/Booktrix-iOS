@@ -22,11 +22,11 @@ extension Request {
     
     var baseURL: URL {
         let url: URL
-//        #if DEBUG
-//            url = URL(string: "http://localhost:3000/api/v1")!
-//        #else
+        #if DEBUG
+            url = URL(string: "http://localhost:3000/api/")!
+        #else
             url = URL(string: "https://booktrix-server.herokuapp.com/api/")!
-//        #endif
+        #endif
         return url
     }
     
@@ -66,3 +66,14 @@ struct LogoutRequest: Request {
     }
 }
 
+struct UserUpdateRequest: Request {
+    let userId: Int
+    
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "users/\(userId)"
+    }
+}

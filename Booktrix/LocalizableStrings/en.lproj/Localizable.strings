@@ -86,3 +86,11 @@
 /* Internal server error */
 "booktrix.http_error.server_error" = "Internal server error";
 
+/* Cannot update. Possible that login or email already taken */
+"booktrix.update.user.cannot_update" = "Cannot update. Possible that login or email already taken";
+
+/* Success update */
+"booktrix.update.save.success" = "Success update";
+
+/* Update failure */
+"booktrix.update.save.failure" = "Update failure";

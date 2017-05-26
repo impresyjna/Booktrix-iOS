@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qUO-OP-so8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k8d-uQ-BWd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,10 +7,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="P3H-o6-9tW">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qUO-OP-so8" customClass="SettingsViewController" customModule="Booktrix" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,33 +23,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9W-JH-BQd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.92941176470588238" green="0.69803921568627447" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Zbt-KY-OlI"/>
-                                </constraints>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Settings" id="7RA-KV-5rg">
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="PdV-NV-Mou">
-                                            <connections>
-                                                <action selector="saveSettingsAction:" destination="qUO-OP-so8" id="Z0F-Vp-3Js"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0H-Y0-0yG">
-                                <rect key="frame" x="0.0" y="60" width="375" height="558"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bX-t1-wQI">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rAx-Hv-fnp">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                                <rect key="frame" x="0.0" y="16" width="375" height="502"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzF-v4-rce">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -112,9 +94,10 @@
                                                                         <rect key="frame" x="127" y="5" width="240" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                                         <connections>
                                                                             <action selector="navigateThroughInputs:" destination="qUO-OP-so8" eventType="primaryActionTriggered" id="hAJ-3i-Tfo"/>
+                                                                            <action selector="textFieldChanged:" destination="qUO-OP-so8" eventType="editingChanged" id="K8O-Di-lxU"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -150,9 +133,10 @@
                                                                         <rect key="frame" x="127" y="5" width="240" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                                         <connections>
                                                                             <action selector="navigateThroughInputs:" destination="qUO-OP-so8" eventType="primaryActionTriggered" id="W9F-Il-knV"/>
+                                                                            <action selector="textFieldChanged:" destination="qUO-OP-so8" eventType="editingChanged" id="NIf-4q-wyi"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -187,9 +171,10 @@
                                                                         <rect key="frame" x="127" y="5" width="240" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                                                                         <connections>
                                                                             <action selector="navigateThroughInputs:" destination="qUO-OP-so8" eventType="primaryActionTriggered" id="bJl-Wn-GfD"/>
+                                                                            <action selector="textFieldChanged:" destination="qUO-OP-so8" eventType="editingChanged" id="E0X-WS-N5L"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -224,9 +209,10 @@
                                                                         <rect key="frame" x="127" y="5" width="240" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                                                                         <connections>
                                                                             <action selector="navigateThroughInputs:" destination="qUO-OP-so8" eventType="primaryActionTriggered" id="D9H-2G-G8x"/>
+                                                                            <action selector="textFieldChanged:" destination="qUO-OP-so8" eventType="editingChanged" id="lux-ob-fWM"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -261,9 +247,10 @@
                                                                         <rect key="frame" x="127" y="5" width="240" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                                         <connections>
                                                                             <action selector="navigateThroughInputs:" destination="qUO-OP-so8" eventType="primaryActionTriggered" id="dDF-rQ-mKR"/>
+                                                                            <action selector="textFieldChanged:" destination="qUO-OP-so8" eventType="editingChanged" id="Hol-Zk-5fj"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -298,9 +285,10 @@
                                                                         <rect key="frame" x="127" y="5" width="240" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                                                         <connections>
                                                                             <action selector="navigateThroughInputs:" destination="qUO-OP-so8" eventType="primaryActionTriggered" id="gEp-o4-2vd"/>
+                                                                            <action selector="textFieldChanged:" destination="qUO-OP-so8" eventType="editingChanged" id="3nh-tN-pEl"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -324,8 +312,8 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MD-lM-YpX">
                                                                 <rect key="frame" x="0.0" y="255" width="375" height="40"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Book categories settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRQ-ER-G8c">
-                                                                        <rect key="frame" x="17" y="8" width="375" height="21"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book categories settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRQ-ER-G8c">
+                                                                        <rect key="frame" x="20" y="10" width="204" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -407,7 +395,7 @@
                                         <accessibility key="accessibilityConfiguration" identifier="Content View" label="Content View"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="rAx-Hv-fnp" secondAttribute="trailing" id="GLo-HM-6p6"/>
-                                            <constraint firstItem="rAx-Hv-fnp" firstAttribute="top" secondItem="5bX-t1-wQI" secondAttribute="top" id="dks-CR-mAd"/>
+                                            <constraint firstItem="rAx-Hv-fnp" firstAttribute="top" secondItem="5bX-t1-wQI" secondAttribute="top" constant="16" id="dks-CR-mAd"/>
                                             <constraint firstItem="rAx-Hv-fnp" firstAttribute="leading" secondItem="5bX-t1-wQI" secondAttribute="leading" id="tzr-LG-nYq"/>
                                             <constraint firstAttribute="bottom" secondItem="rAx-Hv-fnp" secondAttribute="bottom" constant="10" id="wGH-ua-Fhe"/>
                                         </constraints>
@@ -416,7 +404,7 @@
                                 <constraints>
                                     <constraint firstItem="5bX-t1-wQI" firstAttribute="leading" secondItem="J0H-Y0-0yG" secondAttribute="leading" id="3Qp-lS-t85"/>
                                     <constraint firstAttribute="trailing" secondItem="5bX-t1-wQI" secondAttribute="trailing" id="Haa-tq-oZR"/>
-                                    <constraint firstItem="5bX-t1-wQI" firstAttribute="top" secondItem="J0H-Y0-0yG" secondAttribute="top" id="jd7-Pk-yxl"/>
+                                    <constraint firstItem="5bX-t1-wQI" firstAttribute="top" secondItem="J0H-Y0-0yG" secondAttribute="top" id="gbf-x0-tuH"/>
                                     <constraint firstAttribute="bottom" secondItem="5bX-t1-wQI" secondAttribute="bottom" id="jy2-cb-QXN"/>
                                 </constraints>
                             </scrollView>
@@ -424,17 +412,20 @@
                         <color key="backgroundColor" red="0.99215686274509807" green="0.8901960784313725" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.82745098039999998" green="0.3294117647" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="r9W-JH-BQd" firstAttribute="leading" secondItem="ziU-1o-cjp" secondAttribute="leading" id="B92-51-dMt"/>
-                            <constraint firstAttribute="trailing" secondItem="r9W-JH-BQd" secondAttribute="trailing" id="LRy-GY-I5Q"/>
-                            <constraint firstItem="J0H-Y0-0yG" firstAttribute="top" secondItem="r9W-JH-BQd" secondAttribute="bottom" id="d0D-k9-FlY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="J0H-Y0-0yG" secondAttribute="bottom" id="dCv-Pv-xfY"/>
                             <constraint firstItem="5bX-t1-wQI" firstAttribute="width" secondItem="ziU-1o-cjp" secondAttribute="width" id="gFP-l2-8ei"/>
-                            <constraint firstItem="4Pc-Km-Mni" firstAttribute="top" secondItem="J0H-Y0-0yG" secondAttribute="bottom" id="hYO-L8-LHA"/>
                             <constraint firstItem="J0H-Y0-0yG" firstAttribute="leading" secondItem="ziU-1o-cjp" secondAttribute="leading" id="mz3-jB-J11"/>
                             <constraint firstAttribute="trailing" secondItem="J0H-Y0-0yG" secondAttribute="trailing" id="nWv-bM-3ev"/>
-                            <constraint firstItem="r9W-JH-BQd" firstAttribute="top" secondItem="e1b-n6-xvc" secondAttribute="bottom" id="xx0-za-gxF"/>
+                            <constraint firstItem="J0H-Y0-0yG" firstAttribute="top" secondItem="ziU-1o-cjp" secondAttribute="topMargin" id="ov9-aQ-oR6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="setting_ic" selectedImage="setting_ic" id="TAc-pF-SNm"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Enm-12-O2b">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="PdV-NV-Mou">
+                            <connections>
+                                <action selector="saveSettingsAction:" destination="qUO-OP-so8" id="Z0F-Vp-3Js"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -460,6 +451,25 @@
                         <action selector="bookCategoriesAction:" destination="qUO-OP-so8" id="CN0-tn-NXf"/>
                     </connections>
                 </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1388" y="-26.53673163418291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G3K-Nu-c3P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k8d-uQ-BWd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="setting_ic" selectedImage="setting_ic" id="TAc-pF-SNm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oNF-Qd-jiG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qUO-OP-so8" kind="relationship" relationship="rootViewController" id="k7z-Of-5I7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYb-11-89I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="448.80000000000001" y="-26.53673163418291"/>
         </scene>
