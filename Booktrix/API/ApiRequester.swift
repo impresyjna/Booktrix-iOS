@@ -96,7 +96,7 @@ final class ApiRequester {
         manager.request(request.url, method: request.method, parameters: params?.params, encoding: JSONEncoding(), headers: nil)
             .validate()
             .responseJSON { result in
-                
+                print(result)
                 guard let objects = result.value
                     .flatMap({ $0 as? [[String: Any]] })
                     .flatMap({ try? [T](JSONArray: $0) })

@@ -77,3 +77,9 @@ struct UserUpdateRequest: Request {
         return "users/\(userId)"
     }
 }
+
+struct CategoriesIndexRequest: Request {
+    var path: String {
+        return "categories"
+    }
+}
