@@ -14,16 +14,17 @@ struct Category {
     let name: String
     let color: String?
     let fontColor: String?
+    let booksCount: Int
 }
 
 extension Category: JSONCodable {
     init(object: JSONObject) throws {
-        print(object)
         let decoder = JSONDecoder(object: object)
         id = try decoder.decode("id")
         name = try decoder.decode("name")
         color = try decoder.decode("color")
         fontColor = try decoder.decode("font_color")
+        booksCount = try decoder.decode("user_books_count")
     }
     
     func toJSON() throws -> Any {
@@ -32,6 +33,7 @@ extension Category: JSONCodable {
             try encoder.encode(name, key: "name")
             try encoder.encode(color, key: "color")
             try encoder.encode(fontColor, key: "font_color")
+            try encoder.encode(booksCount, key: "user_books_count")
         }
     }
 }

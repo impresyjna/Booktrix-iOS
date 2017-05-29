@@ -97,3 +97,9 @@
 
 /* Update failure */
 "booktrix.update.save.failure" = "Update failure";
+
+/* Categories */
+"booktrix.categories.title" = "Categories";
+
+/* Books in category */
+"booktrix.category.cell.booksCount" = "Books in category";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoriesTableViewController: UITableViewController {
+final class CategoriesTableViewController: UITableViewController {
     let viewModel = CategoriesViewModel()
     
     override func viewDidLoad() {
@@ -36,14 +36,13 @@ class CategoriesTableViewController: UITableViewController {
             }
         })
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Count \(viewModel.categoriesList.count)")
         return viewModel.categoriesList.count
     }
     
@@ -55,7 +54,7 @@ class CategoriesTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return .leastNonzeroMagnitude
     }
@@ -68,12 +67,21 @@ class CategoriesTableViewController: UITableViewController {
         let edit = UITableViewRowAction(style: .normal, title: LocalizedString.edit) { action, index in
             print("more button tapped")
         }
-        edit.backgroundColor = .lightGray
+        edit.backgroundColor = UIColor(red:0.30, green:0.53, blue:0.66, alpha:1.0)
         
         let delete = UITableViewRowAction(style: .normal, title: LocalizedString.delete) { action, index in
-            print("share button tapped")
+            self.showHud()
+            self.viewModel.deleteCategory(category: self.viewModel.categoriesList[editActionsForRowAt.row], completion: { [weak self] result in
+                switch result {
+                case .success:
+                    self?.tableView.reloadData()
+                    self?.hideHud()
+                case .failure(let error):
+                    self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
+                }
+            })
         }
-        delete.backgroundColor = .blue
+        delete.backgroundColor = UIColor(red:0.69, green:0.25, blue:0.24, alpha:1.0)
         
         return [edit, delete]
     }

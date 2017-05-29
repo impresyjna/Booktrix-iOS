@@ -83,3 +83,15 @@ struct CategoriesIndexRequest: Request {
         return "categories"
     }
 }
+
+struct CategoryDestoryRequest: Request {
+    let categoryId: Int
+    
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "categories/\(categoryId)"
+    }
+}

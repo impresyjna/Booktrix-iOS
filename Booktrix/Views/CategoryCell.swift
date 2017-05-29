@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryCell: UITableViewCell, Reusable, NibLoadable {
+final class CategoryCell: UITableViewCell, Reusable, NibLoadable {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var booksCountLabel: UILabel!
@@ -26,6 +26,11 @@ class CategoryCell: UITableViewCell, Reusable, NibLoadable {
     
     func setup(category: Category) {
         titleLabel.text = category.name
+        booksCountLabel.text = "\(LocalizedString.booksCount): \(category.booksCount)"
     }
 
+}
+
+fileprivate extension LocalizedString {
+    static let booksCount = NSLocalizedString("booktrix.category.cell.booksCount", comment: "Books in category")
 }

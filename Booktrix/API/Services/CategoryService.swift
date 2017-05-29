@@ -16,4 +16,11 @@ final class CategoryService {
         requester.request(request: request, completion: completion)
     }
     
+    func delete(categoryId: Int, completion: @escaping (ApiResponse<Void>) -> ()) {
+        let requester = ApiRequester()
+        let request = CategoryDestoryRequest(categoryId: categoryId)
+        
+        requester.request(request: request, completion: completion)
+    }
+    
 }
