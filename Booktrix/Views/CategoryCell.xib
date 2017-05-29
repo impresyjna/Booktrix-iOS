@@ -15,20 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pbt-3s-ZaX" id="dwr-Ft-oei">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dwv-o1-qf5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-jN-VkU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-jN-VkU">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="10.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="How many books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj6-7N-J92">
-                                <rect key="frame" x="0.0" y="26.5" width="375" height="17"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="How many books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj6-7N-J92">
+                                <rect key="frame" x="0.0" y="10.5" width="359" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,10 +37,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="dwv-o1-qf5" secondAttribute="bottom" id="Dez-we-BAk"/>
-                    <constraint firstAttribute="trailing" secondItem="dwv-o1-qf5" secondAttribute="trailing" id="JRV-X1-Yh4"/>
-                    <constraint firstItem="dwv-o1-qf5" firstAttribute="top" secondItem="dwr-Ft-oei" secondAttribute="top" id="Uk0-vg-3nI"/>
-                    <constraint firstItem="dwv-o1-qf5" firstAttribute="leading" secondItem="dwr-Ft-oei" secondAttribute="leading" id="XiJ-rf-NeZ"/>
+                    <constraint firstAttribute="bottom" secondItem="dwv-o1-qf5" secondAttribute="bottom" constant="8" id="Dez-we-BAk"/>
+                    <constraint firstAttribute="trailing" secondItem="dwv-o1-qf5" secondAttribute="trailing" constant="8" id="JRV-X1-Yh4"/>
+                    <constraint firstItem="dwv-o1-qf5" firstAttribute="top" secondItem="dwr-Ft-oei" secondAttribute="top" constant="8" id="Uk0-vg-3nI"/>
+                    <constraint firstItem="dwv-o1-qf5" firstAttribute="leading" secondItem="dwr-Ft-oei" secondAttribute="leading" constant="8" id="XiJ-rf-NeZ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

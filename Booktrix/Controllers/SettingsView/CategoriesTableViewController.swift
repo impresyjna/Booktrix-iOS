@@ -51,6 +51,7 @@ class CategoriesTableViewController: UITableViewController {
         let category = viewModel.categoriesList[indexPath.row]
         
         let cell: CategoryCell = tableView.dequeue()
+        cell.setup(category: category)
         
         return cell
     }
@@ -61,6 +62,24 @@ class CategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return .leastNonzeroMagnitude
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let edit = UITableViewRowAction(style: .normal, title: LocalizedString.edit) { action, index in
+            print("more button tapped")
+        }
+        edit.backgroundColor = .lightGray
+        
+        let delete = UITableViewRowAction(style: .normal, title: LocalizedString.delete) { action, index in
+            print("share button tapped")
+        }
+        delete.backgroundColor = .blue
+        
+        return [edit, delete]
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }
 

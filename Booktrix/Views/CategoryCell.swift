@@ -23,5 +23,9 @@ class CategoryCell: UITableViewCell, Reusable, NibLoadable {
 
         // Configure the view for the selected state
     }
+    
+    func setup(category: Category) {
+        titleLabel.text = category.name
+    }
 
 }

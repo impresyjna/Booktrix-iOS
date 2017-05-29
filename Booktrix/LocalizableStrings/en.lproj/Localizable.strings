@@ -17,6 +17,9 @@
 /* Edit */
 "booktrix.common.edit" = "Edit";
 
+/* Delete */
+"booktrix.common.delete" = "Delete";
+
 /* Empty */
 "booktrix.string.validation.empty" = "Empty";
 
