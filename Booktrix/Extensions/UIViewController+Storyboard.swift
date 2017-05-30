@@ -17,6 +17,10 @@ extension UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
+    func dismissView() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false

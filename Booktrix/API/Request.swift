@@ -95,3 +95,26 @@ struct CategoryDestoryRequest: Request {
         return "categories/\(categoryId)"
     }
 }
+
+struct CategoryCreateRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "categories"
+    }
+}
+
+struct CategoryUpdateRequest: Request {
+    let categoryId: Int
+    
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "categories/\(categoryId)"
+    }
+}
+

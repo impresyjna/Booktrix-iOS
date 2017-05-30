@@ -8,12 +8,40 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
-
+final class CategoryViewController: UIViewController {
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    var viewModel: CategoryViewModel = CategoryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizedString.save, style: .plain, target: self, action: #selector(save))
+        
+        prepareFields()
+    }
+    
+    func prepareFields() {
+        nameTextField.text = viewModel.form.name
+    }
+    
+    @IBAction func textFieldChanged(_ sender: Any) {
+       viewModel.form.name = nameTextField.text ?? ""
+    }
+    
+    func save() {
+        self.showHud()
+        viewModel.save { [weak self] (result) in
+            self?.hideHud()
+            switch result {
+            case .success:
+                self?.dismissView()
+            case .failure(let error as FormError):
+                self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
+            case .failure(let error):
+                self?.showWarning(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
+            }
+        }
     }
 
 }

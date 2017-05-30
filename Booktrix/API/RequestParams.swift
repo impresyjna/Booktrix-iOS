@@ -71,14 +71,15 @@ struct UserUpdateParams: RequestParams {
     }
 }
 
-struct CategoryCreateParams: RequestParams {
+struct CategoryParams: RequestParams {
     let form: CategoryForm
     
     var params: [String: Any] {
         return [
             "category" : [
                 "name" : form.name,
-                "password" : form.password
+                "color" : form.color,
+                "font_color" : form.fontColor
             ]
         ]
     }

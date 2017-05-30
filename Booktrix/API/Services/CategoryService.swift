@@ -23,4 +23,20 @@ final class CategoryService {
         requester.request(request: request, completion: completion)
     }
     
+    func create(with form: CategoryForm, completion: @escaping (ApiResponse<Category>) -> ()) {
+        let requester = ApiRequester()
+        let request = CategoryCreateRequest()
+        let params = CategoryParams(form: form)
+        
+        requester.request(request: request, params: params, completion: completion)
+    }
+    
+    func update(with form: CategoryForm, categoryId: Int, completion: @escaping (ApiResponse<Category>) -> ()) {
+        let requester = ApiRequester()
+        let request = CategoryUpdateRequest(categoryId: categoryId)
+        let params = CategoryParams(form: form)
+        
+        requester.request(request: request, params: params, completion: completion)
+    }
+    
 }

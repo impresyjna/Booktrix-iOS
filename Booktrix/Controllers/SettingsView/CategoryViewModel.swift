@@ -27,17 +27,20 @@ final class CategoryViewModel {
     
     var form: CategoryForm
     var saveAction: CategoryAction
+    var categoryId: Int
     
     typealias CategoryCompletion = (AddUpdateStatus) -> ()
     
-    init(_ saveAction: CategoryAction = .add) {
+    init(_ saveAction: CategoryAction = .add, categoryId: Int = 0) {
         form = CategoryForm(name: "", color: nil, fontColor: nil)
         self.saveAction = saveAction
+        self.categoryId = categoryId
     }
     
     init(category: Category, saveAction: CategoryAction = .edit) {
         form = CategoryForm(name: category.name, color: category.color, fontColor: category.fontColor)
         self.saveAction = saveAction
+        self.categoryId = category.id
     }
     
     func save(completion: @escaping CategoryCompletion) {
@@ -61,23 +64,41 @@ final class CategoryViewModel {
         }
     }
     
-    func add(completion: CategoryCompletion) {
+    private func add(completion: @escaping CategoryCompletion) {
         let service = CategoryService()
         
+        service.create(with: form, completion: { (result) in
+                switch result {
+                case .success(_):
+                    completion(.success)
+                case .failure(.unprocessable):
+                    let formError = FormError(message: LocalizedString.failure)
+                    completion(.failure(formError))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+        })
     }
     
-    func edit(completion: CategoryCompletion) {
+    private func edit(completion: @escaping CategoryCompletion) {
         let service = CategoryService()
+        
+        service.update(with: form, categoryId: categoryId, completion: { (result) in
+            switch result {
+            case .success(_):
+                completion(.success)
+            case .failure(.unprocessable):
+                let formError = FormError(message: LocalizedString.failure)
+                completion(.failure(formError))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
     }
     
 }
 
 fileprivate extension LocalizedString {
-    static let name = NSLocalizedString("booktrix.user.form.name", comment: "Name")
-    static let surname = NSLocalizedString("booktrix.user.form.surname", comment: "Surname")
-    static let email = NSLocalizedString("booktrix.user.form.email", comment: "Email")
-    static let password = NSLocalizedString("booktrix.user.form.password", comment: "Password")
-    static let confirmation = NSLocalizedString("booktrix.user.form.confirmation", comment: "Password confirmation")
-    static let login = NSLocalizedString("booktrix.user.form.login", comment: "Login")
-    static let emailOrLoginFailure = NSLocalizedString("booktrix.sign.up.form.email_or_login_failure", comment: "Email or login already taken")
+    static let name = NSLocalizedString("booktrix.category.form.name", comment: "Name")
+    static let failure = NSLocalizedString("booktrix.category.failure", comment: "Error")
 }

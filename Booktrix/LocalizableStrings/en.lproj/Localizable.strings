@@ -103,3 +103,13 @@
 
 /* Books in category */
 "booktrix.category.cell.booksCount" = "Books in category";
+
+/* Name */
+"booktrix.category.form.name" = "Name";
+
+/* Error */
+"booktrix.category.failure" = "Error";
+
+/* Save */
+"booktrix.common.save" = "Save";
+
