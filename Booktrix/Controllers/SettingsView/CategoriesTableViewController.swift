@@ -14,6 +14,7 @@ final class CategoriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = LocalizedString.title
+        navigationItem.rightBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategory))
         
         tableView.registerNib(for: CategoryCell.self)
         tableView.estimatedRowHeight = 85.0
@@ -88,6 +89,10 @@ final class CategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func addCategory() {
+        pushViewFromStoryboard(controller: Wireframe.CategoryView().category())
     }
 }
 

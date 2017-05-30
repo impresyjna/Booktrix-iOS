@@ -70,3 +70,16 @@ struct UserUpdateParams: RequestParams {
         ]
     }
 }
+
+struct CategoryCreateParams: RequestParams {
+    let form: CategoryForm
+    
+    var params: [String: Any] {
+        return [
+            "category" : [
+                "name" : form.name,
+                "password" : form.password
+            ]
+        ]
+    }
+}

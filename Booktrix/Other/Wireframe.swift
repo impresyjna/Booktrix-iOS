@@ -59,4 +59,12 @@ struct Wireframe {
             return instantiatior.initial()
         }
     }
+    
+    struct CategoryView: StoryboardWireframe {
+        let storyboardName: String = "CategoryView"
+        
+        func category() -> CategoryViewController {
+            return instantiatior.initial()
+        }
+    }
 }

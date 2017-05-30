@@ -65,6 +65,9 @@
 		1AB1A1001ED8F1E200E40A6D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A0FF1ED8F1E200E40A6D /* Category.swift */; };
 		1AB1A1021EDB10D500E40A6D /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1011EDB10D500E40A6D /* CategoryService.swift */; };
 		1AB1A1041EDB131900E40A6D /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1031EDB131900E40A6D /* CategoriesViewModel.swift */; };
+		1AB1A1061EDCDD9900E40A6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1051EDCDD9800E40A6D /* CategoryViewController.swift */; };
+		1AB1A1081EDCDECE00E40A6D /* CategoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */; };
+		1AB1A10A1EDDD5A300E40A6D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -142,6 +145,9 @@
 		1AB1A0FF1ED8F1E200E40A6D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1AB1A1011EDB10D500E40A6D /* CategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		1AB1A1031EDB131900E40A6D /* CategoriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		1AB1A1051EDCDD9800E40A6D /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryView.storyboard; sourceTree = "<group>"; };
+		1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -389,6 +395,7 @@
 			children = (
 				1AB1A0DB1ED4DC3B00E40A6D /* SettingsView.storyboard */,
 				1AB1A0EF1ED8A76500E40A6D /* CategoriesView.storyboard */,
+				1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */,
 			);
 			name = SettingsTab;
 			sourceTree = "<group>";
@@ -408,6 +415,8 @@
 				1AB1A0E91ED7766400E40A6D /* SettingsViewModel.swift */,
 				1AB1A0ED1ED78EF400E40A6D /* CategoriesTableViewController.swift */,
 				1AB1A1031EDB131900E40A6D /* CategoriesViewModel.swift */,
+				1AB1A1051EDCDD9800E40A6D /* CategoryViewController.swift */,
+				1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -621,6 +630,7 @@
 				1A117BB11EC8E7C100B4D76F /* SignUpView.storyboard in Resources */,
 				1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */,
 				1AB1A0D41ED4DC1900E40A6D /* BookshelfView.storyboard in Resources */,
+				1AB1A1081EDCDECE00E40A6D /* CategoryView.storyboard in Resources */,
 				1AB1A0DA1ED4DC2F00E40A6D /* FriendsView.storyboard in Resources */,
 				1AB1A0CD1ED4D73100E40A6D /* SearchView.storyboard in Resources */,
 				1AB1A0F01ED8A76500E40A6D /* CategoriesView.storyboard in Resources */,
@@ -764,6 +774,7 @@
 				1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
 				1AB1A0E81ED76E6E00E40A6D /* StartViewController.swift in Sources */,
+				1AB1A10A1EDDD5A300E40A6D /* CategoryViewModel.swift in Sources */,
 				1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */,
 				1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
@@ -776,6 +787,7 @@
 				1AB1A0BE1ED232AD00E40A6D /* Instantiatior.swift in Sources */,
 				1A9DC7FD1ECCED79001F0EB4 /* Validator.swift in Sources */,
 				1A9DC7FF1ECE13DC001F0EB4 /* FieldValidationName.swift in Sources */,
+				1AB1A1061EDCDD9900E40A6D /* CategoryViewController.swift in Sources */,
 				1AB1A0EA1ED7766400E40A6D /* SettingsViewModel.swift in Sources */,
 				1AB1A0C01ED23A3D00E40A6D /* StoryboardIdentifiable.swift in Sources */,
 				1AB1A1041EDB131900E40A6D /* CategoriesViewModel.swift in Sources */,
