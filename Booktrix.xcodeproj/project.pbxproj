@@ -68,6 +68,7 @@
 		1AB1A1061EDCDD9900E40A6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1051EDCDD9800E40A6D /* CategoryViewController.swift */; };
 		1AB1A1081EDCDECE00E40A6D /* CategoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */; };
 		1AB1A10A1EDDD5A300E40A6D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */; };
+		1AB1A10C1EDEF23900E40A6D /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A10B1EDEF23900E40A6D /* AppColors.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -148,6 +149,7 @@
 		1AB1A1051EDCDD9800E40A6D /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryView.storyboard; sourceTree = "<group>"; };
 		1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		1AB1A10B1EDEF23900E40A6D /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				1A117BC31ECA331500B4D76F /* TextFieldConfiguration.swift */,
+				1AB1A10B1EDEF23900E40A6D /* AppColors.swift */,
 			);
 			path = ViewsConfiguration;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				1AB1A0FA1ED8EB3900E40A6D /* TableView+Dequeing.swift in Sources */,
 				1AB1A1001ED8F1E200E40A6D /* Category.swift in Sources */,
 				1A117BD51ECC5AA900B4D76F /* ApiClient.swift in Sources */,
+				1AB1A10C1EDEF23900E40A6D /* AppColors.swift in Sources */,
 				1AB1A0F81ED8E79300E40A6D /* CategoryCell.swift in Sources */,
 				1AB1A0FC1ED8ED2C00E40A6D /* Reusable.swift in Sources */,
 			);

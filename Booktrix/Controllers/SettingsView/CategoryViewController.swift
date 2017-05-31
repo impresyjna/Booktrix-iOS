@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import IGColorPicker
 
 final class CategoryViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var colorPickerView: UIView!
+    @IBOutlet weak var colorPick: ColorPickerView!
     
     var viewModel: CategoryViewModel = CategoryViewModel()
     
@@ -19,6 +22,8 @@ final class CategoryViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizedString.save, style: .plain, target: self, action: #selector(save))
         
         prepareFields()
+        
+        colorPick.delegate = self
     }
     
     func prepareFields() {
@@ -44,4 +49,22 @@ final class CategoryViewController: UIViewController {
         }
     }
 
+    @IBAction func showColorPicker(_ sender: Any) {
+        colorPickerView.isHidden = false
+    }
+}
+
+// MARK: - ColorPickerViewDelegate
+extension CategoryViewController: ColorPickerViewDelegate {
+    
+    func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
+        print("Color selected")
+        // A color has been selected
+    }
+    
+    // This is an optional method
+    func colorPickerView(_ colorPickerView: ColorPickerView, didDeselectItemAt indexPath: IndexPath) {
+        // A color has been deselected
+    }
+    
 }

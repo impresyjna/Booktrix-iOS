@@ -1,15 +1,21 @@
 PODS:
+  - IGColorPicker (0.2.1):
+    - M13Checkbox (~> 2.2.0)
+  - M13Checkbox (2.2.6)
   - Nimble (7.0.0)
   - Quick (1.1.0)
 
 DEPENDENCIES:
+  - IGColorPicker
   - Nimble
   - Quick
 
 SPEC CHECKSUMS:
+  IGColorPicker: a6ed1bf42cccf9e260e24d33faec5263310b4cef
+  M13Checkbox: 9989b7e275f18493bd33b960dc68374c47d0027b
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
-PODFILE CHECKSUM: 6042ef6e6d6dd5489a700b7223369c4f50fddba8
+PODFILE CHECKSUM: 7da9e1bde9583663cbd9f22a7526e88f9919c746
 
 COCOAPODS: 1.2.0
