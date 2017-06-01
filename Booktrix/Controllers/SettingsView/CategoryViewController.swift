@@ -38,6 +38,9 @@ final class CategoryViewController: UIViewController {
     
     func prepareFields() {
         nameTextField.text = viewModel.form.name
+        if let color = viewModel.form.color {
+            categoryButton.backgroundColor = UIColor(UInt32(color)!)
+        }
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {
