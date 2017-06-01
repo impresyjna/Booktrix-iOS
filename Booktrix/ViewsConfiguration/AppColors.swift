@@ -35,8 +35,6 @@ enum CategoryBackground : UInt32 {
     case turtleGreen = 0x8a9b68ff
     case pastelGray = 0xd5ddbcff
     case artichoke = 0x869d7aff
-    
-    
     case paleSilver = 0xc9b1bdff
     case mediumSpringBud = 0xbcd979ff
     case olivine = 0x9dad6fff

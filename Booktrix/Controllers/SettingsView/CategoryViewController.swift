@@ -66,16 +66,9 @@ final class CategoryViewController: UIViewController {
 
 // MARK: - ColorPickerViewDelegate
 extension CategoryViewController: ColorPickerViewDelegate {
-    
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
         self.colorPickerView.isHidden = true
         viewModel.form.color = CategoryBackground.allValues[indexPath.row].rawValue.description
         categoryButton.backgroundColor = UIColor(UInt32(viewModel.form.color!)!)
     }
-    
-    // This is an optional method
-    func colorPickerView(_ colorPickerView: ColorPickerView, didDeselectItemAt indexPath: IndexPath) {
-        // A color has been deselected
-    }
-    
 }
