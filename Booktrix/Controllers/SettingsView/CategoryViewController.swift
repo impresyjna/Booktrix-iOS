@@ -13,8 +13,10 @@ final class CategoryViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var colorPickerView: UIView!
     @IBOutlet weak var colorPick: ColorPickerView!
+    @IBOutlet weak var categoryButton: UIButton!
     
     var viewModel: CategoryViewModel = CategoryViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,14 @@ final class CategoryViewController: UIViewController {
         prepareFields()
         
         colorPick.delegate = self
+        
+        var colors: [UIColor] = []
+        
+        for color in CategoryBackground.allValues {
+            colors.append(UIColor(color))
+        }
+        
+        colorPick.colors = colors
     }
     
     func prepareFields() {
@@ -58,8 +68,9 @@ final class CategoryViewController: UIViewController {
 extension CategoryViewController: ColorPickerViewDelegate {
     
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
-        print("Color selected")
-        // A color has been selected
+        self.colorPickerView.isHidden = true
+        viewModel.form.color = CategoryBackground.allValues[indexPath.row].rawValue.description
+        categoryButton.backgroundColor = UIColor(UInt32(viewModel.form.color!)!)
     }
     
     // This is an optional method

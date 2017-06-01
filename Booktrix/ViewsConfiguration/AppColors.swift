@@ -35,6 +35,25 @@ enum CategoryBackground : UInt32 {
     case turtleGreen = 0x8a9b68ff
     case pastelGray = 0xd5ddbcff
     case artichoke = 0x869d7aff
+    
+    
+    case paleSilver = 0xc9b1bdff
+    case mediumSpringBud = 0xbcd979ff
+    case olivine = 0x9dad6fff
+    case khaki = 0xc3b59fff
+    case apricot = 0xffcab1ff
+    case wheat = 0xecdcb0ff
+    case stilDeGrainYellow = 0xf4c95dff
+    case lightKhaki = 0xe7e393ff
+    case aquamarine = 0x8affc1ff
+    case magicMint = 0xaeffd8ff
+    case desertSand = 0xedcbb1ff
+    case soap = 0xc9c9eeff
+    case tigersEye = 0xd8973cff
+    case mellowYellow = 0xfcd581ff
+    case sinopia = 0xcc3f0cff
+    
+    static let allValues = [white, flax, paleCarmine, tangoPink, cyanAzure, queenBlue, laurelGreen, lightGray, lightCyan, grullo, azureishWhite, pastelViolet, kobi, deer, burlywood, viridian, rosyBrown, turtleGreen, pastelGray, artichoke, paleSilver, mediumSpringBud, olivine, khaki, apricot, wheat, stilDeGrainYellow, lightKhaki, aquamarine, magicMint, desertSand, soap, tigersEye, mellowYellow, sinopia]
 }
 
 extension UIColor {

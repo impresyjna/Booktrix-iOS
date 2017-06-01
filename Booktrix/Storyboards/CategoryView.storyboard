@@ -72,7 +72,14 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-lh-xz2">
                                                 <rect key="frame" x="73" y="5" width="294" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Choose color">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="showColorPicker:" destination="Agg-dk-ze4" eventType="touchUpInside" id="DHz-0l-2hO"/>
                                                 </connections>
@@ -129,6 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryButton" destination="GBa-lh-xz2" id="LRz-NH-adp"/>
                         <outlet property="colorPick" destination="CCG-zt-pVk" id="l9P-AZ-9ui"/>
                         <outlet property="colorPickerView" destination="N1Z-6L-uLv" id="5cA-2V-ytj"/>
                         <outlet property="nameTextField" destination="4mo-1X-uYy" id="Xba-iN-BdA"/>

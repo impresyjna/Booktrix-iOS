@@ -27,6 +27,13 @@ final class CategoryCell: UITableViewCell, Reusable, NibLoadable {
     func setup(category: Category) {
         titleLabel.text = category.name
         booksCountLabel.text = "\(LocalizedString.booksCount): \(category.booksCount)"
+        setBackground(categoryBackground: category.color)
+    }
+    
+    func setBackground(categoryBackground: String?) {
+        if let color = categoryBackground {
+            self.backgroundColor = UIColor(UInt32(color)!)
+        }
     }
 
 }
