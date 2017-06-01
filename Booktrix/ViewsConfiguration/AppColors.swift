@@ -14,8 +14,36 @@ enum NotificationBackground : UInt32 {
     case success = 0x388E3Cff
 }
 
+enum CategoryBackground : UInt32 {
+    case white = 0xFFFFFFff
+    case flax = 0xe1dd8fff
+    case paleCarmine = 0xb0413eff
+    case tangoPink = 0xe0777dff
+    case cyanAzure = 0x4c86a8ff
+    case queenBlue = 0x477890ff
+    case laurelGreen = 0xb9baa3ff
+    case lightGray = 0xd6d5c9ff
+    case lightCyan = 0xd9f7faff
+    case grullo = 0xaba194ff
+    case azureishWhite = 0xc7e8f3ff
+    case pastelViolet = 0xbf9acaff
+    case kobi = 0xeda2c0ff
+    case deer = 0xb88b4aff
+    case burlywood = 0xddca7dff
+    case viridian = 0x3f826dff
+    case rosyBrown = 0xbd8b9cff
+    case turtleGreen = 0x8a9b68ff
+    case pastelGray = 0xd5ddbcff
+    case artichoke = 0x869d7aff
+}
+
 extension UIColor {
     convenience init(_ name: NotificationBackground) {
+        let rgbaValue = name.rawValue
+        self.init(rgbaValue)
+    }
+    
+    convenience init(_ name: CategoryBackground) {
         let rgbaValue = name.rawValue
         self.init(rgbaValue)
     }
