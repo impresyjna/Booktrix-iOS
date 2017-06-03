@@ -66,7 +66,7 @@ final class SettingsViewController: UIViewController {
     
     @IBAction func logoutAction(_ sender: Any) {
         showHud()
-        viewModel.logout(completion: { _ in })
+        viewModel.logout { _ in }
         KeychainStorage().deleteUser()
         setNewRoot(controller: Wireframe.SignInView().signIn())
     }

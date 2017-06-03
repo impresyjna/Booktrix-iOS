@@ -15,23 +15,19 @@ final class CategoryViewController: UIViewController {
     @IBOutlet weak var colorPick: ColorPickerView!
     @IBOutlet weak var categoryButton: UIButton!
     
-    let viewModel = CategoryViewModel()
+    var viewModel = CategoryViewModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizedString.save, style: .plain, target: self, action: #selector(save))
         
         prepareFields()
         
         colorPick.delegate = self
         
-        var colors: [UIColor] = []
-        
-        for color in CategoryBackground.allValues {
-            colors.append(UIColor(color))
-        }
+        let colors = CategoryBackground.allValues.map { UIColor($0) }
         
         colorPick.colors = colors
     }
@@ -39,12 +35,12 @@ final class CategoryViewController: UIViewController {
     func prepareFields() {
         nameTextField.text = viewModel.form.name
         if let color = viewModel.form.color {
-            categoryButton.backgroundColor = UIColor(UInt32(color)!)
+            categoryButton.backgroundColor = UIColor(UInt32(color) ?? 0)
         }
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {
-       viewModel.form.name = nameTextField.text ?? ""
+        viewModel.form.name = nameTextField.text ?? ""
     }
     
     func save() {
@@ -61,7 +57,7 @@ final class CategoryViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func showColorPicker(_ sender: Any) {
         colorPickerView.isHidden = false
     }
@@ -72,6 +68,8 @@ extension CategoryViewController: ColorPickerViewDelegate {
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
         self.colorPickerView.isHidden = true
         viewModel.form.color = CategoryBackground.allValues[indexPath.row].rawValue.description
-        categoryButton.backgroundColor = UIColor(UInt32(viewModel.form.color!)!)
+        if let color = viewModel.form.color {
+            categoryButton.backgroundColor = UIColor(UInt32(color) ?? 0)
+        }
     }
 }

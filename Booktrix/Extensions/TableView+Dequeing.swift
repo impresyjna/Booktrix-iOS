@@ -18,6 +18,6 @@ extension UITableView {
     }
     
     func dequeue<Cell: UITableViewCell>() -> Cell where Cell: Reusable {
-        return self.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier) as! Cell
+        return dequeueReusableCell(withIdentifier: Cell.reuseIdentifier) as! Cell
     }
 }
