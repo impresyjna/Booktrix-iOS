@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CategoriesViewModel: NSObject {
+final class CategoriesViewModel {
     enum CategoriesIndexStatus {
         case success
         case failure(DisplayableError)
@@ -32,7 +32,7 @@ final class CategoriesViewModel: NSObject {
         })
     }
     
-    func deleteCategory(category: Category, completion: @escaping CategoriesIndexCompletion) {
+    func deleteCategory(_ category: Category, completion: @escaping CategoriesIndexCompletion) {
         let service = CategoryService()
         
         service.delete(categoryId: category.id, completion: { (result) in

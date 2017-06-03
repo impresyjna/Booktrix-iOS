@@ -15,7 +15,7 @@ final class CategoryViewController: UIViewController {
     @IBOutlet weak var colorPick: ColorPickerView!
     @IBOutlet weak var categoryButton: UIButton!
     
-    var viewModel: CategoryViewModel = CategoryViewModel()
+    let viewModel = CategoryViewModel()
     
     
     override func viewDidLoad() {
