@@ -67,7 +67,7 @@ final class SettingsViewModel {
         
         switch status {
         case .success:
-            service.update(with: form, completion: { (result) in
+            service.update(with: form) { (result) in
                 switch result {
                 case .success(let user):
                     KeychainStorage().setUser(user)
@@ -78,7 +78,7 @@ final class SettingsViewModel {
                 case .failure(let error):
                     completion(.failure(error))
                 }
-            })
+            }
         case .failure(let error):
             let formError = FormError(message: error.message)
             completion(.failure(formError))

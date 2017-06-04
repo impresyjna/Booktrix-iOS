@@ -21,7 +21,7 @@ final class CategoriesViewModel {
     func categoriesIndex(completion: @escaping CategoriesIndexCompletion) {
         let service = CategoryService()
         
-        service.categoriesIndex(completion: { (result) in
+        service.categoriesIndex { (result) in
             switch result {
             case .success(let categories):
                 self.categoriesList = categories
@@ -29,13 +29,13 @@ final class CategoriesViewModel {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
     
     func deleteCategory(_ category: Category, completion: @escaping CategoriesIndexCompletion) {
         let service = CategoryService()
         
-        service.delete(categoryId: category.id, completion: { (result) in
+        service.delete(categoryId: category.id) { (result) in
             switch result {
             case .success:
                 self.categoriesList = self.categoriesList.filter(){ $0.id != category.id }
@@ -43,6 +43,6 @@ final class CategoriesViewModel {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
 }

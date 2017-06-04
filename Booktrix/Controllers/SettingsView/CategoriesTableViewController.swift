@@ -31,7 +31,7 @@ final class CategoriesTableViewController: UITableViewController {
     
     func fetchCategories() {
         showHud()
-        viewModel.categoriesIndex(completion: { [weak self] result in
+        viewModel.categoriesIndex { [weak self] result in
             switch result {
             case .success:
                 self?.tableView.reloadData()
@@ -39,7 +39,7 @@ final class CategoriesTableViewController: UITableViewController {
             case .failure(let error):
                 self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
             }
-        })
+        }
     }
     
     // MARK: - Table view data source

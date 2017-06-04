@@ -69,7 +69,7 @@ final class CategoryViewModel {
     private func add(completion: @escaping CategoryCompletion) {
         let service = CategoryService()
         
-        service.create(with: form, completion: { (result) in
+        service.create(with: form) { (result) in
             switch result {
             case .success(_):
                 completion(.success)
@@ -79,13 +79,13 @@ final class CategoryViewModel {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
     
     private func edit(completion: @escaping CategoryCompletion) {
         let service = CategoryService()
         
-        service.update(with: form, categoryId: categoryId, completion: { (result) in
+        service.update(with: form, categoryId: categoryId) { (result) in
             switch result {
             case .success(_):
                 completion(.success)
@@ -95,7 +95,7 @@ final class CategoryViewModel {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
     
 }
