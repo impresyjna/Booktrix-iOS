@@ -16,7 +16,7 @@ final class CategoriesViewModel {
     
     typealias CategoriesIndexCompletion = (CategoriesIndexStatus) -> ()
     
-    var categoriesList: [Category] = []
+    fileprivate(set) var categoriesList: [Category] = []
     
     func categoriesIndex(completion: @escaping CategoriesIndexCompletion) {
         let service = CategoryService()

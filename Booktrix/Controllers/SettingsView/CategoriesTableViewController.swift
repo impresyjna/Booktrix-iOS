@@ -86,14 +86,19 @@ final class CategoriesTableViewController: UITableViewController {
         return true
     }
     
+    
+    func categoryAction(_ categoryAction: CategoryAction) {
+        let vc = Wireframe.CategoryView().category()
+        vc.viewModel = CategoryViewModel(categoryAction)
+        pushViewFromStoryboard(controller: vc)
+    }
+    
     func addCategory() {
-        pushViewFromStoryboard(controller: Wireframe.CategoryView().category())
+        categoryAction(.add)
     }
     
     func editCategory(_ category: Category) {
-        let vc = Wireframe.CategoryView().category()
-        vc.viewModel = CategoryViewModel(category: category)
-        pushViewFromStoryboard(controller: vc)
+        categoryAction(.edit(category))
     }
     
     func deleteCategory(_ category: Category) {

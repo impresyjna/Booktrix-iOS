@@ -16,7 +16,7 @@ struct CategoryForm {
 
 enum CategoryAction {
     case add
-    case edit
+    case edit(Category)
 }
 
 final class CategoryViewModel {
@@ -31,16 +31,18 @@ final class CategoryViewModel {
     
     typealias CategoryCompletion = (AddUpdateStatus) -> ()
     
-    init(_ saveAction: CategoryAction = .add, categoryId: Int = 0) {
-        form = CategoryForm(name: "", color: nil, fontColor: nil)
-        self.saveAction = saveAction
-        self.categoryId = categoryId
-    }
-    
-    init(category: Category, saveAction: CategoryAction = .edit) {
-        form = CategoryForm(name: category.name, color: category.color, fontColor: category.fontColor)
-        self.saveAction = saveAction
-        self.categoryId = category.id
+    init(_ saveAction: CategoryAction) {
+        switch saveAction {
+        case .add:
+            form = CategoryForm(name: "", color: nil, fontColor: nil)
+            self.saveAction = saveAction
+            self.categoryId = 0
+        case .edit(let category):
+            form = CategoryForm(name: category.name, color: category.color, fontColor: category.fontColor)
+            self.saveAction = saveAction
+            self.categoryId = category.id
+        }
+        
     }
     
     func save(completion: @escaping CategoryCompletion) {
@@ -68,15 +70,15 @@ final class CategoryViewModel {
         let service = CategoryService()
         
         service.create(with: form, completion: { (result) in
-                switch result {
-                case .success(_):
-                    completion(.success)
-                case .failure(.unprocessable):
-                    let formError = FormError(message: LocalizedString.failure)
-                    completion(.failure(formError))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
+            switch result {
+            case .success(_):
+                completion(.success)
+            case .failure(.unprocessable):
+                let formError = FormError(message: LocalizedString.failure)
+                completion(.failure(formError))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         })
     }
     
