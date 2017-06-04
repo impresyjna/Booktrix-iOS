@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CategoriesViewModel: NSObject {
+final class CategoriesViewModel {
     enum CategoriesIndexStatus {
         case success
         case failure(DisplayableError)
@@ -16,12 +16,12 @@ final class CategoriesViewModel: NSObject {
     
     typealias CategoriesIndexCompletion = (CategoriesIndexStatus) -> ()
     
-    var categoriesList: [Category] = []
+    fileprivate(set) var categoriesList: [Category] = []
     
     func categoriesIndex(completion: @escaping CategoriesIndexCompletion) {
         let service = CategoryService()
         
-        service.categoriesIndex(completion: { (result) in
+        service.categoriesIndex { (result) in
             switch result {
             case .success(let categories):
                 self.categoriesList = categories
@@ -29,13 +29,13 @@ final class CategoriesViewModel: NSObject {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
     
-    func deleteCategory(category: Category, completion: @escaping CategoriesIndexCompletion) {
+    func deleteCategory(_ category: Category, completion: @escaping CategoriesIndexCompletion) {
         let service = CategoryService()
         
-        service.delete(categoryId: category.id, completion: { (result) in
+        service.delete(categoryId: category.id) { (result) in
             switch result {
             case .success:
                 self.categoriesList = self.categoriesList.filter(){ $0.id != category.id }
@@ -43,6 +43,6 @@ final class CategoriesViewModel: NSObject {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
 }

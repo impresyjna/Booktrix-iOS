@@ -16,6 +16,26 @@ struct UserUpdateForm {
     var email: String
     var password: String
     var confirmation: String
+    
+    init() {
+        id = 0
+        name = ""
+        surname = ""
+        login = ""
+        email = ""
+        password = ""
+        confirmation = ""
+    }
+    
+    init(user: User) {
+        id = user.id
+        name = user.name
+        surname = user.surname
+        login = user.login
+        email = user.email
+        password = ""
+        confirmation = ""
+    }
 }
 
 final class SettingsViewModel {
@@ -24,21 +44,14 @@ final class SettingsViewModel {
         case failure(DisplayableError)
     }
     
-    enum LogoutStatus {
-        case success
-    }
     
-    typealias LogOutCompletion = (LogoutStatus) -> ()
+    typealias LogOutCompletion = (ApiResponse<Void>) -> ()
     typealias UserUpdateCompletion = (UserUpdateStatus) -> ()
     
     var form: UserUpdateForm
     
     init() {
-        guard let user = KeychainStorage().getUser() else {
-            form = UserUpdateForm(id: 0, name: "", surname: "", login: "", email: "", password: "", confirmation: "")
-            return
-        }
-        form = UserUpdateForm(id: user.id, name: user.name,  surname: user.surname, login: user.login, email: user.email, password: "", confirmation: "")
+        form = KeychainStorage().getUser().map(UserUpdateForm.init(user:)) ?? UserUpdateForm()
     }
     
     func updateUser(completion: @escaping UserUpdateCompletion) {
@@ -50,11 +63,11 @@ final class SettingsViewModel {
             FieldValidationName(name: LocalizedString.password, validationResult: form.password.validate(.nonEmpty, .atLeast(6))).result,
             FieldValidationName(name: LocalizedString.confirmation, validationResult: form.confirmation.validate(.matching(form.password), .nonEmpty)).result,
             FieldValidationName(name: LocalizedString.login, validationResult: form.login.validate(.nonEmpty)).result
-        ])
+            ])
         
         switch status {
         case .success:
-            service.update(with: form, completion: { (result) in
+            service.update(with: form) { (result) in
                 switch result {
                 case .success(let user):
                     KeychainStorage().setUser(user)
@@ -65,7 +78,7 @@ final class SettingsViewModel {
                 case .failure(let error):
                     completion(.failure(error))
                 }
-            })
+            }
         case .failure(let error):
             let formError = FormError(message: error.message)
             completion(.failure(formError))
@@ -75,9 +88,9 @@ final class SettingsViewModel {
     func logout(completion: @escaping LogOutCompletion) {
         let service = UserService()
         
-        service.logout(completion: { _ in
-            completion(.success)
-        })
+        service.logout { (result) in
+            completion(result)
+        }
     }
 }
 

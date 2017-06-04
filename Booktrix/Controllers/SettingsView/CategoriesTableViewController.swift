@@ -31,7 +31,7 @@ final class CategoriesTableViewController: UITableViewController {
     
     func fetchCategories() {
         showHud()
-        viewModel.categoriesIndex(completion: { [weak self] result in
+        viewModel.categoriesIndex { [weak self] result in
             switch result {
             case .success:
                 self?.tableView.reloadData()
@@ -39,7 +39,7 @@ final class CategoriesTableViewController: UITableViewController {
             case .failure(let error):
                 self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
             }
-        })
+        }
     }
     
     // MARK: - Table view data source
@@ -70,12 +70,12 @@ final class CategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let edit = UITableViewRowAction(style: .normal, title: LocalizedString.edit) { action, index in
-            self.editCategory(category: self.viewModel.categoriesList[editActionsForRowAt.row])
+            self.editCategory(self.viewModel.categoriesList[editActionsForRowAt.row])
         }
         edit.backgroundColor = UIColor(red:0.30, green:0.53, blue:0.66, alpha:1.0)
         
         let delete = UITableViewRowAction(style: .normal, title: LocalizedString.delete) { action, index in
-            self.deleteCategory(category: self.viewModel.categoriesList[editActionsForRowAt.row])
+            self.deleteCategory(self.viewModel.categoriesList[editActionsForRowAt.row])
         }
         delete.backgroundColor = UIColor(red:0.69, green:0.25, blue:0.24, alpha:1.0)
         
@@ -86,19 +86,24 @@ final class CategoriesTableViewController: UITableViewController {
         return true
     }
     
-    func addCategory() {
-        pushViewFromStoryboard(controller: Wireframe.CategoryView().category())
-    }
     
-    func editCategory(category: Category) {
-        let vc = Wireframe.CategoryView().category() as CategoryViewController
-        vc.viewModel = CategoryViewModel(category: category)
+    func categoryAction(_ categoryAction: CategoryAction) {
+        let vc = Wireframe.CategoryView().category()
+        vc.viewModel = CategoryViewModel(categoryAction)
         pushViewFromStoryboard(controller: vc)
     }
     
-    func deleteCategory(category: Category) {
+    func addCategory() {
+        categoryAction(.add)
+    }
+    
+    func editCategory(_ category: Category) {
+        categoryAction(.edit(category))
+    }
+    
+    func deleteCategory(_ category: Category) {
         showHud()
-        viewModel.deleteCategory(category: category, completion: { [weak self] result in
+        viewModel.deleteCategory(category) { [weak self] result in
             switch result {
             case .success:
                 self?.tableView.reloadData()
@@ -106,7 +111,7 @@ final class CategoriesTableViewController: UITableViewController {
             case .failure(let error):
                 self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
             }
-        })
+        }
     }
 }
 
