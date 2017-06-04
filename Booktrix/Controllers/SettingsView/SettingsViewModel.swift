@@ -44,11 +44,8 @@ final class SettingsViewModel {
         case failure(DisplayableError)
     }
     
-    enum LogoutStatus {
-        case success
-    }
     
-    typealias LogOutCompletion = (LogoutStatus) -> ()
+    typealias LogOutCompletion = (ApiResponse<Void>) -> ()
     typealias UserUpdateCompletion = (UserUpdateStatus) -> ()
     
     var form: UserUpdateForm
@@ -91,8 +88,8 @@ final class SettingsViewModel {
     func logout(completion: @escaping LogOutCompletion) {
         let service = UserService()
         
-        service.logout { _ in
-            completion(.success)
+        service.logout { (result) in
+            completion(result)
         }
     }
 }
