@@ -17,6 +17,9 @@
 /* Edit */
 "booktrix.common.edit" = "Edit";
 
+/* Delete */
+"booktrix.common.delete" = "Delete";
+
 /* Empty */
 "booktrix.string.validation.empty" = "Empty";
 
@@ -85,4 +88,28 @@
 
 /* Internal server error */
 "booktrix.http_error.server_error" = "Internal server error";
+
+/* Cannot update. Possible that login or email already taken */
+"booktrix.update.user.cannot_update" = "Cannot update. Possible that login or email already taken";
+
+/* Success update */
+"booktrix.update.save.success" = "Success update";
+
+/* Update failure */
+"booktrix.update.save.failure" = "Update failure";
+
+/* Categories */
+"booktrix.categories.title" = "Categories";
+
+/* Books in category */
+"booktrix.category.cell.booksCount" = "Books in category";
+
+/* Name */
+"booktrix.category.form.name" = "Name";
+
+/* Error */
+"booktrix.category.failure" = "Error";
+
+/* Save */
+"booktrix.common.save" = "Save";
 

@@ -13,6 +13,8 @@ struct LocalizedString {
     static let ok = NSLocalizedString("booktrix.common.ok", comment: "OK")
     static let back = NSLocalizedString("booktrix.common.back", comment: "Back")
     static let edit = NSLocalizedString("booktrix.common.edit", comment: "Edit")
+    static let delete = NSLocalizedString("booktrix.common.delete", comment: "Delete")
+    static let save = NSLocalizedString("booktrix.common.save", comment: "Save")
     
     static let badRequest = NSLocalizedString("booktrix.http_error.bad_request", comment: "Bad request")
     static let notAuthorized = NSLocalizedString("booktrix.http_error.not_authorized", comment: "Not authorized")

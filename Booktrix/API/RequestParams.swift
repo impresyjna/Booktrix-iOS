@@ -47,3 +47,40 @@ struct LoginParams: RequestParams {
         ]
     }
 }
+
+struct UserUpdateParams: RequestParams {
+    let form: UserUpdateForm
+    
+    var params: [String: Any] {
+        return [
+            "user" : [
+                "name" : form.name,
+                "surname" : form.surname,
+                "login" : form.login,
+                "email" : form.email,
+                "password" : form.password,
+                "password_confirmation" : form.confirmation
+            ],
+            "user_setting": [
+                "show_full_name":  true,
+                "show_gifts_boolean": true,
+                "show_activities": true,
+                "show_books": true
+            ]
+        ]
+    }
+}
+
+struct CategoryParams: RequestParams {
+    let form: CategoryForm
+    
+    var params: [String: Any] {
+        return [
+            "category" : [
+                "name" : form.name,
+                "color" : form.color,
+                "font_color" : form.fontColor
+            ]
+        ]
+    }
+}

@@ -16,9 +16,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="lkC-OC-1Hf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.82745098039999998" green="0.3294117647" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.82745098039999998" green="0.3294117647" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.90588235294117647" green="0.46666666666666667" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dnU-J5-Rjo" kind="relationship" relationship="viewControllers" id="We8-9l-xJP"/>
@@ -42,16 +42,6 @@
             </objects>
             <point key="canvasLocation" x="84" y="-185"/>
         </scene>
-        <!--SearchView-->
-        <scene sceneID="RJX-hV-fnb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SearchView" id="hTw-6T-yEz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="c97-kI-pIo"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WgC-wc-iiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="201" y="-116"/>
-        </scene>
         <!--BookshelfView-->
         <scene sceneID="IcK-2p-vQK">
             <objects>
@@ -71,16 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8C-ow-eEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="406" y="42"/>
-        </scene>
-        <!--GiftsView-->
-        <scene sceneID="bnv-vd-mWR">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GiftsView" id="0ER-6T-SSH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hyK-Aa-EsI"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q8x-SZ-rWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="313" y="122"/>
         </scene>
         <!--FriendsView-->
         <scene sceneID="tUJ-GT-cZo">

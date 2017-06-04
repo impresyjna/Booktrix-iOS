@@ -22,11 +22,11 @@ extension Request {
     
     var baseURL: URL {
         let url: URL
-//        #if DEBUG
-//            url = URL(string: "http://localhost:3000/api/v1")!
-//        #else
+        #if DEBUG
+            url = URL(string: "http://localhost:3000/api/")!
+        #else
             url = URL(string: "https://booktrix-server.herokuapp.com/api/")!
-//        #endif
+        #endif
         return url
     }
     
@@ -53,6 +53,68 @@ struct LoginRequest: Request {
     
     var path: String {
         return "sessions"
+    }
+}
+
+struct LogoutRequest: Request {
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "sessions"
+    }
+}
+
+struct UserUpdateRequest: Request {
+    let userId: Int
+    
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "users/\(userId)"
+    }
+}
+
+struct CategoriesIndexRequest: Request {
+    var path: String {
+        return "categories"
+    }
+}
+
+struct CategoryDestoryRequest: Request {
+    let categoryId: Int
+    
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "categories/\(categoryId)"
+    }
+}
+
+struct CategoryCreateRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "categories"
+    }
+}
+
+struct CategoryUpdateRequest: Request {
+    let categoryId: Int
+    
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "categories/\(categoryId)"
     }
 }
 
