@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bookshelf View Controller-->
         <scene sceneID="Mxo-w6-5ZS">
             <objects>
-                <viewController id="veH-8N-NJa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookshelfViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="veH-8N-NJa" customClass="BookshelfViewController" customModule="Booktrix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7d-Ae-m6E"/>
                         <viewControllerLayoutGuide type="bottom" id="JAV-hn-HFm"/>
@@ -25,7 +25,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="gJf-Zc-dMy">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" systemItem="add" id="a18-Nq-IKX"/>
+                            <barButtonItem style="plain" systemItem="add" id="a18-Nq-IKX">
+                                <connections>
+                                    <action selector="addBook:" destination="veH-8N-NJa" id="QK0-hy-Qbz"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem style="plain" systemItem="search" id="Vgy-qA-yY6"/>
                         </rightBarButtonItems>
                     </navigationItem>
