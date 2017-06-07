@@ -46,10 +46,6 @@ struct Wireframe {
         func settings() -> SettingsViewController {
             return instantiatior.initial()
         }
-        
-        func categories() -> CategoriesTableViewController {
-            return instantiatior.initial()
-        }
     }
     
     struct CategoriesView: StoryboardWireframe {
@@ -73,6 +69,14 @@ struct Wireframe {
         
         func userBook() -> UserBookViewController {
             return instantiatior.initial()
+        }
+        
+        func description() -> BookDescriptionViewController {
+            return instantiatior.identifiable()
+        }
+        
+        func details() -> BookDetailsViewController {
+            return instantiatior.identifiable()
         }
     }
 
