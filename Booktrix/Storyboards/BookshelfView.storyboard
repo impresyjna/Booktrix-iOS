@@ -25,19 +25,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="gJf-Zc-dMy">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" systemItem="add" id="a18-Nq-IKX">
+                            <barButtonItem systemItem="add" id="a18-Nq-IKX">
                                 <connections>
                                     <action selector="addBook:" destination="veH-8N-NJa" id="QK0-hy-Qbz"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem style="plain" systemItem="search" id="Vgy-qA-yY6"/>
+                            <barButtonItem systemItem="search" id="Vgy-qA-yY6"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFC-yA-DRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376.8" y="31.934032983508249"/>
+            <point key="canvasLocation" x="1186" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V1G-Lw-noA">

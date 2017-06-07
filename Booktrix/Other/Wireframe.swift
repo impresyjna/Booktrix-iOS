@@ -67,4 +67,13 @@ struct Wireframe {
             return instantiatior.initial()
         }
     }
+    
+    struct UserBookView: StoryboardWireframe {
+        let storyboardName: String = "UserBookView"
+        
+        func userBook() -> UserBookViewController {
+            return instantiatior.initial()
+        }
+    }
+
 }

@@ -118,3 +118,25 @@ struct CategoryUpdateRequest: Request {
     }
 }
 
+struct UserBookCreateRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "user_books"
+    }
+}
+
+struct UserBookUpdateRequest: Request {
+    let userBookId: Int
+    
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "user_books/\(userBookId)"
+    }
+}
+

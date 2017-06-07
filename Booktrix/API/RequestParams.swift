@@ -26,10 +26,10 @@ struct RegisterParams: RequestParams {
                 "password_confirmation" : form.confirmation
             ],
             "user_setting": [
-                    "show_full_name":  true,
-                    "show_gifts_boolean": true,
-                    "show_activities": true,
-                    "show_books": true
+                "show_full_name":  true,
+                "show_gifts_boolean": true,
+                "show_activities": true,
+                "show_books": true
             ]
         ]
     }
@@ -81,6 +81,25 @@ struct CategoryParams: RequestParams {
                 "color" : form.color,
                 "font_color" : form.fontColor
             ]
+        ]
+    }
+}
+
+struct UserBookParams: RequestParams {
+    let form: UserBookForm
+    
+    var params: [String: Any] {
+        return [
+            "book" : [
+                "title" : form.title,
+                "author" : form.author,
+                "publisher" : form.publisher ?? "",
+                "isbn" : form.isbn ?? "",
+                "description" : form.description ?? "",
+                "publish_date" : form.publishDate ?? "",
+                "page_count" : form.pageCount ?? 0,
+            ],
+            "category" : form.categoryId ?? 0
         ]
     }
 }
