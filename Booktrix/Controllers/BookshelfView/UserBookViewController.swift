@@ -24,12 +24,10 @@ class UserBookViewController: UIViewController {
     }()
     
     private var activeController : UIViewController? {
-        
         willSet {
             self.activeController?.view.removeFromSuperview()
             self.activeController?.removeFromParentViewController()
         }
-        
         didSet {
             guard let newActive = self.activeController else { return }
             
@@ -50,11 +48,38 @@ class UserBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizedString.save, style: .plain, target: self, action: #selector(save))
+        
+        prepareFields()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         switchToTabAtIndex(index: 0)
+    }
+    
+    func prepareFields() {
+        //TODO:
+    }
+    
+    @IBAction func textFieldChanged(_ sender: Any) {
+        //TODO: 
+    }
+    
+    func save() {
+        self.showHud()
+        viewModel.save { [weak self] (result) in
+            self?.hideHud()
+            switch result {
+            case .success:
+                self?.dismissView()
+            case .failure(let error as FormError):
+                self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
+            case .failure(let error):
+                self?.showWarning(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
+            }
+        }
     }
     
     @IBAction func changeTab(_ sender: Any) {
@@ -69,7 +94,6 @@ class UserBookViewController: UIViewController {
     //TODO: 
     /* 
      * Zmniejszenie zdjęcia na mniejsze iPhony
-     * Segmented controller
      * Akcja create
      * Akcja update
      * Wypełnianie danymi
