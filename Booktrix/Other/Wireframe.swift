@@ -78,6 +78,10 @@ struct Wireframe {
         func details() -> BookDetailsViewController {
             return instantiatior.identifiable()
         }
+        
+        func scanner() -> ScannerViewController {
+            return instantiatior.identifiable()
+        }
     }
 
 }

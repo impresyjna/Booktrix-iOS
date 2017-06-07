@@ -8,10 +8,15 @@
 
 import UIKit
 
-class UserBookViewController: UIViewController {
-    
+protocol UserBookProtocol {
+    func scanFinished(book: Book)
+}
+
+class UserBookViewController: UIViewController, UserBookProtocol {
     @IBOutlet weak var contentContainer: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var authorTextField: UITextField!
 
     var viewModel: UserBookViewModel!
     
@@ -60,11 +65,16 @@ class UserBookViewController: UIViewController {
     }
     
     func prepareFields() {
-        //TODO:
+        titleTextField.innerViewsLook()
+        authorTextField.innerViewsLook()
+        
+        titleTextField.text = viewModel.form.title
+        authorTextField.text = viewModel.form.author
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {
-        //TODO: 
+        viewModel.form.title = titleTextField.text ?? ""
+        viewModel.form.author = authorTextField.text ?? ""
     }
     
     func save() {
@@ -82,6 +92,16 @@ class UserBookViewController: UIViewController {
         }
     }
     
+    @IBAction func scanOpenAction(_ sender: Any) {
+        let vc = Wireframe.UserBookView().scanner()
+        vc.viewModel = ScannerViewModel(self)
+        pushViewFromStoryboard(controller: vc)
+    }
+    
+    func scanFinished(book: Book) {
+        viewModel.fillUserBookForm(book: book)
+    }
+    
     @IBAction func changeTab(_ sender: Any) {
         switchToTabAtIndex(index: segmentedControl.selectedSegmentIndex)
     }
@@ -90,6 +110,7 @@ class UserBookViewController: UIViewController {
         self.activeController = index == 0 ? self.descriptionController : self.detailsController
         segmentedControl.selectedSegmentIndex = index
     }
+
     
     //TODO: 
     /* 
@@ -97,6 +118,9 @@ class UserBookViewController: UIViewController {
      * Akcja create
      * Akcja update
      * Wypełnianie danymi
+     * Odpalenie ekranu skanowania
+     * Podłaczenie otrzymanych danych do forma
+     * Przełączanie po textfieldach na guzik next
      */
     
 }

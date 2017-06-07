@@ -17,6 +17,7 @@ final class UserBookForm {
     var publishDate: String?
     var pageCount: Int?
     var categoryId: Int?
+    var image: String?
     
     init() {
         self.title = ""
@@ -62,6 +63,17 @@ final class UserBookViewModel {
             self.form = UserBookForm(userBook)
             self.userBookId = userBook.book.id
         }
+    }
+    
+    func fillUserBookForm(book: Book) {
+        form.title = book.title
+        form.author = book.author
+        form.description = book.description
+        form.publishDate = book.publisher
+        form.publishDate = book.publishDate
+        form.isbn = book.isbn
+        form.pageCount = book.pageCount
+        form.image = book.image
     }
     
     func save(completion: @escaping UserBookCompletion) {

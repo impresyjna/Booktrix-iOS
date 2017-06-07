@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITextField {
-    func prepareForView(_ borderColor: UIColor = TextFieldConfiguration.textFieldBorderColor,
+    func prepareForView(borderColor: UIColor = TextFieldConfiguration.textFieldBorderColor,
                         backgroundColor: UIColor = TextFieldConfiguration.textFieldBackgroundColor,
                         borderWidth: CGFloat = TextFieldConfiguration.textFieldBorderWidth,
                         cornerRadius: CGFloat = TextFieldConfiguration.textFieldCornerRadius) {
@@ -18,4 +18,7 @@ extension UITextField {
         self.layer.borderColor = borderColor.cgColor
     }
     
+    func innerViewsLook() {
+        self.prepareForView(borderColor: TextFieldConfiguration.textFieldInnerBorderColor)
+    }
 }

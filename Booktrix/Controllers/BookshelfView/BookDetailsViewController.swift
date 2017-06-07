@@ -10,26 +10,24 @@ import UIKit
 
 class BookDetailsViewController: UIViewController {
 
+    @IBOutlet weak var isbnTextField: UITextField!
+    @IBOutlet weak var publisherTextField: UITextField!
+    @IBOutlet weak var publishDateTextField: UITextField!
+    @IBOutlet weak var pageCountTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField! //TODO: Make this to choose from server
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        prepareFields()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func prepareFields() {
+        isbnTextField.innerViewsLook()
+        publisherTextField.innerViewsLook()
+        publishDateTextField.innerViewsLook()
+        pageCountTextField.innerViewsLook()
+        categoryTextField.innerViewsLook()
     }
-    */
 
 }
