@@ -95,7 +95,18 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     func found(code: String) {
-        print(code)
+        self.showHud()
+        viewModel.findBook(isbn: code) { [weak self] (result) in
+            self?.hideHud()
+            switch result {
+            case .success:
+                self?.dismissView()
+            case .failure(let error as FormError):
+                self?.showError(title: nil, subtitle: error.message, dismissDelay: 3.0)
+            case .failure(let error):
+                self?.showWarning(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
+            }
+        }
     }
     
     override var prefersStatusBarHidden: Bool {

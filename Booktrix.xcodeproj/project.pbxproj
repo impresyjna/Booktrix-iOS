@@ -39,6 +39,8 @@
 		1A2F270C1EE87AA4002A853D /* TextViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F270B1EE87AA4002A853D /* TextViewConfiguration.swift */; };
 		1A2F270E1EE8AC23002A853D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F270D1EE8AC23002A853D /* ScannerViewController.swift */; };
 		1A2F27101EE8AC39002A853D /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F270F1EE8AC39002A853D /* ScannerViewModel.swift */; };
+		1A3BAD0A1EE8BF0C006464D0 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BAD091EE8BF0C006464D0 /* BookService.swift */; };
+		1A3BAD0C1EE95FF1006464D0 /* UserBookDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BAD0B1EE95FF1006464D0 /* UserBookDataViewModel.swift */; };
 		1A641B411EE484F4004693E7 /* UserBookView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A641B401EE484F4004693E7 /* UserBookView.storyboard */; };
 		1A641B441EE4853A004693E7 /* UserBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A641B431EE4853A004693E7 /* UserBookViewController.swift */; };
 		1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */; };
@@ -134,6 +136,8 @@
 		1A2F270B1EE87AA4002A853D /* TextViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewConfiguration.swift; sourceTree = "<group>"; };
 		1A2F270D1EE8AC23002A853D /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		1A2F270F1EE8AC39002A853D /* ScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		1A3BAD091EE8BF0C006464D0 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		1A3BAD0B1EE95FF1006464D0 /* UserBookDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookDataViewModel.swift; sourceTree = "<group>"; };
 		1A641B401EE484F4004693E7 /* UserBookView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserBookView.storyboard; sourceTree = "<group>"; };
 		1A641B431EE4853A004693E7 /* UserBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookViewController.swift; sourceTree = "<group>"; };
 		1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -352,6 +356,7 @@
 				1A117BDC1ECC5DE200B4D76F /* UserService.swift */,
 				1AB1A1011EDB10D500E40A6D /* CategoryService.swift */,
 				1A2F27031EE8066C002A853D /* UserBookService.swift */,
+				1A3BAD091EE8BF0C006464D0 /* BookService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				1A2F26F71EE4A028002A853D /* UserBookViewModel.swift */,
 				1A2F27051EE80EAB002A853D /* BookDetailsViewController.swift */,
 				1A2F27071EE80EBB002A853D /* BookDescriptionViewController.swift */,
+				1A3BAD0B1EE95FF1006464D0 /* UserBookDataViewModel.swift */,
 				1A2F270D1EE8AC23002A853D /* ScannerViewController.swift */,
 				1A2F270F1EE8AC39002A853D /* ScannerViewModel.swift */,
 			);
@@ -845,10 +851,12 @@
 				1AB1A10A1EDDD5A300E40A6D /* CategoryViewModel.swift in Sources */,
 				1A2F270A1EE87987002A853D /* UITextView+Prepare.swift in Sources */,
 				1A117BD71ECC5B3D00B4D76F /* RequestParams.swift in Sources */,
+				1A3BAD0A1EE8BF0C006464D0 /* BookService.swift in Sources */,
 				1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
 				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
 				1A117BCB1ECBBC4C00B4D76F /* ApiRequester.swift in Sources */,
+				1A3BAD0C1EE95FF1006464D0 /* UserBookDataViewModel.swift in Sources */,
 				1AB1A0E11ED4EEA200E40A6D /* RootViewController.swift in Sources */,
 				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
 				1A117BD01ECC55AD00B4D76F /* KeychainStorage.swift in Sources */,

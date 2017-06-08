@@ -21,11 +21,15 @@ class UserBookViewController: UIViewController, UserBookProtocol {
     var viewModel: UserBookViewModel!
     
     lazy var descriptionController : BookDescriptionViewController? = {
-        return Wireframe.UserBookView().description()
+        let vc = Wireframe.UserBookView().description()
+        vc.viewModel = UserBookDataViewModel(self.viewModel.form)
+        return vc
     }()
     
     lazy var detailsController : BookDetailsViewController? = {
-        return Wireframe.UserBookView().details()
+        let vc = Wireframe.UserBookView().details()
+        vc.viewModel = UserBookDataViewModel(self.viewModel.form)
+        return vc
     }()
     
     private var activeController : UIViewController? {
@@ -53,10 +57,17 @@ class UserBookViewController: UIViewController, UserBookProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizedString.save, style: .plain, target: self, action: #selector(save))
         
         prepareFields()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fillFields()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,7 +78,9 @@ class UserBookViewController: UIViewController, UserBookProtocol {
     func prepareFields() {
         titleTextField.innerViewsLook()
         authorTextField.innerViewsLook()
-        
+    }
+    
+    func fillFields() {
         titleTextField.text = viewModel.form.title
         authorTextField.text = viewModel.form.author
     }
@@ -110,17 +123,5 @@ class UserBookViewController: UIViewController, UserBookProtocol {
         self.activeController = index == 0 ? self.descriptionController : self.detailsController
         segmentedControl.selectedSegmentIndex = index
     }
-
-    
-    //TODO: 
-    /* 
-     * Zmniejszenie zdjęcia na mniejsze iPhony
-     * Akcja create
-     * Akcja update
-     * Wypełnianie danymi
-     * Odpalenie ekranu skanowania
-     * Podłaczenie otrzymanych danych do forma
-     * Przełączanie po textfieldach na guzik next
-     */
     
 }

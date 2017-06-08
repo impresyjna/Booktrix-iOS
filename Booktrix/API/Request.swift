@@ -140,3 +140,10 @@ struct UserBookUpdateRequest: Request {
     }
 }
 
+struct FindBook: Request {
+    
+    var path: String {
+        return "found_by_isbn"
+    }
+}
+

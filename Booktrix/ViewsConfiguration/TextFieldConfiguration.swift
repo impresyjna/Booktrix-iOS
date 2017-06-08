@@ -14,4 +14,5 @@ struct TextFieldConfiguration {
     static let textFieldBorderWidth:CGFloat = 1.0
     static let textFieldCornerRadius:CGFloat = 5.0
     static let textFieldBackgroundColor = UIColor.clear
+    static let textFieldPlaceholderColor = UIColor(red:0.13, green:0.20, blue:0.23, alpha:0.3)
 }

@@ -103,3 +103,13 @@ struct UserBookParams: RequestParams {
         ]
     }
 }
+
+struct FindBookParams: RequestParams {
+    let isbn: String
+    
+    var params: [String: Any] {
+        return [
+            "isbn" : isbn
+        ]
+    }
+}
