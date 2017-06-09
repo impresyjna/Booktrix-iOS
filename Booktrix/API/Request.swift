@@ -22,11 +22,11 @@ extension Request {
     
     var baseURL: URL {
         let url: URL
-//        #if DEBUG
-//            url = URL(string: "http://localhost:3000/api/")!
-//        #else
+        #if DEBUG
+            url = URL(string: "http://localhost:3000/api/")!
+        #else
             url = URL(string: "https://booktrix-server.herokuapp.com/api/")!
-//        #endif
+        #endif
         return url
     }
     
@@ -140,10 +140,17 @@ struct UserBookUpdateRequest: Request {
     }
 }
 
+struct UserBooksIndexRequest: Request {
+    var path: String {
+        return "user_books"
+    }
+}
+
 struct FindBook: Request {
     
     var path: String {
         return "found_by_isbn"
     }
 }
+
 

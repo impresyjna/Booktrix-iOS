@@ -113,3 +113,24 @@
 /* Save */
 "booktrix.common.save" = "Save";
 
+/* Title */
+"booktrix.user_book.form.title" = "Title";
+
+/* Author */
+"booktrix.user_book.form.author" = "Author";
+
+/* Problem with saving */
+"booktrix.user_book.failure" = "Problem with saving";
+
+/* Scanning not supported */
+"booktrix.scanner.not_supported" = "Scanning not supported";
+
+/* Your device does not support scanning a code from an item. Please use a device with a camera. */
+"booktrix.scanner.message" = "Your device does not support scanning a code from an item. Please use a device with a camera.";
+
+/* Publisher */
+"booktrix.user_book.cell.publisher" = "Publisher";
+
+/* ISBN number */
+"booktrix.user_book.cell.isbn_number" = "ISBN number";
+

@@ -36,15 +36,7 @@ class BookDescriptionViewController: UIViewController, UITextViewDelegate {
         descriptionTextView.text = viewModel.form.description
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         viewModel.form.description = descriptionTextView.text
     }
-
 }

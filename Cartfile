@@ -3,3 +3,4 @@ github "matthewcheok/JSONCodable" ~> 3.0.1
 github "kishikawakatsumi/KeychainAccess" ~> 3.0
 github "pkluz/PKHUD" ~> 4.0
 github "bryx-inc/BRYXBanner" ~> 0.7
+github "Alamofire/AlamofireImage" ~> 3.1

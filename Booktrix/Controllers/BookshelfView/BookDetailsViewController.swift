@@ -43,8 +43,12 @@ class BookDetailsViewController: UIViewController {
         isbnTextField.text = viewModel.form.isbn
         publisherTextField.text = viewModel.form.publisher
         publishDateTextField.text = viewModel.form.publishDate
-        pageCountTextField.text = String(describing: viewModel.form.pageCount ?? 0)
-        categoryTextField.text = String(describing: viewModel.form.categoryId ?? 0)
+        if let pageCount = viewModel.form.pageCount {
+            pageCountTextField.text = String(describing: pageCount)
+        }
+        if let categoryId = viewModel.form.categoryId {
+            categoryTextField.text = String(describing: categoryId)
+        }
     }
     
     @IBAction func navigateThroughInputs(_ sender: UITextField) {

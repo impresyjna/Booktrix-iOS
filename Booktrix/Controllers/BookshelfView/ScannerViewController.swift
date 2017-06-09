@@ -59,8 +59,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default)) //TODO: Tłumaczenie
+        let ac = UIAlertController(title: LocalizedString.notSupported, message: LocalizedString.message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: LocalizedString.ok, style: .default))
         present(ac, animated: true)
         captureSession = nil
     }
@@ -116,4 +116,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
+}
+
+fileprivate extension LocalizedString {
+    static let notSupported = NSLocalizedString("booktrix.scanner.not_supported", comment: "Scanning not supported")
+    static let message = NSLocalizedString("booktrix.scanner.message", comment: "Your device does not support scanning a code from an item. Please use a device with a camera.")
 }

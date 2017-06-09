@@ -9,6 +9,13 @@
 import Foundation
 
 final class UserBookService {
+    func userBooksIndex(completion: @escaping (ApiResponse<[UserBook]>) -> ()) {
+        let requester = ApiRequester()
+        let request = UserBooksIndexRequest()
+        
+        requester.request(request: request, completion: completion)
+    }
+    
     func create(with form: UserBookForm, completion: @escaping (ApiResponse<UserBook>) -> ()) {
         let requester = ApiRequester()
         let request = UserBookCreateRequest()

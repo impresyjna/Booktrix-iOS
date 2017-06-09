@@ -41,6 +41,8 @@
 		1A2F27101EE8AC39002A853D /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F270F1EE8AC39002A853D /* ScannerViewModel.swift */; };
 		1A3BAD0A1EE8BF0C006464D0 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BAD091EE8BF0C006464D0 /* BookService.swift */; };
 		1A3BAD0C1EE95FF1006464D0 /* UserBookDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BAD0B1EE95FF1006464D0 /* UserBookDataViewModel.swift */; };
+		1A3BAD0E1EE9DBE6006464D0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3BAD0D1EE9DBE6006464D0 /* AlamofireImage.framework */; };
+		1A3BAD101EE9DC6C006464D0 /* UserBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3BAD0F1EE9DC6C006464D0 /* UserBookCell.xib */; };
 		1A641B411EE484F4004693E7 /* UserBookView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A641B401EE484F4004693E7 /* UserBookView.storyboard */; };
 		1A641B441EE4853A004693E7 /* UserBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A641B431EE4853A004693E7 /* UserBookViewController.swift */; };
 		1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */; };
@@ -87,6 +89,7 @@
 		1AB1A1081EDCDECE00E40A6D /* CategoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */; };
 		1AB1A10A1EDDD5A300E40A6D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */; };
 		1AB1A10C1EDEF23900E40A6D /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1A10B1EDEF23900E40A6D /* AppColors.swift */; };
+		1AB7C2011EE9DFE600D2C158 /* UserBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2001EE9DFE600D2C158 /* UserBookCell.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -138,6 +141,8 @@
 		1A2F270F1EE8AC39002A853D /* ScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		1A3BAD091EE8BF0C006464D0 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		1A3BAD0B1EE95FF1006464D0 /* UserBookDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookDataViewModel.swift; sourceTree = "<group>"; };
+		1A3BAD0D1EE9DBE6006464D0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		1A3BAD0F1EE9DC6C006464D0 /* UserBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserBookCell.xib; sourceTree = "<group>"; };
 		1A641B401EE484F4004693E7 /* UserBookView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserBookView.storyboard; sourceTree = "<group>"; };
 		1A641B431EE4853A004693E7 /* UserBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookViewController.swift; sourceTree = "<group>"; };
 		1A9DC7DF1ECC62BB001F0EB4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -186,6 +191,7 @@
 		1AB1A1071EDCDECE00E40A6D /* CategoryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryView.storyboard; sourceTree = "<group>"; };
 		1AB1A1091EDDD5A300E40A6D /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		1AB1A10B1EDEF23900E40A6D /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		1AB7C2001EE9DFE600D2C158 /* UserBookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookCell.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -216,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3BAD0E1EE9DBE6006464D0 /* AlamofireImage.framework in Frameworks */,
 				1AB1A09E1ECFAF9C00E40A6D /* BRYXBanner.framework in Frameworks */,
 				1A9DC7E41ECC69AF001F0EB4 /* PKHUD.framework in Frameworks */,
 				1A117BCD1ECC553600B4D76F /* KeychainAccess.framework in Frameworks */,
@@ -361,6 +368,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		1A3BAD111EE9DC75006464D0 /* UserBookCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A3BAD0F1EE9DC6C006464D0 /* UserBookCell.xib */,
+				1AB7C2001EE9DFE600D2C158 /* UserBookCell.swift */,
+			);
+			name = UserBookCell;
+			sourceTree = "<group>";
+		};
 		1A641B421EE48506004693E7 /* BookshelfView */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +505,7 @@
 		1AB1A0F31ED8E6C700E40A6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A3BAD111EE9DC75006464D0 /* UserBookCell */,
 				1AB1A0F61ED8E77700E40A6D /* CategoryCell */,
 			);
 			path = Views;
@@ -584,6 +601,7 @@
 		7C1B97FD03B3C74B1D6F67C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A3BAD0D1EE9DBE6006464D0 /* AlamofireImage.framework */,
 				1AB1A09D1ECFAF9C00E40A6D /* BRYXBanner.framework */,
 				1A9DC7E31ECC69AF001F0EB4 /* PKHUD.framework */,
 				1A117BCC1ECC553600B4D76F /* KeychainAccess.framework */,
@@ -698,6 +716,7 @@
 				1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */,
 				1AB1A0D41ED4DC1900E40A6D /* BookshelfView.storyboard in Resources */,
 				1AB1A1081EDCDECE00E40A6D /* CategoryView.storyboard in Resources */,
+				1A3BAD101EE9DC6C006464D0 /* UserBookCell.xib in Resources */,
 				1AB1A0DA1ED4DC2F00E40A6D /* FriendsView.storyboard in Resources */,
 				1AB1A0CD1ED4D73100E40A6D /* SearchView.storyboard in Resources */,
 				1AB1A0F01ED8A76500E40A6D /* CategoriesView.storyboard in Resources */,
@@ -744,6 +763,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JSONCodable.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BRYXBanner.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);
@@ -880,6 +900,7 @@
 				1A117BD31ECC563F00B4D76F /* User.swift in Sources */,
 				1AB1A0E41ED64C4600E40A6D /* SettingsViewController.swift in Sources */,
 				1A9DC8011ECE41D1001F0EB4 /* UIViewController+SwiftNotifications.swift in Sources */,
+				1AB7C2011EE9DFE600D2C158 /* UserBookCell.swift in Sources */,
 				1AB1A0BC1ED22FB800E40A6D /* Wireframe.swift in Sources */,
 				1A2F26FA1EE4A0C3002A853D /* BookshelfViewModel.swift in Sources */,
 				1A641B441EE4853A004693E7 /* UserBookViewController.swift in Sources */,

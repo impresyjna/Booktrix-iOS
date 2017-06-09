@@ -11,33 +11,42 @@
     </dependencies>
     <scenes>
         <!--Bookshelf View Controller-->
-        <scene sceneID="Mxo-w6-5ZS">
+        <scene sceneID="gaw-kF-4tJ">
             <objects>
-                <viewController storyboardIdentifier="BookshelfViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="veH-8N-NJa" customClass="BookshelfViewController" customModule="Booktrix" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Z7d-Ae-m6E"/>
-                        <viewControllerLayoutGuide type="bottom" id="JAV-hn-HFm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TOT-Rm-2nK">
+                <tableViewController storyboardIdentifier="BookshelfViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pai-Ph-I2d" customClass="BookshelfViewController" customModule="Booktrix" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fkl-3x-bda">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gJf-Zc-dMy">
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="09r-On-roF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="09r-On-roF" id="zlR-zi-C8b">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pai-Ph-I2d" id="FC7-mj-OX4"/>
+                            <outlet property="delegate" destination="pai-Ph-I2d" id="xyn-Yb-Xsu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ifY-iK-A41">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="a18-Nq-IKX">
+                            <barButtonItem systemItem="add" id="ezk-c6-WlB">
                                 <connections>
-                                    <action selector="addBook:" destination="veH-8N-NJa" id="QK0-hy-Qbz"/>
+                                    <action selector="addBook:" destination="pai-Ph-I2d" id="5Ie-Iv-mo6"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="search" id="Vgy-qA-yY6"/>
+                            <barButtonItem systemItem="search" id="tlI-zZ-cqJ"/>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UFC-yA-DRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9r-1Y-VJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1186" y="32"/>
+            <point key="canvasLocation" x="1252" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V1G-Lw-noA">
@@ -51,7 +60,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="veH-8N-NJa" kind="relationship" relationship="rootViewController" id="2ug-Mj-6uu"/>
+                        <segue destination="pai-Ph-I2d" kind="relationship" relationship="rootViewController" id="u5N-k1-iwr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKD-bc-CtJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
