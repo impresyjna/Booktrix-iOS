@@ -118,3 +118,59 @@ struct CategoryUpdateRequest: Request {
     }
 }
 
+struct UserBookCreateRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "user_books"
+    }
+}
+
+struct UserBookUpdateRequest: Request {
+    let userBookId: Int
+    
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "user_books/\(userBookId)"
+    }
+}
+
+struct UserBooksIndexRequest: Request {
+    var path: String {
+        return "user_books"
+    }
+}
+
+struct UserBookShowRequest: Request {
+    let userBookId: Int
+    
+    var path: String {
+        return "user_books/\(userBookId)"
+    }
+}
+
+struct UserBookDestoryRequest: Request {
+    let userBookId: Int
+    
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "user_books/\(userBookId)"
+    }
+}
+
+struct FindBook: Request {
+    
+    var path: String {
+        return "found_by_isbn"
+    }
+}
+
+

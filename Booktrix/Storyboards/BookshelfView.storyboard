@@ -1,33 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="veH-8N-NJa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="btM-lK-Qfy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Mxo-w6-5ZS">
+        <!--Bookshelf View Controller-->
+        <scene sceneID="gaw-kF-4tJ">
             <objects>
-                <viewController id="veH-8N-NJa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Z7d-Ae-m6E"/>
-                        <viewControllerLayoutGuide type="bottom" id="JAV-hn-HFm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TOT-Rm-2nK">
+                <tableViewController storyboardIdentifier="BookshelfViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pai-Ph-I2d" customClass="BookshelfViewController" customModule="Booktrix" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fkl-3x-bda">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="bookshelf_ic" selectedImage="bookshelf_ic" id="43w-Pf-H8F"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UFC-yA-DRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="pai-Ph-I2d" id="FC7-mj-OX4"/>
+                            <outlet property="delegate" destination="pai-Ph-I2d" id="xyn-Yb-Xsu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ifY-iK-A41">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="ezk-c6-WlB">
+                                <connections>
+                                    <action selector="addBook:" destination="pai-Ph-I2d" id="5Ie-Iv-mo6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="tlI-zZ-cqJ"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9r-1Y-VJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="32"/>
+            <point key="canvasLocation" x="1252" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V1G-Lw-noA">
+            <objects>
+                <navigationController storyboardIdentifier="BookshelfNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="btM-lK-Qfy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bookshelf_ic" selectedImage="bookshelf_ic" id="43w-Pf-H8F"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="udU-aC-KdE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pai-Ph-I2d" kind="relationship" relationship="rootViewController" id="u5N-k1-iwr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKD-bc-CtJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.60000000000002" y="31.934032983508249"/>
         </scene>
     </scenes>
     <resources>

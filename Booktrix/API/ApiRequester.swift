@@ -76,8 +76,8 @@ final class ApiRequester {
         manager.adapter = Adapter(keychain: .init())
     }
     
-    func request<T:JSONDecodable>(request: Request, params: RequestParams? = nil, completion: @escaping (ApiResponse<T>) -> ()) {
-        manager.request(request.url, method: request.method, parameters: params?.params, encoding: JSONEncoding(), headers: nil)
+    func request<T:JSONDecodable>(request: Request, params: RequestParams? = nil, encoding: ParameterEncoding = JSONEncoding(), completion: @escaping (ApiResponse<T>) -> ()) {
+        manager.request(request.url, method: request.method, parameters: params?.params, encoding: encoding, headers: nil)
             .validate(statusCode: 200...422)
             .responseJSON { result in
                 guard let object = result.value
