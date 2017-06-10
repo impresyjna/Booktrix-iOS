@@ -42,7 +42,6 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-yq-nRb">
                                         <rect key="frame" x="0.0" y="8" width="65" height="100"/>
-                                        <color key="backgroundColor" red="0.94509803920000002" green="0.96862745100000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="hFA-kW-ISQ"/>
                                             <constraint firstAttribute="width" constant="65" id="mPP-Fz-iWw"/>
@@ -116,6 +115,7 @@
                     <connections>
                         <outlet property="authorTextField" destination="J1c-cZ-vdM" id="UJ2-6L-kQI"/>
                         <outlet property="contentContainer" destination="Z8e-AI-hAb" id="EX9-eB-Diz"/>
+                        <outlet property="coverImage" destination="tfD-yq-nRb" id="tLe-WQ-Ucu"/>
                         <outlet property="segmentedControl" destination="SXc-O0-XXo" id="vjG-1s-jht"/>
                         <outlet property="titleTextField" destination="Wju-2j-6SS" id="Bpd-Z8-7wJ"/>
                     </connections>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookDetailsViewController: UIViewController {
+final class BookDetailsViewController: UIViewController {
 
     @IBOutlet weak var isbnTextField: UITextField!
     @IBOutlet weak var publisherTextField: UITextField!

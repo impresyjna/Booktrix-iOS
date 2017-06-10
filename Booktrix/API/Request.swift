@@ -146,6 +146,18 @@ struct UserBooksIndexRequest: Request {
     }
 }
 
+struct UserBookDestoryRequest: Request {
+    let userBookId: Int
+    
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "user_books/\(userBookId)"
+    }
+}
+
 struct FindBook: Request {
     
     var path: String {

@@ -12,11 +12,12 @@ protocol UserBookProtocol {
     func scanFinished(book: Book)
 }
 
-class UserBookViewController: UIViewController, UserBookProtocol {
+final class UserBookViewController: UIViewController, UserBookProtocol {
     @IBOutlet weak var contentContainer: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
+    @IBOutlet weak var coverImage: UIImageView!
 
     var viewModel: UserBookViewModel!
     
@@ -83,6 +84,10 @@ class UserBookViewController: UIViewController, UserBookProtocol {
     func fillFields() {
         titleTextField.text = viewModel.form.title
         authorTextField.text = viewModel.form.author
+        
+        if let url = URL(string: viewModel.form.image ?? "") {
+            coverImage.setImage(Image.url(url))
+        }
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {

@@ -23,7 +23,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-3G-kRa">
                                 <rect key="frame" x="0.0" y="0.0" width="75" height="99.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="IPj-Ey-Zq5"/>
                                     <constraint firstAttribute="width" constant="75" id="qAj-0e-X1i"/>

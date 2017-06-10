@@ -24,6 +24,9 @@ final class UserBookCell: UITableViewCell, Reusable, NibLoadable {
         if let category = userBook.category {
             setBackground(categoryBackground: category.color)
         }
+        if let url = URL(string: userBook.book.image ?? "") {
+            coverImage.setImage(Image.url(url))
+        }
     }
     
     func setBackground(categoryBackground: String?) {

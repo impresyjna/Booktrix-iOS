@@ -33,6 +33,7 @@ final class UserBookForm {
         self.publishDate = userBook.book.publishDate
         self.pageCount = userBook.book.pageCount
         self.categoryId = userBook.category?.id
+        self.image = userBook.book.image
     }
 }
 
@@ -61,7 +62,7 @@ final class UserBookViewModel {
             self.userBookId = 0
         case .edit(let userBook):
             self.form = UserBookForm(userBook)
-            self.userBookId = userBook.book.id
+            self.userBookId = userBook.id
         }
     }
     
@@ -79,7 +80,7 @@ final class UserBookViewModel {
     func save(completion: @escaping UserBookCompletion) {
         let status = FieldValidationName(name: LocalizedString.author, validationResult: form.author.validate(.nonEmpty)).result.combine([
             FieldValidationName(name: LocalizedString.title, validationResult: form.title.validate(.nonEmpty)).result
-            ])
+        ])
         
         switch status {
         case .success:

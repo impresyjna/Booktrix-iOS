@@ -31,4 +31,11 @@ final class UserBookService {
         
         requester.request(request: request, params: params, completion: completion)
     }
+    
+    func delete(userBookId: Int, completion: @escaping (ApiResponse<Void>) -> ()) {
+        let requester = ApiRequester()
+        let request = UserBookDestoryRequest(userBookId: userBookId)
+        
+        requester.request(request: request, completion: completion)
+    }
 }

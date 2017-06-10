@@ -61,15 +61,15 @@ final class BookshelfViewController: UITableViewController {
     
     func deleteUserBook(_ userBook: UserBook) {
         showHud()
-//        viewModel.deleteCategory(category) { [weak self] result in
-//            switch result {
-//            case .success:
-//                self?.tableView.reloadData()
-//                self?.hideHud()
-//            case .failure(let error):
-//                self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
-//            }
-//        }
+        viewModel.deleteUserBook(userBook) { [weak self] result in
+            switch result {
+            case .success:
+                self?.tableView.reloadData()
+                self?.hideHud()
+            case .failure(let error):
+                self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

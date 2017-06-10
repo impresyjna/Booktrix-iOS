@@ -32,17 +32,17 @@ final class BookshelfViewModel {
         }
     }
     
-//    func deleteCategory(_ category: Category, completion: @escaping CategoriesIndexCompletion) {
-//        let service = CategoryService()
-//        
-//        service.delete(categoryId: category.id) { (result) in
-//            switch result {
-//            case .success:
-//                self.categoriesList = self.categoriesList.filter(){ $0.id != category.id }
-//                completion(.success)
-//            case .failure(let error):
-//                completion(.failure(error))
-//            }
-//        }
-//    }
+    func deleteUserBook(_ userBook: UserBook, completion: @escaping UserBooksIndexCompletion) {
+        let service = UserBookService()
+        
+        service.delete(userBookId: userBook.id) { (result) in
+            switch result {
+            case .success:
+                self.userBooksList = self.userBooksList.filter(){ $0.id != userBook.id }
+                completion(.success)
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

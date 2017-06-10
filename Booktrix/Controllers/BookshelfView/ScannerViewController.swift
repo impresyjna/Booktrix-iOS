@@ -9,8 +9,8 @@
 import AVFoundation
 import UIKit
 
-class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-
+final class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
     var viewModel: ScannerViewModel!
     
     var captureSession: AVCaptureSession!
@@ -34,8 +34,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if (captureSession.canAddInput(videoInput)) {
             captureSession.addInput(videoInput)
         } else {
-            failed();
-            return;
+            failed()
+            return
         }
         
         let metadataOutput = AVCaptureMetadataOutput()
@@ -50,12 +50,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             return
         }
         
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession);
-        previewLayer.frame = view.layer.bounds;
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        view.layer.addSublayer(previewLayer);
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = view.layer.bounds
+        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        view.layer.addSublayer(previewLayer)
         
-        captureSession.startRunning();
+        captureSession.startRunning()
     }
     
     func failed() {
@@ -69,7 +69,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewWillAppear(animated)
         
         if (captureSession?.isRunning == false) {
-            captureSession.startRunning();
+            captureSession.startRunning()
         }
     }
     
@@ -77,7 +77,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewWillDisappear(animated)
         
         if (captureSession?.isRunning == true) {
-            captureSession.stopRunning();
+            captureSession.stopRunning()
         }
     }
     

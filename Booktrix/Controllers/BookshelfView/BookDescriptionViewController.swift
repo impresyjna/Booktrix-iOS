@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookDescriptionViewController: UIViewController, UITextViewDelegate {
+final class BookDescriptionViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var descriptionTextView: UITextView!
     
