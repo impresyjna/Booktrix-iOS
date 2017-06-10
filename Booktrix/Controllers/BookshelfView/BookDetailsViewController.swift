@@ -44,10 +44,10 @@ final class BookDetailsViewController: UIViewController {
         publisherTextField.text = viewModel.form.publisher
         publishDateTextField.text = viewModel.form.publishDate
         if let pageCount = viewModel.form.pageCount {
-            pageCountTextField.text = String(describing: pageCount)
+            pageCountTextField.text = "\(pageCount)"
         }
         if let categoryId = viewModel.form.categoryId {
-            categoryTextField.text = String(describing: categoryId)
+            categoryTextField.text = "\(categoryId)"
         }
     }
     
