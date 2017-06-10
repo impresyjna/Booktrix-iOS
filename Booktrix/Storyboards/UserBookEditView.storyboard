@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCi-dS-dfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79" y="942"/>
+            <point key="canvasLocation" x="-7" y="941"/>
         </scene>
         <!--Book Details View Controller-->
         <scene sceneID="khT-aA-SGW">
@@ -387,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taL-WA-CKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="942"/>
+            <point key="canvasLocation" x="636" y="941"/>
         </scene>
     </scenes>
 </document>

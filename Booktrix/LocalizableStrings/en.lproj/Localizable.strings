@@ -134,3 +134,5 @@
 /* ISBN number */
 "booktrix.user_book.cell.isbn_number" = "ISBN number";
 
+/* User book not found */
+"booktrix.user_book.show.not_found" = "User book not found";

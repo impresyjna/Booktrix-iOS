@@ -146,6 +146,14 @@ struct UserBooksIndexRequest: Request {
     }
 }
 
+struct UserBookShowRequest: Request {
+    let userBookId: Int
+    
+    var path: String {
+        return "user_books/\(userBookId)"
+    }
+}
+
 struct UserBookDestoryRequest: Request {
     let userBookId: Int
     

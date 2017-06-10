@@ -22,13 +22,13 @@ final class UserBookViewController: UIViewController, UserBookProtocol {
     var viewModel: UserBookViewModel!
     
     lazy var descriptionController : BookDescriptionViewController? = {
-        let vc = Wireframe.UserBookView().description()
+        let vc = Wireframe.UserBookEditView().description()
         vc.viewModel = UserBookDataViewModel(self.viewModel.form)
         return vc
     }()
     
     lazy var detailsController : BookDetailsViewController? = {
-        let vc = Wireframe.UserBookView().details()
+        let vc = Wireframe.UserBookEditView().details()
         vc.viewModel = UserBookDataViewModel(self.viewModel.form)
         return vc
     }()
@@ -111,7 +111,7 @@ final class UserBookViewController: UIViewController, UserBookProtocol {
     }
     
     @IBAction func scanOpenAction(_ sender: Any) {
-        let vc = Wireframe.UserBookView().scanner()
+        let vc = Wireframe.UserBookEditView().scanner()
         vc.viewModel = ScannerViewModel(self)
         pushViewFromStoryboard(controller: vc)
     }

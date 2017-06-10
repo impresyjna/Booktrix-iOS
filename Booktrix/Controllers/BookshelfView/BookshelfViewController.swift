@@ -46,7 +46,7 @@ final class BookshelfViewController: UITableViewController {
     }
     
     func bookAction(_ bookAction: UserBookAction) {
-        let vc = Wireframe.UserBookView().userBook()
+        let vc = Wireframe.UserBookEditView().userBook()
         vc.viewModel = UserBookViewModel(bookAction)
         pushViewFromStoryboard(controller: vc)
     }
@@ -62,10 +62,10 @@ final class BookshelfViewController: UITableViewController {
     func deleteUserBook(_ userBook: UserBook) {
         showHud()
         viewModel.deleteUserBook(userBook) { [weak self] result in
+            self?.hideHud()
             switch result {
             case .success:
                 self?.tableView.reloadData()
-                self?.hideHud()
             case .failure(let error):
                 self?.showError(title: nil, subtitle: error.errorMessage, dismissDelay: 3.0)
             }
@@ -111,8 +111,10 @@ final class BookshelfViewController: UITableViewController {
         return [edit, delete]
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = Wireframe.UserBookShowView().userBook()
+        vc.viewModel = UserBookShowViewModel(userBookId: viewModel.userBooksList[indexPath.row].id)
+        pushViewFromStoryboard(controller: vc)
     }
 
 }
