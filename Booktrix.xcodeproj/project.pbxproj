@@ -98,6 +98,11 @@
 		1AB7C2151EEC208100D2C158 /* BookShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2141EEC208100D2C158 /* BookShowDetailsViewController.swift */; };
 		1AB7C2171EEC209300D2C158 /* BookShowDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2161EEC209300D2C158 /* BookShowDescriptionViewModel.swift */; };
 		1AB7C2191EEC209D00D2C158 /* BookShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2181EEC209D00D2C158 /* BookShowDetailsViewModel.swift */; };
+		1AB7C2211EECA25300D2C158 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2201EECA25300D2C158 /* AddFriendViewController.swift */; };
+		1AB7C2231EECA26E00D2C158 /* AddFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2221EECA26E00D2C158 /* AddFriendViewModel.swift */; };
+		1AB7C2251EECA2F400D2C158 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2241EECA2F400D2C158 /* FriendsViewController.swift */; };
+		1AB7C2271EECA32E00D2C158 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2261EECA32E00D2C158 /* FriendsViewModel.swift */; };
+		1AB7C2291EECA75C00D2C158 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2281EECA75C00D2C158 /* FriendService.swift */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -208,6 +213,11 @@
 		1AB7C2141EEC208100D2C158 /* BookShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShowDetailsViewController.swift; sourceTree = "<group>"; };
 		1AB7C2161EEC209300D2C158 /* BookShowDescriptionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShowDescriptionViewModel.swift; sourceTree = "<group>"; };
 		1AB7C2181EEC209D00D2C158 /* BookShowDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShowDetailsViewModel.swift; sourceTree = "<group>"; };
+		1AB7C2201EECA25300D2C158 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		1AB7C2221EECA26E00D2C158 /* AddFriendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewModel.swift; sourceTree = "<group>"; };
+		1AB7C2241EECA2F400D2C158 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		1AB7C2261EECA32E00D2C158 /* FriendsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		1AB7C2281EECA75C00D2C158 /* FriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +272,7 @@
 		1A117BA91EC8D54800B4D76F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AB7C21F1EEC9F9200D2C158 /* FriendsView */,
 				1A641B421EE48506004693E7 /* BookshelfView */,
 				1AB1A0E21ED64C1C00E40A6D /* SettingsView */,
 				1AB1A0DD1ED4EE3700E40A6D /* RootView */,
@@ -381,6 +392,7 @@
 				1AB1A1011EDB10D500E40A6D /* CategoryService.swift */,
 				1A2F27031EE8066C002A853D /* UserBookService.swift */,
 				1A3BAD091EE8BF0C006464D0 /* BookService.swift */,
+				1AB7C2281EECA75C00D2C158 /* FriendService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -558,6 +570,17 @@
 				1AB7C2181EEC209D00D2C158 /* BookShowDetailsViewModel.swift */,
 			);
 			name = UserBookShowView;
+			sourceTree = "<group>";
+		};
+		1AB7C21F1EEC9F9200D2C158 /* FriendsView */ = {
+			isa = PBXGroup;
+			children = (
+				1AB7C2201EECA25300D2C158 /* AddFriendViewController.swift */,
+				1AB7C2221EECA26E00D2C158 /* AddFriendViewModel.swift */,
+				1AB7C2241EECA2F400D2C158 /* FriendsViewController.swift */,
+				1AB7C2261EECA32E00D2C158 /* FriendsViewModel.swift */,
+			);
+			name = FriendsView;
 			sourceTree = "<group>";
 		};
 		1AED63D51E83B16300F3FD53 = {
@@ -906,6 +929,7 @@
 				1AB1A0EE1ED78EF400E40A6D /* CategoriesTableViewController.swift in Sources */,
 				1A2F26F81EE4A028002A853D /* UserBookViewModel.swift in Sources */,
 				1AB7C2171EEC209300D2C158 /* BookShowDescriptionViewModel.swift in Sources */,
+				1AB7C2231EECA26E00D2C158 /* AddFriendViewModel.swift in Sources */,
 				1AB1A0A31ED1115A00E40A6D /* ActivitiesViewController.swift in Sources */,
 				1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */,
 				1AB1A0E81ED76E6E00E40A6D /* StartViewController.swift in Sources */,
@@ -916,11 +940,13 @@
 				1AB7C2111EEC202900D2C158 /* UserBookShowViewModel.swift in Sources */,
 				1A3BAD0A1EE8BF0C006464D0 /* BookService.swift in Sources */,
 				1A9DC7E91ECC780D001F0EB4 /* StringValidation.swift in Sources */,
+				1AB7C2291EECA75C00D2C158 /* FriendService.swift in Sources */,
 				1A117BB81EC8EBD200B4D76F /* UITextField+Prepare.swift in Sources */,
 				1A117BAE1EC8D81E00B4D76F /* SignInViewController.swift in Sources */,
 				1A117BCB1ECBBC4C00B4D76F /* ApiRequester.swift in Sources */,
 				1A3BAD0C1EE95FF1006464D0 /* UserBookDataViewModel.swift in Sources */,
 				1AB1A0E11ED4EEA200E40A6D /* RootViewController.swift in Sources */,
+				1AB7C2271EECA32E00D2C158 /* FriendsViewModel.swift in Sources */,
 				1A117BB51EC8EB5900B4D76F /* SignUpViewController.swift in Sources */,
 				1A117BD01ECC55AD00B4D76F /* KeychainStorage.swift in Sources */,
 				1A9DC7F51ECCDCF2001F0EB4 /* LocalizedString.swift in Sources */,
@@ -939,9 +965,11 @@
 				1A117BB31EC8E9C500B4D76F /* SignInViewModel.swift in Sources */,
 				1AB1A0C21ED3844F00E40A6D /* DisplayableError.swift in Sources */,
 				1A117BBC1EC8F45200B4D76F /* UIViewController+Storyboard.swift in Sources */,
+				1AB7C2251EECA2F400D2C158 /* FriendsViewController.swift in Sources */,
 				1A2F26FE1EE4A54E002A853D /* Mark.swift in Sources */,
 				1A117BDD1ECC5DE200B4D76F /* UserService.swift in Sources */,
 				1A117BD31ECC563F00B4D76F /* User.swift in Sources */,
+				1AB7C2211EECA25300D2C158 /* AddFriendViewController.swift in Sources */,
 				1AB1A0E41ED64C4600E40A6D /* SettingsViewController.swift in Sources */,
 				1A9DC8011ECE41D1001F0EB4 /* UIViewController+SwiftNotifications.swift in Sources */,
 				1AB7C2011EE9DFE600D2C158 /* UserBookCell.swift in Sources */,

@@ -173,4 +173,14 @@ struct FindBook: Request {
     }
 }
 
+struct FriendCreateRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "friends"
+    }
+}
+
 

@@ -100,4 +100,11 @@ struct Wireframe {
         }
     }
 
+    struct FriendsView: StoryboardWireframe {
+        let storyboardName: String = "FriendsView"
+        
+        func addFriend() -> AddFriendViewController {
+            return instantiatior.identifiable()
+        }
+    }
 }

@@ -113,3 +113,13 @@ struct FindBookParams: RequestParams {
         ]
     }
 }
+
+struct FriendParams: RequestParams {
+    let form: AddFriendForm
+    
+    var params: [String: Any] {
+        return [
+            "friend" : form.login
+        ]
+    }
+}

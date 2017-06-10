@@ -136,3 +136,12 @@
 
 /* User book not found */
 "booktrix.user_book.show.not_found" = "User book not found";
+
+/* Login */
+"booktrix.friend.form.login" = "Login";
+
+/* Not exists */
+"booktrix.friend.failure" = "Not exists";
+
+/* Same logins, can not add friend */
+"booktrix.friend.same_logins" = "Same logins, can not add friend";
