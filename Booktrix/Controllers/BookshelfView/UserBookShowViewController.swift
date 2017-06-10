@@ -89,7 +89,7 @@ final class UserBookShowViewController: UIViewController {
         authorLabel.text = viewModel.userBook.book.author
         
         if let url = URL(string: viewModel.userBook.book.image ?? "") {
-            coverImage.setImage(Image.url(url))
+            coverImage.setImage(.url(url))
         }
     }
     

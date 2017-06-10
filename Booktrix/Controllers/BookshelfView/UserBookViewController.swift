@@ -86,7 +86,7 @@ final class UserBookViewController: UIViewController, UserBookProtocol {
         authorTextField.text = viewModel.form.author
         
         if let url = URL(string: viewModel.form.image ?? "") {
-            coverImage.setImage(Image.url(url))
+            coverImage.setImage(.url(url))
         }
     }
     

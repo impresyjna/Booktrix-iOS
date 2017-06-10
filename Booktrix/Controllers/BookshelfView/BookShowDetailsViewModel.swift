@@ -14,12 +14,22 @@ struct UserBookDetails {
     var publishDate: String?
     var pageCount: Int?
     var category: String?
+    
+    init(_ userBook: UserBook) {
+        self.isbn = userBook.book.isbn
+        self.publisher = userBook.book.publisher
+        self.publishDate = userBook.book.publishDate
+        self.pageCount = userBook.book.pageCount
+        if let category = userBook.category {
+            self.category = category.name
+        }
+    }
 }
 
 final class BookShowDetailsViewModel {
     var details: UserBookDetails
     
     init(_ userBook: UserBook) {
-        self.details = UserBookDetails(isbn: userBook.book.isbn, publisher: userBook.book.publisher, publishDate: userBook.book.publishDate, pageCount: userBook.book.pageCount, category: userBook.category?.name)
+        self.details = UserBookDetails(userBook)
     }
 }

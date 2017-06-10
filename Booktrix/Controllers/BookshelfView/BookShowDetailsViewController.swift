@@ -34,7 +34,7 @@ final class BookShowDetailsViewController: UIViewController {
         publisherLabel.text = viewModel.details.publisher
         publishDateLabel.text = viewModel.details.publishDate
         if let pageCount = viewModel.details.pageCount {
-            pageCountLabel.text = String(describing: pageCount)
+            pageCountLabel.text = "\(pageCount)"
         }
         categoryLabel.text = viewModel.details.category
     }

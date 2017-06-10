@@ -19,11 +19,11 @@ extension UIImageView {
 
     func setImage(_ image: Image) {
         switch image {
-        case Image.url(let url):
+        case .url(let url):
             self.kf.setImage(with: url)
-        case Image.image(let image):
+        case .image(let image):
             self.image = image
-        case Image.data(let data):
+        case .data(let data):
             self.image = UIImage(data: data)
         }
     }

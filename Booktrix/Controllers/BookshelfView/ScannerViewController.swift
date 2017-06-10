@@ -28,6 +28,7 @@ final class ScannerViewController: UIViewController, AVCaptureMetadataOutputObje
         do {
             videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
+            failed()
             return
         }
         
