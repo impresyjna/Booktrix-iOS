@@ -105,6 +105,13 @@ final class FriendsViewController: UIViewController, UITableViewDelegate, UITabl
         return .leastNonzeroMagnitude
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if viewModel.listKind == .index {
+            let vc = Wireframe.FriendsView().friend()
+            vc.viewModel = FriendViewModel(friendId: viewModel.friendsList[indexPath.row].id)
+            pushViewFromStoryboard(controller: vc)
+        }
+    }
     func editFriend(_ friend: Friend, action: FriendsUpdateAction) {
         showHud()
         viewModel.friendUpdate(friend, action: action) { [weak self] (result) in

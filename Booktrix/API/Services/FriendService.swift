@@ -41,4 +41,11 @@ final class FriendService {
         
         requester.request(request: request, params: params, completion: completion)
     }
+    
+    func show(friendId: Int, completion: @escaping (ApiResponse<FriendDetails>) -> ()) {
+        let requester = ApiRequester()
+        let request = FriendShowRequest(friendId: friendId)
+        
+        requester.request(request: request, completion: completion)
+    }
 }

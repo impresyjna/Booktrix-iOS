@@ -163,3 +163,12 @@
 
 /* Remove */
 "booktrix.friends.view.remove" = "Remove";
+
+/* Friend not found */
+"booktrix.friend.show.not_found" = "Friend not found";
+
+/* Author */
+"booktrix.friend_book.cell.author" = "Author";
+
+/* Title */
+"booktrix.friend_book.cell.title" = "Title";

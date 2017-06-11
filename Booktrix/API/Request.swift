@@ -212,4 +212,12 @@ struct FriendUpdateRequest: Request {
     }
 }
 
+struct FriendShowRequest: Request {
+    let friendId: Int
+    
+    var path: String {
+        return "friends/\(friendId)"
+    }
+}
+
 
