@@ -29,12 +29,23 @@
                                     <segment title="Requested"/>
                                     <segment title="Blocked"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeTab:" destination="eWy-ug-VWc" eventType="valueChanged" id="bAv-Sw-m6l"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ORP-Kr-g4g">
+                                <rect key="frame" x="0.0" y="97" width="375" height="521"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="7bA-fL-TeK" firstAttribute="top" secondItem="ORP-Kr-g4g" secondAttribute="bottom" id="17r-wG-GVi"/>
+                            <constraint firstItem="ORP-Kr-g4g" firstAttribute="leading" secondItem="BQN-LD-w9e" secondAttribute="leading" id="5oy-WK-gv2"/>
+                            <constraint firstItem="ORP-Kr-g4g" firstAttribute="top" secondItem="eBu-J4-0cY" secondAttribute="bottom" constant="5" id="CAd-Wu-gNd"/>
                             <constraint firstAttribute="trailing" secondItem="eBu-J4-0cY" secondAttribute="trailing" constant="4" id="Ltc-wq-Vq1"/>
                             <constraint firstItem="eBu-J4-0cY" firstAttribute="leading" secondItem="BQN-LD-w9e" secondAttribute="leading" constant="4" id="OfJ-q4-b3G"/>
+                            <constraint firstAttribute="trailing" secondItem="ORP-Kr-g4g" secondAttribute="trailing" id="T2g-Or-r7N"/>
                             <constraint firstItem="eBu-J4-0cY" firstAttribute="top" secondItem="mdm-fS-aWX" secondAttribute="bottom" id="kte-AW-EYm"/>
                         </constraints>
                     </view>
@@ -46,6 +57,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="eBu-J4-0cY" id="YXp-R7-UM7"/>
+                        <outlet property="tableView" destination="ORP-Kr-g4g" id="key-l0-DMW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9z-ub-qr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

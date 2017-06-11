@@ -123,3 +123,24 @@ struct FriendParams: RequestParams {
         ]
     }
 }
+
+struct FriendActionParams: RequestParams {
+    let form: FriendsActionForm
+    
+    var params: [String: Any] {
+        return [
+            "login" : form.login,
+            "friend_action" : form.action
+        ]
+    }
+}
+
+struct FriendsIndexParams: RequestParams {
+    let friendsList: FriendsList
+    
+    var params: [String: Any] {
+        return [
+            "list" : friendsList.string
+        ]
+    }
+}

@@ -14,6 +14,7 @@ struct Friend {
     let surname: String
     let email: String
     let login: String
+    let booksCount: Int
 }
 
 extension Friend: JSONCodable {
@@ -24,6 +25,7 @@ extension Friend: JSONCodable {
         email = try decoder.decode("email")
         name = try decoder.decode("name")
         surname = try decoder.decode("surname")
+        booksCount = try decoder.decode("books_count")
     }
     
     func toJSON() throws -> Any {
@@ -33,6 +35,7 @@ extension Friend: JSONCodable {
             try encoder.encode(surname, key: "surname")
             try encoder.encode(email, key: "email")
             try encoder.encode(login, key: "login")
+            try encoder.encode(booksCount, key: "books_count")
         }
     }
 }

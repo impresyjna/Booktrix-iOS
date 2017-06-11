@@ -103,6 +103,8 @@
 		1AB7C2251EECA2F400D2C158 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2241EECA2F400D2C158 /* FriendsViewController.swift */; };
 		1AB7C2271EECA32E00D2C158 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2261EECA32E00D2C158 /* FriendsViewModel.swift */; };
 		1AB7C2291EECA75C00D2C158 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C2281EECA75C00D2C158 /* FriendService.swift */; };
+		1AB7C22C1EED7F4D00D2C158 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7C22B1EED7F4D00D2C158 /* FriendCell.swift */; };
+		1AB7C22E1EED7FBB00D2C158 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB7C22D1EED7FBB00D2C158 /* FriendCell.xib */; };
 		1AED63E21E83B16300F3FD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED63E11E83B16300F3FD53 /* AppDelegate.swift */; };
 		1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63E81E83B16300F3FD53 /* Assets.xcassets */; };
 		1AED63EC1E83B16300F3FD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED63EA1E83B16300F3FD53 /* LaunchScreen.storyboard */; };
@@ -218,6 +220,8 @@
 		1AB7C2241EECA2F400D2C158 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		1AB7C2261EECA32E00D2C158 /* FriendsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		1AB7C2281EECA75C00D2C158 /* FriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
+		1AB7C22B1EED7F4D00D2C158 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		1AB7C22D1EED7FBB00D2C158 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		1AED63DE1E83B16300F3FD53 /* Booktrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booktrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AED63E11E83B16300F3FD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AED63E81E83B16300F3FD53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -532,6 +536,7 @@
 		1AB1A0F31ED8E6C700E40A6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1AB7C22A1EED7F2500D2C158 /* FriendCell */,
 				1A3BAD111EE9DC75006464D0 /* UserBookCell */,
 				1AB1A0F61ED8E77700E40A6D /* CategoryCell */,
 			);
@@ -581,6 +586,15 @@
 				1AB7C2261EECA32E00D2C158 /* FriendsViewModel.swift */,
 			);
 			name = FriendsView;
+			sourceTree = "<group>";
+		};
+		1AB7C22A1EED7F2500D2C158 /* FriendCell */ = {
+			isa = PBXGroup;
+			children = (
+				1AB7C22D1EED7FBB00D2C158 /* FriendCell.xib */,
+				1AB7C22B1EED7F4D00D2C158 /* FriendCell.swift */,
+			);
+			name = FriendCell;
 			sourceTree = "<group>";
 		};
 		1AED63D51E83B16300F3FD53 = {
@@ -778,6 +792,7 @@
 				1AB1A0F51ED8E77000E40A6D /* CategoryCell.xib in Resources */,
 				1A117BB11EC8E7C100B4D76F /* SignUpView.storyboard in Resources */,
 				1AED63E91E83B16300F3FD53 /* Assets.xcassets in Resources */,
+				1AB7C22E1EED7FBB00D2C158 /* FriendCell.xib in Resources */,
 				1AB1A0D41ED4DC1900E40A6D /* BookshelfView.storyboard in Resources */,
 				1AB1A1081EDCDECE00E40A6D /* CategoryView.storyboard in Resources */,
 				1A3BAD101EE9DC6C006464D0 /* UserBookCell.xib in Resources */,
@@ -923,6 +938,7 @@
 				1A2F27061EE80EAB002A853D /* BookDetailsViewController.swift in Sources */,
 				1A2F27081EE80EBB002A853D /* BookDescriptionViewController.swift in Sources */,
 				1A9DC7E01ECC62BB001F0EB4 /* SignUpViewModel.swift in Sources */,
+				1AB7C22C1EED7F4D00D2C158 /* FriendCell.swift in Sources */,
 				1AB1A1021EDB10D500E40A6D /* CategoryService.swift in Sources */,
 				1A2F270C1EE87AA4002A853D /* TextViewConfiguration.swift in Sources */,
 				1A2F270E1EE8AC23002A853D /* ScannerViewController.swift in Sources */,

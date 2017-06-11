@@ -183,4 +183,33 @@ struct FriendCreateRequest: Request {
     }
 }
 
+struct FriendsIndexRequest: Request {
+    
+    var path: String {
+        return "friends"
+    }
+}
+
+struct FriendDestoryRequest: Request {
+    
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "friends"
+    }
+}
+
+struct FriendUpdateRequest: Request {
+   
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "friends"
+    }
+}
+
 
