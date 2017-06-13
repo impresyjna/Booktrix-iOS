@@ -173,4 +173,51 @@ struct FindBook: Request {
     }
 }
 
+struct FriendCreateRequest: Request {
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "friends"
+    }
+}
+
+struct FriendsIndexRequest: Request {
+    
+    var path: String {
+        return "friends"
+    }
+}
+
+struct FriendDestoryRequest: Request {
+    
+    var method: HTTPMethod {
+        return .delete
+    }
+    
+    var path: String {
+        return "friends"
+    }
+}
+
+struct FriendUpdateRequest: Request {
+   
+    var method: HTTPMethod {
+        return .patch
+    }
+    
+    var path: String {
+        return "friends"
+    }
+}
+
+struct FriendShowRequest: Request {
+    let friendId: Int
+    
+    var path: String {
+        return "friends/\(friendId)"
+    }
+}
+
 

@@ -136,3 +136,39 @@
 
 /* User book not found */
 "booktrix.user_book.show.not_found" = "User book not found";
+
+/* Login */
+"booktrix.friend.form.login" = "Login";
+
+/* Not exists */
+"booktrix.friend.failure" = "Not exists";
+
+/* Same logins, can not add friend */
+"booktrix.friend.same_logins" = "Same logins, can not add friend";
+
+/* Books in library */
+"booktrix.friend.cell.booksCount" = "Books in library";
+
+/* Problem with finishing request */
+"booktrix.friends.failure" = "Problem with finishing request";
+
+/* Accept */
+"booktrix.friends.view.accept" = "Accept";
+
+/* Block */
+"booktrix.friends.view.block" = "Block";
+
+/* Unblock */
+"booktrix.friends.view.unblock" = "Unblock";
+
+/* Remove */
+"booktrix.friends.view.remove" = "Remove";
+
+/* Friend not found */
+"booktrix.friend.show.not_found" = "Friend not found";
+
+/* Author */
+"booktrix.friend_book.cell.author" = "Author";
+
+/* Title */
+"booktrix.friend_book.cell.title" = "Title";

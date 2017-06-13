@@ -43,7 +43,7 @@ final class CategoryViewController: UIViewController {
     }
     
     func save() {
-        self.showHud()
+        showHud()
         viewModel.save { [weak self] (result) in
             self?.hideHud()
             switch result {
